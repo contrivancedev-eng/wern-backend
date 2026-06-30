@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Socket.IO Step Event Test</title>
+
+    <!-- ✅ Socket.IO v4 client (REQUIRED for Node.js server) -->
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+    <style>
+        * { box-sizing: border-box; font-family: Arial, sans-serif; }
+        body {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 { text-align: center; color: #333; }
+
+        .status-box {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .connected { background: #d4edda; color: #155724; }
+        .disconnected { background: #f8d7da; color: #721c24; }
+
+        .form-group { margin-bottom: 12px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .btn-success { background: #28a745; color: #fff; }
+        .btn-danger { background: #dc3545; color: #fff; }
+        .btn-primary { background: #007bff; color: #fff; }
+        .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+        .log-box {
+            background: #1e1e1e;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 8px;
+            height: 320px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 13px;
+            white-space: pre-wrap;
+        }
+
+        .log-info { color: #5bf; }
+        .log-success { color: #0f0; }
+        .log-error { color: #f55; }
+        .log-send { color: #ff0; }
+    </style>
+</head>
+
+<body>
+
+<h1>🚶 Step Event Test</h1>
+
+<div id="statusBox" class="status-box disconnected">
+    ⚫ Disconnected
+</div>
+
+<button class="btn btn-success" id="connectBtn" onclick="connectSocket()">Connect</button>
+<button class="btn btn-danger" id="disconnectBtn" onclick="disconnectSocket()" disabled>Disconnect</button>
+
+<hr>
+
+<div class="form-group">
+    <label>JWT Token</label>
+    <input type="text" id="token" placeholder="paste JWT here (eyJ...)">
+</div>
+
+<div class="form-group">
+    <label>User ID</label>
+    <input type="number" id="user_id" value="1">
+</div>
+
+<div class="form-group">
+    <label>Category ID <small>(optional — leave blank for 0)</small></label>
+    <input type="number" id="category_id" placeholder="leave blank for 0">
+</div>
+
+<div class="form-group">
+    <label>Steps</label>
+    <input type="number" id="steps" value="10">
+</div>
+
+<div class="form-group">
+    <label>Type</label>
+    <input type="text" id="type" value="walk">
+</div>
+
+<div class="form-group">
+    <label>Latitude</label>
+    <input type="number" id="lat" value="22.6708" step="any">
+</div>
+
+<div class="form-group">
+    <label>Longitude</label>
+    <input type="number" id="lng" value="88.3497" step="any">
+</div>
+
+<button class="btn btn-primary" id="sendBtn" onclick="sendStepEvent()" disabled>
+    📤 Send Step Event
+</button>
+
+<h3>📋 Response Log</h3>
+<div class="log-box" id="logBox"></div>
+
+<script>
+    // Auto-detect server URL from the page's origin so it can never go stale.
+    // Override by appending ?server=https://example.com to the URL.
+    const BUILD = "2026-05-18-wernapp";
+    const params = new URLSearchParams(window.location.search);
+    const SERVER_URL = params.get("server") || window.location.origin;
+    console.log("[socket-test build]", BUILD, "→", SERVER_URL);
+    let socket = null;
+
+    function log(message, type = "info") {
+        const logBox = document.getElementById("logBox");
+        const time = new Date().toLocaleTimeString();
+        logBox.innerHTML += `<span class="log-${type}">[${time}] ${message}</span>\n`;
+        logBox.scrollTop = logBox.scrollHeight;
+    }
+
+    function updateStatus(connected) {
+        const statusBox = document.getElementById("statusBox");
+        document.getElementById("connectBtn").disabled = connected;
+        document.getElementById("disconnectBtn").disabled = !connected;
+        document.getElementById("sendBtn").disabled = !connected;
+
+        if (connected) {
+            statusBox.className = "status-box connected";
+            statusBox.innerHTML = "🟢 Connected (ID: " + socket.id + ")";
+        } else {
+            statusBox.className = "status-box disconnected";
+            statusBox.innerHTML = "⚫ Disconnected";
+        }
+    }
+
+    function connectSocket() {
+        log("Connecting to " + SERVER_URL + "...", "info");
+
+        socket = io(SERVER_URL, {
+            transports: ["websocket", "polling"],
+            upgrade: true,
+            reconnection: true
+        });
+
+        socket.on("connect", () => {
+            updateStatus(true);
+            log("✅ Connected successfully", "success");
+        });
+
+        socket.on("disconnect", (reason) => {
+            updateStatus(false);
+            log("❌ Disconnected: " + reason, "error");
+        });
+
+        socket.on("connect_error", (err) => {
+            log("❌ Connection error: " + err.message, "error");
+        });
+
+        socket.on("step_ack", (data) => {
+            log("✅ step_ack:\n" + JSON.stringify(data, null, 2), "success");
+        });
+
+        socket.on("server_error", (data) => {
+            log("❌ server_error:\n" + JSON.stringify(data, null, 2), "error");
+        });
+    }
+
+    function disconnectSocket() {
+        if (socket) {
+            socket.disconnect();
+            socket = null;
+            updateStatus(false);
+            log("Disconnected by user", "info");
+        }
+    }
+
+    function sendStepEvent() {
+        if (!socket || !socket.connected) {
+            alert("Please connect first");
+            return;
+        }
+
+        const catRaw = document.getElementById("category_id").value.trim();
+        const payload = {
+            token: document.getElementById("token").value.trim(),
+            user_id: Number(document.getElementById("user_id").value),
+            category_id: catRaw === "" ? 0 : Number(catRaw),
+            steps: Number(document.getElementById("steps").value),
+            timestamp: Math.floor(Date.now() / 1000),
+            type: document.getElementById("type").value,
+            lat: Number(document.getElementById("lat").value),
+            lng: Number(document.getElementById("lng").value)
+        };
+
+        log("📤 Sending:\n" + JSON.stringify(payload, null, 2), "send");
+        socket.emit("step_event", payload);
+    }
+
+    log("Page loaded (build " + BUILD + "). Target: " + SERVER_URL, "info");
+    log("Click Connect to start.", "info");
+</script>
+
+</body>
+</html>

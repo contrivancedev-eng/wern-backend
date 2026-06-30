@@ -1,0 +1,5306 @@
+<?php
+$pageTitle = 'WERN - Walk Earn Empower';
+echo view('Web/includes/header', ['pageTitle' => $pageTitle]);
+echo view('Web/includes/topbar');
+?>
+
+
+        <div class="body-overlay"></div>
+
+        <!-- main area start -->
+        <main>
+            <!-- hero start -->
+            <section id="home" class="hero hero-style hero-style--two pos-rel bg_img"
+                data-background="<?= base_url('public/web/assets/img/bg/hero_bg02.jpg') ?>">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 my-auto">
+                            <div class="hero-content hero-content--two">
+                                <h2 class="title scale-animation wow">WERN: The Human Movement OS </h2>
+                                <p class="poweredTxt scale-animation wow">(Powered by : Liberte)</p>
+                                <p class="sub-title scale-animation wow">
+                                    WERN is a revolutionary "Walk & Earn" mobile application designed to convert your
+                                    daily steps into real, tangible rewards. It is a standalone platform built from the
+                                    ground up to empower individuals by monetizing the simple act of movement.
+                                </p>
+                                <div class="hero-btn scale-animation wow">
+                                    <a class="thm-btn chatbot-btn" href="#0">
+                                        Start Walking & Earning - Join Now
+                                        <span class="arrow-icon">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="5.06592" y="19.9785" width="20.5712" height="2.61221"
+                                                    transform="rotate(-40.2798 5.06592 19.9785)" fill="white" />
+                                                <rect x="7.97095" y="7.24463" width="2.61221" height="2.61221"
+                                                    transform="rotate(-40.2798 7.97095 7.24463)" fill="white" />
+                                                <rect x="11.6523" y="7.54834" width="2.61221" height="2.61221"
+                                                    transform="rotate(-40.2798 11.6523 7.54834)" fill="white" />
+                                                <rect x="15.334" y="7.85205" width="2.61221" height="2.61221"
+                                                    transform="rotate(-40.2798 15.334 7.85205)" fill="white" />
+                                                <rect x="18.7119" y="11.8374" width="2.61221" height="2.61221"
+                                                    transform="rotate(-40.2798 18.7119 11.8374)" fill="white" />
+                                                <rect x="18.4084" y="15.52" width="2.61221" height="2.61221"
+                                                    transform="rotate(-40.2798 18.4084 15.52)" fill="white" />
+                                                <rect x="18.104" y="19.2012" width="2.61221" height="2.61221"
+                                                    transform="rotate(-40.2798 18.104 19.2012)" fill="white" />
+                                            </svg>
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="5.06592" y="19.9785" width="20.5712" height="2.61221"
+                                                    transform="rotate(-40.2798 5.06592 19.9785)" fill="white" />
+                                                <rect x="7.97095" y="7.24463" width="2.61221" height="2.61221"
+                                                    transform="rotate(-40.2798 7.97095 7.24463)" fill="white" />
+                                                <rect x="11.6523" y="7.54834" width="2.61221" height="2.61221"
+                                                    transform="rotate(-40.2798 11.6523 7.54834)" fill="white" />
+                                                <rect x="15.334" y="7.85205" width="2.61221" height="2.61221"
+                                                    transform="rotate(-40.2798 15.334 7.85205)" fill="white" />
+                                                <rect x="18.7119" y="11.8374" width="2.61221" height="2.61221"
+                                                    transform="rotate(-40.2798 18.7119 11.8374)" fill="white" />
+                                                <rect x="18.4084" y="15.52" width="2.61221" height="2.61221"
+                                                    transform="rotate(-40.2798 18.4084 15.52)" fill="white" />
+                                                <rect x="18.104" y="19.2012" width="2.61221" height="2.61221"
+                                                    transform="rotate(-40.2798 18.104 19.2012)" fill="white" />
+                                            </svg>
+                                        </span>
+                                        <span class="btn-bg">
+                                            <svg width="484" height="60" viewBox="0 0 484 60" fill="none"
+                                                preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="484" height="60" fill="url(#paint0_radial_2224_3384)" />
+                                                <defs>
+                                                    <radialGradient id="paint0_radial_2224_3384" cx="0" cy="0" r="1"
+                                                        gradientTransform="matrix(-667.5 -25 0.582116 -49.7476 497 39)"
+                                                        gradientUnits="userSpaceOnUse">
+                                                        <stop offset="0" stop-color="#00FF97" />
+                                                        <stop offset="1" stop-color="#00020F" stop-opacity="0" />
+                                                    </radialGradient>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="hero-store-badges scale-animation wow">
+                                    <a href="https://apps.apple.com/in/app/wern-walk-track-empower/id6761259828#information" target="_blank" rel="noopener" aria-label="Download on the App Store">
+                                        <img src="<?= base_url('public/web/assets/img/pricing/appstore.png') ?>" alt="App Store">
+                                    </a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.wern.app&hl=en_IN" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+                                        <img src="<?= base_url('public/web/assets/img/pricing/playstore.png') ?>" alt="Google Play">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-4">
+                            <div class="wern-login-container wow fadeInRightBig" data-wow-delay="0ms"
+                                data-wow-duration="800ms">
+                                <!-- Logo Section -->
+                                <div class="wern-logo">
+                                    <h1>WERN</h1>
+                                    <p class="wern-tagline">Walk. Earn. Empower.</p>
+                                </div>
+
+                                <!-- Login Form -->
+                                <form id="wernLoginForm">
+                                    <!-- Account Number -->
+                                    <div class="wern-form-group">
+                                        <label class="wern-label">Account Number</label>
+                                        <div class="wern-input-wrapper">
+                                            <input type="text" id="accountNumber" class="wern-input"
+                                                placeholder="Enter Your Account Number" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- PIN -->
+                                    <div class="wern-form-group">
+                                        <label class="wern-label">PIN</label>
+                                        <div class="wern-input-wrapper">
+                                            <input type="password" id="pin" class="wern-input" placeholder="••••"
+                                                maxlength="4" required>
+                                            <button type="button" id="togglePin" class="toggle-password">
+                                                <i class="fas fa-eye-slash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Secure Login Button -->
+                                    <button type="button" id="loginBtn" class="wern-btn">Secure Login</button>
+
+                                    <!-- Recent Login Info -->
+                                    <div class="recent-login last-login">
+                                        <i class='fas fa-clock'></i>
+                                        <span>Last login: 1 hour, 3 minutes ago from New York, USA (03:47 AM)</span>
+                                    </div>
+                                </form>
+
+                                <!-- Divider -->
+                                <div class="wern-divider"></div>
+
+                                <!-- Access Request Section -->
+                                <div class="access-section">
+                                    <h2 class="access-title">Don't Have Access?</h2>
+                                    <p class="access-subtitle">Enter your email to get the EULA & request access</p>
+
+                                    <form id="wernAccessForm">
+                                        <div class="wern-form-group">
+                                            <div class="wern-input-wrapper">
+                                                <input type="email" class="wern-input" id="eulaEmailInput" placeholder="Enter your email" required>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="wern-btn wern-btn-secondary">
+                                            Request EULA & Access
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-linear"></div>
+            </section>
+            <!-- hero end -->
+
+            <!-- video start -->
+            <section class="video z-1 pt-25 pb-70 pos-rel">
+                <div class="container">
+                    <div class="xb-video-frame pos-rel">
+                        <video autoplay muted loop playsinline class="wern-hero-video">
+                            <source src="https://lbtbucket.blr1.cdn.digitaloceanspaces.com/hero.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="xb-img">
+                            <img src="<?= base_url('public/web/assets/img/video/video-frame.png') ?>" alt="image">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="xb-linear-gradient">
+                    <span class="gradient gradient--1"></span>
+                    <span class="gradient gradient--2"></span>
+                    <span class="gradient gradient--3"></span>
+                    <span class="gradient gradient--4"></span>
+                    <span class="gradient gradient--dot-img">
+                        <img src="<?= base_url('public/web/assets/img/shape/video-shape04.png') ?>" alt="dot-image">
+                    </span>
+                </div>
+                <div class="xb-text-marquee-wrap marquee-left">
+                    <div class="xb-text-marquee-item">
+                        <h2 class="title">Walk and earn rewards</h2>
+                        <span class="img"><img src="<?= base_url('public/web/assets/img/video/robot-img.png') ?>" alt="image"></span>
+                        <h2 class="title">Track your daily steps</h2>
+                        <span class="img"><img src="<?= base_url('public/web/assets/img/video/robot-img.png') ?>" alt="image"></span>
+                        <h2 class="title">Join nearby walkers</h2>
+                        <span class="img"><img src="<?= base_url('public/web/assets/img/video/robot-img.png') ?>" alt="image"></span>
+                        <h2 class="title">Blockchain verified NFTs</h2>
+                        <span class="img"><img src="<?= base_url('public/web/assets/img/video/robot-img.png') ?>" alt="image"></span>
+                        <h2 class="title">Eco-friendly challenges</h2>
+                        <span class="img"><img src="<?= base_url('public/web/assets/img/video/robot-img.png') ?>" alt="image"></span>
+                        <h2 class="title">Community fitness goals</h2>
+                        <span class="img"><img src="<?= base_url('public/web/assets/img/video/robot-img.png') ?>" alt="image"></span>
+                    </div>
+                </div>
+            </section>
+            <!-- video end -->
+
+            <div class="bg_img" data-background="<?= base_url('public/web/assets/img/bg/custom-bg.jpg') ?>">
+
+                <section id="major-features" class="project bg_img pb-100"
+                    data-background="<?= base_url('public/web/assets/img/bg/project-bg.jpg') ?>">
+                    <div class="container">
+                        <div class="sec-title xb-sec-padding text-center">
+                            <h2 class="title">WERN Foundation</h2>
+                        </div>
+                    </div>
+                    <div class="container mxw-1800">
+                        <div class="xb-project-wrap">
+                            <div class="xb-project-pagination-wrap">
+                                <ul class="xb-project-pagination">
+                                    <li>1</li>
+                                    <li class="active">2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li>6</li>
+                                </ul>
+                            </div>
+                            <div class="xb-project-inner">
+                                <div class="xb-project-item bg_img">
+                                    <video class="video-bg" autoplay loop muted playsinline>
+                                        <source src="<?= base_url('public/web/assets/video/video-1.mp4') ?>" type="video/mp4">
+                                    </video>
+                                    <div class="xb-project-content">
+                                        <div class="xb-item--inner xb-border">
+                                            <h2 class="xb-item--title mb-0">Financial Empowerment</h2>
+                                            <span class="coming-soon-pill coming-soon-pill--stacked">Coming soon</span>
+                                            <p class="xb-item--content mb-3">
+                                                We provide a direct way for users to earn our in-app currency,
+                                                "Litties," simply by walking. This creates an accessible, universal
+                                                income stream available to anyone with a smartphone.
+                                            </p>
+                                            <p class="xb-item--content">
+                                                WERN is not just another fitness tracker; it is a comprehensive
+                                                lifestyle application that makes every step valuable, meaningful, and
+                                                safe.
+                                            </p>
+
+                                            <div class="xb-item---btn mt-30">
+                                                <a class="thm-btn agency-btn" href="<?= base_url('user-onboarding') ?>">
+                                                    <span class="text">
+                                                        read more
+                                                    </span>
+                                                    <span class="arrow">
+                                                        <span class="arrow-icon">
+                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="5.06592" y="19.9785" width="20.5712"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 5.06592 19.9785)"
+                                                                    fill="white" />
+                                                                <rect x="7.97095" y="7.24463" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 7.97095 7.24463)"
+                                                                    fill="white" />
+                                                                <rect x="11.6523" y="7.54834" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 11.6523 7.54834)"
+                                                                    fill="white" />
+                                                                <rect x="15.334" y="7.85205" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 15.334 7.85205)"
+                                                                    fill="white" />
+                                                                <rect x="18.7119" y="11.8374" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.7119 11.8374)"
+                                                                    fill="white" />
+                                                                <rect x="18.4084" y="15.52" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.4084 15.52)"
+                                                                    fill="white" />
+                                                                <rect x="18.104" y="19.2012" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.104 19.2012)"
+                                                                    fill="white" />
+                                                            </svg>
+                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="5.06592" y="19.9785" width="20.5712"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 5.06592 19.9785)"
+                                                                    fill="white" />
+                                                                <rect x="7.97095" y="7.24463" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 7.97095 7.24463)"
+                                                                    fill="white" />
+                                                                <rect x="11.6523" y="7.54834" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 11.6523 7.54834)"
+                                                                    fill="white" />
+                                                                <rect x="15.334" y="7.85205" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 15.334 7.85205)"
+                                                                    fill="white" />
+                                                                <rect x="18.7119" y="11.8374" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.7119 11.8374)"
+                                                                    fill="white" />
+                                                                <rect x="18.4084" y="15.52" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.4084 15.52)"
+                                                                    fill="white" />
+                                                                <rect x="18.104" y="19.2012" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.104 19.2012)"
+                                                                    fill="white" />
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xb-project-item bg_img">
+                                    <video class="video-bg" autoplay loop muted playsinline>
+                                        <source src="<?= base_url('public/web/assets/video/video-2.mp4') ?>" type="video/mp4">
+                                    </video>
+                                    <div class="xb-project-content">
+                                        <div class="xb-item--inner xb-border">
+                                            <h2 class="xb-item--title">Refer & Earn</h2>
+                                            <p class="xb-item--content">
+                                                A powerful viral growth engine. Invite friends to join WERN and earn
+                                                significant bonuses for every successful referral. It's the easiest way
+                                                to multiply your earnings.
+                                            </p>
+                                            <!-- <ul class="xb-item--list ul_li">
+                                                <li>Conversion Rate: <span>1,000 Steps = 1 Littie</span></li>
+                                                <li>Security: <span>Fraud Prevention System</span></li>
+                                            </ul>
+                                            <div class="xb-item--technologie ul_li">
+                                                <span>Core Technologies:</span>
+                                                <ul class="list-unstyled ul_li">
+                                                    <li><img src="<?= base_url('public/web/assets/img/icon/telegram.png') ?>" alt="icon"></li>
+                                                    <li><img src="<?= base_url('public/web/assets/img/icon/airtable.png') ?>" alt="icon"></li>
+                                                    <li><img src="<?= base_url('public/web/assets/img/icon/slack.png') ?>" alt="icon"></li>
+                                                </ul>
+                                            </div> -->
+                                            <div class="xb-item---btn mt-30">
+                                                <a class="thm-btn agency-btn" href="<?= base_url('step-based-rewards') ?>">
+                                                    <span class="text">
+                                                        read more
+                                                    </span>
+                                                    <span class="arrow">
+                                                        <span class="arrow-icon">
+                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="5.06592" y="19.9785" width="20.5712"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 5.06592 19.9785)"
+                                                                    fill="white" />
+                                                                <rect x="7.97095" y="7.24463" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 7.97095 7.24463)"
+                                                                    fill="white" />
+                                                                <rect x="11.6523" y="7.54834" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 11.6523 7.54834)"
+                                                                    fill="white" />
+                                                                <rect x="15.334" y="7.85205" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 15.334 7.85205)"
+                                                                    fill="white" />
+                                                                <rect x="18.7119" y="11.8374" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.7119 11.8374)"
+                                                                    fill="white" />
+                                                                <rect x="18.4084" y="15.52" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.4084 15.52)"
+                                                                    fill="white" />
+                                                                <rect x="18.104" y="19.2012" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.104 19.2012)"
+                                                                    fill="white" />
+                                                            </svg>
+                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="5.06592" y="19.9785" width="20.5712"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 5.06592 19.9785)"
+                                                                    fill="white" />
+                                                                <rect x="7.97095" y="7.24463" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 7.97095 7.24463)"
+                                                                    fill="white" />
+                                                                <rect x="11.6523" y="7.54834" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 11.6523 7.54834)"
+                                                                    fill="white" />
+                                                                <rect x="15.334" y="7.85205" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 15.334 7.85205)"
+                                                                    fill="white" />
+                                                                <rect x="18.7119" y="11.8374" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.7119 11.8374)"
+                                                                    fill="white" />
+                                                                <rect x="18.4084" y="15.52" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.4084 15.52)"
+                                                                    fill="white" />
+                                                                <rect x="18.104" y="19.2012" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.104 19.2012)"
+                                                                    fill="white" />
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xb-project-item bg_img">
+                                    <video class="video-bg" autoplay loop muted playsinline>
+                                        <source src="<?= base_url('public/web/assets/video/video-3a.mp4') ?>" type="video/mp4">
+                                    </video>
+                                    <div class="xb-project-content">
+                                        <div class="xb-item--inner xb-border">
+                                            <h2 class="xb-item--title">Streak & Challenge Rewards</h2>
+                                            <p class="xb-item--content">
+                                                Earn bonus Litties for maintaining daily walking streaks and completing
+                                                special challenges hosted by WERN or our brand partners.
+                                            </p>
+
+                                            <div class="xb-item---btn mt-30">
+                                                <a class="thm-btn agency-btn" href="<?= base_url('proximity-based-social') ?>">
+                                                    <span class="text">
+                                                        read more
+                                                    </span>
+                                                    <span class="arrow">
+                                                        <span class="arrow-icon">
+                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="5.06592" y="19.9785" width="20.5712"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 5.06592 19.9785)"
+                                                                    fill="white" />
+                                                                <rect x="7.97095" y="7.24463" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 7.97095 7.24463)"
+                                                                    fill="white" />
+                                                                <rect x="11.6523" y="7.54834" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 11.6523 7.54834)"
+                                                                    fill="white" />
+                                                                <rect x="15.334" y="7.85205" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 15.334 7.85205)"
+                                                                    fill="white" />
+                                                                <rect x="18.7119" y="11.8374" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.7119 11.8374)"
+                                                                    fill="white" />
+                                                                <rect x="18.4084" y="15.52" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.4084 15.52)"
+                                                                    fill="white" />
+                                                                <rect x="18.104" y="19.2012" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.104 19.2012)"
+                                                                    fill="white" />
+                                                            </svg>
+                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="5.06592" y="19.9785" width="20.5712"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 5.06592 19.9785)"
+                                                                    fill="white" />
+                                                                <rect x="7.97095" y="7.24463" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 7.97095 7.24463)"
+                                                                    fill="white" />
+                                                                <rect x="11.6523" y="7.54834" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 11.6523 7.54834)"
+                                                                    fill="white" />
+                                                                <rect x="15.334" y="7.85205" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 15.334 7.85205)"
+                                                                    fill="white" />
+                                                                <rect x="18.7119" y="11.8374" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.7119 11.8374)"
+                                                                    fill="white" />
+                                                                <rect x="18.4084" y="15.52" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.4084 15.52)"
+                                                                    fill="white" />
+                                                                <rect x="18.104" y="19.2012" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.104 19.2012)"
+                                                                    fill="white" />
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xb-project-item bg_img">
+                                    <video class="video-bg" autoplay loop muted playsinline>
+                                        <source src="<?= base_url('public/web/assets/video/video-4.mp4') ?>" type="video/mp4">
+                                    </video>
+                                    <div class="xb-project-content">
+                                        <div class="xb-item--inner xb-border">
+                                            <h2 class="xb-item--title mb-0">Authentic Brand Connection</h2>
+                                            <span class="coming-soon-pill coming-soon-pill--stacked">Coming soon</span>
+                                            <p class="xb-item--content">
+                                                We are fixing the broken advertising model. Instead of intrusive ads,
+                                                WERN allows brands to reward users directly for real- world actions and
+                                                engagement, creating a relationship built on value, not views.
+                                            </p>
+
+
+                                            <div class="xb-item---btn mt-30">
+                                                <a class="thm-btn agency-btn" href="<?= base_url('feature-daily-referrals') ?>">
+                                                    <span class="text">
+                                                        read more
+                                                    </span>
+                                                    <span class="arrow">
+                                                        <span class="arrow-icon">
+                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="5.06592" y="19.9785" width="20.5712"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 5.06592 19.9785)"
+                                                                    fill="white" />
+                                                                <rect x="7.97095" y="7.24463" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 7.97095 7.24463)"
+                                                                    fill="white" />
+                                                                <rect x="11.6523" y="7.54834" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 11.6523 7.54834)"
+                                                                    fill="white" />
+                                                                <rect x="15.334" y="7.85205" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 15.334 7.85205)"
+                                                                    fill="white" />
+                                                                <rect x="18.7119" y="11.8374" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.7119 11.8374)"
+                                                                    fill="white" />
+                                                                <rect x="18.4084" y="15.52" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.4084 15.52)"
+                                                                    fill="white" />
+                                                                <rect x="18.104" y="19.2012" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.104 19.2012)"
+                                                                    fill="white" />
+                                                            </svg>
+                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="5.06592" y="19.9785" width="20.5712"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 5.06592 19.9785)"
+                                                                    fill="white" />
+                                                                <rect x="7.97095" y="7.24463" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 7.97095 7.24463)"
+                                                                    fill="white" />
+                                                                <rect x="11.6523" y="7.54834" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 11.6523 7.54834)"
+                                                                    fill="white" />
+                                                                <rect x="15.334" y="7.85205" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 15.334 7.85205)"
+                                                                    fill="white" />
+                                                                <rect x="18.7119" y="11.8374" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.7119 11.8374)"
+                                                                    fill="white" />
+                                                                <rect x="18.4084" y="15.52" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.4084 15.52)"
+                                                                    fill="white" />
+                                                                <rect x="18.104" y="19.2012" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.104 19.2012)"
+                                                                    fill="white" />
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xb-project-item bg_img">
+                                    <video class="video-bg" autoplay loop muted playsinline>
+                                        <source src="<?= base_url('public/web/assets/video/video-5.mp4') ?>" type="video/mp4">
+                                    </video>
+                                    <div class="xb-project-content">
+                                        <div class="xb-item--inner xb-border">
+                                            <h2 class="xb-item--title mb-0">Partner Marketplace</h2>
+                                            <span class="coming-soon-pill coming-soon-pill--stacked">Coming soon</span>
+                                            <p class="xb-item--content">
+                                                An exclusive marketplace where users can redeem their Litties for
+                                                real-world goods, services, and discounts from a curated list of brands.
+                                            </p>
+                                            <div class="xb-item---btn mt-30">
+                                                <a class="thm-btn agency-btn" href="<?= base_url('feature-daily-social-map') ?>">
+                                                    <span class="text">
+                                                        read more
+                                                    </span>
+                                                    <span class="arrow">
+                                                        <span class="arrow-icon">
+                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="5.06592" y="19.9785" width="20.5712"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 5.06592 19.9785)"
+                                                                    fill="white" />
+                                                                <rect x="7.97095" y="7.24463" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 7.97095 7.24463)"
+                                                                    fill="white" />
+                                                                <rect x="11.6523" y="7.54834" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 11.6523 7.54834)"
+                                                                    fill="white" />
+                                                                <rect x="15.334" y="7.85205" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 15.334 7.85205)"
+                                                                    fill="white" />
+                                                                <rect x="18.7119" y="11.8374" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.7119 11.8374)"
+                                                                    fill="white" />
+                                                                <rect x="18.4084" y="15.52" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.4084 15.52)"
+                                                                    fill="white" />
+                                                                <rect x="18.104" y="19.2012" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.104 19.2012)"
+                                                                    fill="white" />
+                                                            </svg>
+                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="5.06592" y="19.9785" width="20.5712"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 5.06592 19.9785)"
+                                                                    fill="white" />
+                                                                <rect x="7.97095" y="7.24463" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 7.97095 7.24463)"
+                                                                    fill="white" />
+                                                                <rect x="11.6523" y="7.54834" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 11.6523 7.54834)"
+                                                                    fill="white" />
+                                                                <rect x="15.334" y="7.85205" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 15.334 7.85205)"
+                                                                    fill="white" />
+                                                                <rect x="18.7119" y="11.8374" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.7119 11.8374)"
+                                                                    fill="white" />
+                                                                <rect x="18.4084" y="15.52" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.4084 15.52)"
+                                                                    fill="white" />
+                                                                <rect x="18.104" y="19.2012" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.104 19.2012)"
+                                                                    fill="white" />
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xb-project-item bg_img">
+                                    <video class="video-bg" autoplay loop muted playsinline>
+                                        <source src="<?= base_url('public/web/assets/video/video-6.mp4') ?>" type="video/mp4">
+                                    </video>
+                                    <div class="xb-project-content">
+                                        <div class="xb-item--inner xb-border">
+                                            <h2 class="xb-item--title mb-0">My Passport</h2>
+                                            <span class="coming-soon-pill coming-soon-pill--stacked">Coming soon</span>
+                                            <p class="xb-item--content">
+                                                WERN Digital Passport: Every step you take becomes a journey — unlock
+                                                city badges, leave your footprints across countries, watch your
+                                                eco-impact grow, and share your achievements with a community that
+                                                celebrates every milestone. Explore, earn, and see your progress come
+                                                alive.
+                                            </p>
+                                            <div class="xb-item---btn mt-30">
+                                                <a class="thm-btn agency-btn" href="<?= base_url('feature-daily-social-map') ?>">
+                                                    <span class="text">
+                                                        read more
+                                                    </span>
+                                                    <span class="arrow">
+                                                        <span class="arrow-icon">
+                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="5.06592" y="19.9785" width="20.5712"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 5.06592 19.9785)"
+                                                                    fill="white" />
+                                                                <rect x="7.97095" y="7.24463" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 7.97095 7.24463)"
+                                                                    fill="white" />
+                                                                <rect x="11.6523" y="7.54834" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 11.6523 7.54834)"
+                                                                    fill="white" />
+                                                                <rect x="15.334" y="7.85205" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 15.334 7.85205)"
+                                                                    fill="white" />
+                                                                <rect x="18.7119" y="11.8374" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.7119 11.8374)"
+                                                                    fill="white" />
+                                                                <rect x="18.4084" y="15.52" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.4084 15.52)"
+                                                                    fill="white" />
+                                                                <rect x="18.104" y="19.2012" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.104 19.2012)"
+                                                                    fill="white" />
+                                                            </svg>
+                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="5.06592" y="19.9785" width="20.5712"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 5.06592 19.9785)"
+                                                                    fill="white" />
+                                                                <rect x="7.97095" y="7.24463" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 7.97095 7.24463)"
+                                                                    fill="white" />
+                                                                <rect x="11.6523" y="7.54834" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 11.6523 7.54834)"
+                                                                    fill="white" />
+                                                                <rect x="15.334" y="7.85205" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 15.334 7.85205)"
+                                                                    fill="white" />
+                                                                <rect x="18.7119" y="11.8374" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.7119 11.8374)"
+                                                                    fill="white" />
+                                                                <rect x="18.4084" y="15.52" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.4084 15.52)"
+                                                                    fill="white" />
+                                                                <rect x="18.104" y="19.2012" width="2.61221"
+                                                                    height="2.61221"
+                                                                    transform="rotate(-40.2798 18.104 19.2012)"
+                                                                    fill="white" />
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- feature start -->
+                <section id="features" class="feature pb-155">
+                    <div class="container">
+                        <div class="sec-title sec-title--two feature-sec-title text-center mb-45">
+
+                            <h2 class="title">All Features</h2>
+
+                        </div>
+
+                        <!-- Feature Tabs -->
+                        <div class="feature-tabs-wrapper text-center mb-50">
+                            <ul class="feature-tabs-nav ul_li_center">
+                                <li class="tab-item thm-btn chatbot-btn active" data-filter="allcategories">Features
+                                    Categories</li>
+                                <li class="tab-item thm-btn chatbot-btn" data-filter="allFeatures">All Features</li>
+                            </ul>
+                        </div>
+
+                        <div class="row mt-none-30">
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allcategories">
+                                <div class="xb-feature-item-3 h-100 big-item wow fadeInUp" data-wow-delay="0ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/feature/1.png') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+                                            <div class="tagWithHeading">
+                                                <h2 class="xb-item--title">Core Features</h2>
+                                                <div class="badgeTag">12 Features</div>
+                                            </div>
+                                            <p class="xb-item--content">
+                                                Essential platform functionality including onboarding, rewards, and core
+                                                user experience features.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allcategories">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="100ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 100ms; animation-name: fadeInUp;">
+                                   
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/feature/2.png') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+                                            <div class="tagWithHeading">
+                                                <h2 class="xb-item--title">Gamification</h2>
+                                                <div class="badgeTag">8 Features</div>
+                                            </div>
+                                            <p class="xb-item--content">
+                                                Engagement-driven features including badges, leaderboards, streaks, and
+                                                achievement systems.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allcategories">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="0ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 0ms; animation-name: none;">
+                                    
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/feature/3.png') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+                                            <div class="tagWithHeading">
+                                                <h2 class="xb-item--title">Analytics & Impact</h2>
+                                                <div class="badgeTag">7 Features</div>
+                                            </div>
+                                            <p class="xb-item--content">
+                                                Data-driven insights, carbon tracking, impact measurement, and advanced
+                                                analytics.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allcategories">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="100ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 100ms; animation-name: none;">
+                                    
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/feature/4.png') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+                                            <div class="tagWithHeading">
+                                                <h2 class="xb-item--title">Safety & Wellness</h2>
+                                                <div class="badgeTag">6 Features</div>
+                                            </div>
+                                            <p class="xb-item--content">
+                                                Safety-first features including emergency network, women's safety
+                                                toolkit, and parental controls.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allcategories">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="200ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 200ms; animation-name: none;">
+                                    
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/feature/5.png') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+                                            <div class="tagWithHeading">
+                                                <h2 class="xb-item--title">B2B & Enterprise</h2>
+                                                <div class="badgeTag">7 Features</div>
+                                            </div>
+                                            <p class="xb-item--content">
+                                                Corporate wellness integration, API access, white-label solutions, and
+                                                enterprise features.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allcategories">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="300ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 300ms; animation-name: none;">
+                                    
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/feature/6.png') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+                                            <div class="tagWithHeading">
+                                                <h2 class="xb-item--title">Social & Proximity</h2>
+                                                <div class="badgeTag">5 Features</div>
+                                            </div>
+                                            <p class="xb-item--content">
+                                                Community-building features including proximity-based social, maps, and
+                                                social interactions.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="400ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 400ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/1.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">User Onboarding</h2>
+                                            <p class="xb-item--content">
+                                                WERN's User Onboarding system represents a paradigm shift in how fitness
+                                                and wellness platforms welcome new members.
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('User Onboarding')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Core</span>
+                                                    <span class="deepTag">Live</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="500ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 500ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/2.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+                                            <h2 class="xb-item--title mt-3">Step-based Rewards</h2>
+                                            <p class="xb-item--content">
+                                                Step-based Rewards form the absolute foundation of WERN's revolutionary
+                                                movement economy—the mechanism that transforms
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Step-based Rewards')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Core</span>
+                                                    <span class="deepTag">Live</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="600ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 600ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/3.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Proximity-based Social</h2>
+                                            <p class="xb-item--content">
+                                                Proximity-based Social is WERN's groundbreaking innovation that
+                                                transforms walking from a solitary activity into a connected,
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Proximity-based Social')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Social</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="700ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 700ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/4.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Daily Referral System</h2>
+                                            <p class="xb-item--content">
+                                                The Daily Referral System is WERN's powerful growth engine—a
+                                                comprehensive, multi-tiered referral program that transforms
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Daily Referral System')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Core</span>
+                                                    <span class="deepTag">Live</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="800ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 800ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/5.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Daily Social Map</h2>
+                                            <p class="xb-item--content">
+                                                The Daily Social Map is WERN's advanced, real-time visualization system
+                                                that transforms how users understand and interact
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Daily Social Map')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Social</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="900ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 900ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/6.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Civic Reporting</h2>
+                                            <p class="xb-item--content">
+                                                Civic Reporting represents WERN's commitment to transforming individual
+                                                walking journeys into collective community improvement
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Civic Reporting')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Core</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1000ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1000ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/7.png') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Kindness Score (Karma)</h2>
+                                            <p class="xb-item--content">
+                                                Kindness Score (Karma) is WERN's proprietary gamification metric—a
+                                                revolutionary reputation system that quantifies and rewards
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Kindness Score (Karma)')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Gamification</span>
+                                                    <span class="deepTag">Live</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1100ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1100ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/8.png') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Carbon Footprint Reporting</h2>
+                                            <p class="xb-item--content">
+                                                Carbon Footprint Reporting is WERN's comprehensive environmental impact
+                                                measurement system—a sophisticated
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Carbon Footprint Reporting')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Analytics</span>
+                                                    <span class="deepTag">Live</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1200ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1200ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/9.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Carbon Footprint Tracker</h2>
+                                            <p class="xb-item--content">
+                                                Carbon Footprint Tracker is WERN's personal-level environmental impact
+                                                visualization system—a real-time tool that transforms abstract
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Carbon Footprint Tracker')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Analytics</span>
+                                                    <span class="deepTag">Live</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1300ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1300ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/10.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Custom Challenges (Elite)</h2>
+                                            <p class="xb-item--content">
+                                                Custom Challenges (Elite) is WERN's premium challenge creation system—a
+                                                sophisticated platform that empowers organizations,
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Custom Challenges (Elite)')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Business</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1400ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1400ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/12.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Post-Walk Analytics (Elite)</h2>
+                                            <p class="xb-item--content">
+                                                Post-Walk Analytics (Elite) is WERN's comprehensive post-activity
+                                                analysis system—an advanced analytics dashboard providing
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Post-Walk Analytics (Elite)')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Analytics</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1500ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1500ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/13.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Brand Ambassador System</h2>
+                                            <p class="xb-item--content">
+                                                Brand Ambassador System is WERN's comprehensive gamified recruitment and
+                                                advocacy program that empowers top-performing users
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Brand Ambassador System')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Business</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1600ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 1600ms; animation-name: fadeInUp;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/14.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Walk-to-Give Option</h2>
+                                            <p class="xb-item--content">
+                                                Walk-to-Give Option is WERN's transformative impact conversion feature
+                                                that empowers users to transform their earned Litties
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Walk-to-Give Option')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Core</span>
+                                                    <span class="deepTag">Live</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1700ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1700ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/15.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Emergency Network</h2>
+                                            <p class="xb-item--content">
+                                                Emergency Network is WERN's comprehensive safety-first feature system
+                                                designed to provide users with immediate access
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Emergency Network')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Safety</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1800ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 1800ms; animation-name: fadeInUp;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/16.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Challenges (Gamified)</h2>
+                                            <p class="xb-item--content">
+                                                Challenges (Gamified) is WERN's comprehensive challenge system featuring
+                                                ongoing themed competitions that transform walking
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Challenges (Gamified)')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Gamification</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1900ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 1900ms; animation-name: fadeInUp;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/17.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Footprint Visualization</h2>
+                                            <p class="xb-item--content">
+                                                Footprint Visualization is WERN's comprehensive visual analytics system
+                                                that transforms walking activity data into beautiful,
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Footprint Visualization')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Analytics</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="2000ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 2000ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/18.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Data Privacy Focus</h2>
+                                            <p class="xb-item--content">
+                                                Data Privacy Focus is WERN's comprehensive privacy and data protection
+                                                system built on a secure-by-design approach
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Data Privacy Focus')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Core</span>
+                                                    <span class="deepTag">Live</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="2100ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 2100ms; animation-name: fadeInUp;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/19.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Employer-Funded Rewards</h2>
+                                            <p class="xb-item--content">
+                                                Employer-Funded Rewards is WERN's innovative B2B2C model that enables
+                                                corporations to fund employee reward pools
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Employer-Funded Rewards')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Business</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="2200ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 2200ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/20.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Corporate Wellness Integration</h2>
+                                            <p class="xb-item--content">
+                                                Corporate Wellness Integration is WERN's comprehensive B2B platform
+                                                solution that enables organizations to implement
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Corporate Wellness Integration')">Learn
+                                                    More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Business</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="400ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 400ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/21.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Social Impact Dashboards</h2>
+                                            <p class="xb-item--content">
+                                                Social Impact Dashboards is WERN's comprehensive real-time visualization
+                                                system that displays collective community impact
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Social Impact Dashboards')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Analytics</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="500ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 500ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/22.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">API & Insights (White-Label)</h2>
+                                            <p class="xb-item--content">
+                                                API & Insights (White-Label) is WERN's comprehensive developer and
+                                                partnership integration platform providing RESTful APIs
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('API & Insights (White-Label)')">Learn
+                                                    More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Business</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="600ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 600ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/23.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Leaderboards</h2>
+                                            <p class="xb-item--content">
+                                                Leaderboards is WERN's comprehensive multi-tiered ranking system that
+                                                provides competitive motivation through global rankings
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Leaderboards')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Gamification</span>
+                                                    <span class="deepTag">Live</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="700ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 700ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/24.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Badges (NFT-Based)</h2>
+                                            <p class="xb-item--content">
+                                                Badges (NFT-Based) is WERN's revolutionary achievement recognition
+                                                system that combines gamification with blockchain technology,
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Badges (NFT-Based)')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Social</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="800ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 800ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/25.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Nearby Walkers Map</h2>
+                                            <p class="xb-item--content">
+                                                Nearby Walkers Map is WERN's interactive real-time mapping feature that
+                                                displays nearby walkers with precise location data
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Nearby Walkers Map')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Gamification</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="900ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 900ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/26.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Corporate Leagues</h2>
+                                            <p class="xb-item--content">
+                                                Corporate Leagues is WERN's structured competition framework designed
+                                                for organizations, providing division systems,
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Corporate Leagues')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Business</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1000ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1000ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/27.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Women's Safety Toolkit (GlowTokens)</h2>
+                                            <p class="xb-item--content">
+                                                Women's Safety Toolkit (GlowTokens) is WERN's breakthrough safety
+                                                innovation specifically designed to address the critical
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Women\'s Safety Toolkit (GlowTokens)')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Safety</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1100ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1100ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/28.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">KidLab Mode (PlayCoins & LabuBu)</h2>
+                                            <p class="xb-item--content">
+                                                KidLab Mode (PlayCoins & LabuBu) is WERN's comprehensive family-friendly
+                                                mode designed specifically for children,
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('KidLab Mode (PlayCoins & LabuBu)')">Learn
+                                                    More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Safety</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1200ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1200ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/29.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Impact Coin Version (Multi-Token)</h2>
+                                            <p class="xb-item--content">
+                                                Impact Coin Version (Multi-Token) is WERN's comprehensive multi-token
+                                                ecosystem that enables users to convert their walking
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Impact Coin Version (Multi-Token)')">Learn
+                                                    More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Core</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1300ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1300ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/30.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">AI Coach</h2>
+                                            <p class="xb-item--content">
+                                                AI Coach is WERN's intelligent personalized guidance system powered by
+                                                advanced artificial intelligence and machine learning
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('AI Coach')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Analytics</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1400ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1400ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/My Passport.png') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3 mb-0">My Passport</h2>
+                                            <p class="xb-item--content">
+                                                My Passport is WERN's comprehensive consolidated achievement and impact
+                                                record that serves as a user's digital identity,
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('My Passport')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Gamification</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1500ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1500ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/32.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Streaks</h2>
+                                            <p class="xb-item--content">
+                                                Streaks is WERN's comprehensive daily walking streak tracking
+                                                system
+                                                that rewards consistent activity through streak monitoring,
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Streaks')">Learn
+                                                    More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Gamification</span>
+                                                    <span class="deepTag">Live</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1600ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 1600ms; animation-name: fadeInUp;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/33.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Wallet</h2>
+                                            <p class="xb-item--content">
+                                                Wallet is WERN's secure digital wallet system that enables users
+                                                to
+                                                manage their Litties, impact coins, transaction history,
+                                            </p>
+                                            <div class="d-flex justify-content-between"></div>
+                                            <button class="text-successTxt text-uppercase fw-semibold"
+                                                onclick="openFeatureModal('Wallet')">Learn More
+                                            </button>
+                                            <div class="d-flex align-items-center gap-2 mt-3">
+                                                <span class="lightTag">Core</span>
+                                                <span class="deepTag">Live</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1700ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1700ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/34.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Referrals</h2>
+                                            <p class="xb-item--content">
+                                                Referrals is WERN's comprehensive referral tracking and reward
+                                                system
+                                                that enables users to earn rewards by inviting friends
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Referrals')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Core</span>
+                                                    <span class="deepTag">Live</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1900ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 1900ms; animation-name: fadeInUp;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/36.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Safe Route Verification</h2>
+                                            <p class="xb-item--content">
+                                                Safe Route Verification is WERN's comprehensive community-driven
+                                                route
+                                                safety system that enables users to discover
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Safe Route Verification')">Learn
+                                                    More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Safety</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="2000ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 2000ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/37.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Parental Controls</h2>
+                                            <p class="xb-item--content">
+                                                Parental Controls is WERN's comprehensive parental management
+                                                system
+                                                designed for KidLab Mode, providing geo-fencing
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Parental Controls')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Safety</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="2100ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 2100ms; animation-name: fadeInUp;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/38.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Geofencing</h2>
+                                            <p class="xb-item--content">
+                                                Geofencing is WERN's location-based boundary system that enables
+                                                users
+                                                to set custom geographic boundaries for safety
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Geofencing')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Safety</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="2200ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 2200ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/39.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Destination Missions</h2>
+                                            <p class="xb-item--content">
+                                                Destination Missions is WERN's location-based mission system
+                                                that
+                                                rewards users for walking to specific destinations
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Destination Missions')">Learn
+                                                    More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Gamification</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1600ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 1600ms; animation-name: fadeInUp;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/40.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Event Missions</h2>
+                                            <p class="xb-item--content">
+                                                Event Missions is WERN's time-limited event-based mission system
+                                                that
+                                                creates special walking challenges tied to occasions,
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Event Missions')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Gamification</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1700ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 1700ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/41.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Impact Coins Conversion</h2>
+                                            <p class="xb-item--content">
+                                                Impact Coins Conversion is WERN's seamless conversion system
+                                                that
+                                                enables users to transform their earned Litties
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Impact Coins Conversion')">Learn
+                                                    More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Core</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1800ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 1800ms; animation-name: fadeInUp;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/42.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Subscriptions (Premium)</h2>
+                                            <p class="xb-item--content">
+                                                Subscriptions (Premium) is WERN's premium subscription tier that
+                                                provides enhanced features, exclusive rewards, advanced
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Subscriptions (Premium)')">Learn
+                                                    More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Business</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="1900ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 1900ms; animation-name: fadeInUp;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/43.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Ambassador Program</h2>
+                                            <p class="xb-item--content">
+                                                Ambassador Program is WERN's elite program for top-performing
+                                                users
+                                                that
+                                                provides revenue sharing opportunities
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Ambassador Program')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Business</span>
+                                                    <span class="deepTag">Live</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="2000ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 2000ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/44.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Privacy Controls</h2>
+                                            <p class="xb-item--content">
+                                                Privacy Controls is WERN's comprehensive granular privacy
+                                                management
+                                                system that enables users to maintain complete
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Privacy Controls')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Core</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="2100ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: visible; animation-duration: 600ms; animation-delay: 2100ms; animation-name: fadeInUp;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/45.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Notifications</h2>
+                                            <p class="xb-item--content">
+                                                Notifications is WERN's intelligent notification system that
+                                                provides
+                                                customizable alerts for achievements, challenges
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Notifications')">Learn More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Core</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-30 feature-card hidden" data-category="allFeatures">
+                                <div class="xb-feature-item-3 h-100 wow fadeInUp" data-wow-delay="2200ms"
+                                    data-wow-duration="600ms"
+                                    style="visibility: hidden; animation-duration: 600ms; animation-delay: 2200ms; animation-name: none;">
+                                    <div class="xb-item--inner xb-border">
+                                        <div class="xb-img">
+                                            <img src="<?= base_url('public/web/assets/img/allfeatures/46.jpg') ?>" alt="image">
+                                        </div>
+                                        <div class="xb-item--holder">
+
+                                            <h2 class="xb-item--title mt-3">Accessibility & Inclusivity</h2>
+                                            <p class="xb-item--content">
+                                                Accessibility & Inclusivity is WERN's comprehensive
+                                                accessibility
+                                                system
+                                                that ensures the platform is usable and enjoyable
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="text-successTxt text-uppercase fw-semibold"
+                                                    onclick="openFeatureModal('Accessibility & Inclusivity')">Learn
+                                                    More
+                                                </button>
+                                                <div class="d-flex align-items-center gap-2 mt-3">
+                                                    <span class="lightTag">Core</span>
+                                                    <span class="deepTag">Upcoming</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+            </div>
+            </section>
+    </div>
+    <!-- feature end -->
+
+
+    <!-- process start -->
+    <section id="process" class="process-sction z-1 pt-150 d-none investor-only">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="xb-process-left-container wow fadeInLeft" data-wow-duration="600ms">
+                        <div class="sec-title sec-title--two process-title mb-50">
+                            <span class="sub-title d-block mb-25">
+                                <img src="<?= base_url('public/web/assets/img/icon/sub-left-icon.png') ?>" alt="icon">Innovation
+                                Roadmap</span>
+                            <h2 class="title d-inline">The Journey of Unstoppable Innovation</h2>
+                        </div>
+                        <div class="xb-process-step xb-border active">
+                            <div class="xb-img">
+                                <img src="<?= base_url('public/web/assets/img/process/img01.png') ?>" alt="image">
+                                <h2 class="step-number">01</h2>
+                            </div>
+                            <h2 class="step-name">Phase 1</h2>
+                        </div>
+                        <div class="xb-process-step xb-border">
+                            <div class="xb-img">
+                                <img src="<?= base_url('public/web/assets/img/process/img01.png') ?>" alt="image">
+                                <h2 class="step-number">02</h2>
+                            </div>
+                            <h2 class="step-name">Phase 2</h2>
+                        </div>
+                        <div class="xb-process-step xb-border">
+                            <div class="xb-img">
+                                <img src="<?= base_url('public/web/assets/img/process/img01.png') ?>" alt="image">
+                                <h2 class="step-number">03</h2>
+                            </div>
+                            <h2 class="step-name">Phase 3</h2>
+                        </div>
+                        <!-- <div class="xb-process-step xb-border">
+                            <div class="xb-img">
+                                <img src="<?= base_url('public/web/assets/img/process/img01.png') ?>" alt="image">
+                                <h2 class="step-number">04</h2>
+                            </div>
+                            <h2 class="step-name">Protect & Include</h2>
+                        </div>
+                        <div class="xb-process-step xb-border">
+                            <div class="xb-img">
+                                <img src="<?= base_url('public/web/assets/img/process/img01.png') ?>" alt="image">
+                                <h2 class="step-number">05</h2>
+                            </div>
+                            <h2 class="step-name">Scale & Sustain</h2>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-7 all Content need to change">
+                    <div class="xb-process-right-container pb-150 mt-none-30 wow fadeInRight" data-wow-duration="600ms">
+                        <div
+                            class="xb-process-item xb-ser-item contextCard xb-border img-hove-effect text-start ms-md-4">
+                            <div class="xb-item--inner">
+                                <h3 class="xb-item--title border-effect mb-4">
+                                    <a href="#0">Foundation & Core Growth (0-6 Months)</a>
+                                </h3>
+
+                                <div class="xb-project-content xb-item--inner p-0">
+                                    <ul class="xb-item--list ul_li m-0">
+                                        <li>Launch MVP:
+                                            <span> Release the core Walk & Earn, Refer & Earn, and user wallet
+                                                functionalities.</span>
+                                        </li>
+                                        <li>Deploy Safety Features:
+                                            <span> Roll out the first version of the Women's Safety Toolkit and
+                                                community safety maps.</span>
+                                        </li>
+                                        <li>User Acquisition:
+                                            <span> Focus on organic growth through the Refer & Earn model to
+                                                build a
+                                                strong foundational user base.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div
+                            class="xb-process-item xb-ser-item contextCard xb-border img-hove-effect text-start ms-md-4 mt-30">
+                            <div class="xb-item--inner">
+                                <h3 class="xb-item--title border-effect mb-4">
+                                    <a href="#0">Ecosystem Expansion (6-12 Months)</a>
+                                </h3>
+
+                                <div class="xb-project-content xb-item--inner p-0">
+                                    <ul class="xb-item--list ul_li m-0">
+                                        <li>Launch Partner Marketplace:
+                                            <span>Onboard our first cohort of brand partners, allowing users to
+                                                redeem
+                                                Litties for real products and services.</span>
+                                        </li>
+                                        <li>Introduce Branded Challenges:
+                                            <span>Allow brands to sponsor challenges and missions within the
+                                                app.</span>
+                                        </li>
+                                        <li>Enhance Social Features:
+                                            <span>Introduce community leagues and group challenges to foster
+                                                deeper
+                                                engagement.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="xb-process-item xb-ser-item contextCard xb-border img-hove-effect text-start ms-md-4 mt-30">
+                            <div class="xb-item--inner">
+                                <h3 class="xb-item--title border-effect mb-4">
+                                    <a href="#0">Platform Maturity & Scale (12-24 Months)</a>
+                                </h3>
+                                <div class="xb-project-content xb-item--inner p-0">
+                                    <ul class="xb-item--list ul_li m-0">
+                                        <li>Expand Impact Hub:
+                                            <span>Partner with more international and local NGOs to offer a
+                                                wider range
+                                                of causes for users to support.</span>
+                                        </li>
+                                        <li>Introduce Premium Tiers:
+                                            <span>Offer optional subscription plans for power users seeking
+                                                enhanced
+                                                features and reward multipliers.</span>
+                                        </li>
+                                        <li>International Expansion:
+                                            <span>Begin localizing the app and launching targeted campaigns in
+                                                new high-
+                                                growth international markets.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- process end -->
+
+    <!-- market opportunity start -->
+    <section id="competitive-landscape" class="competitive-landscape pos-rel pt-80 pb-100">
+        <div class="container">
+            <div class="sec-title mb-50">
+                <div class="d-flex align-items-center justify-content-center mb-3">
+                    <h2 class="title mb-0">Competitive Landscape</h2>
+                </div>
+                <p class="description d-block text-center m-auto"
+                    style="color: rgba(255,255,255,0.7); font-size: 16px; max-width: 900px;">
+                    WERN operates at the intersection of multiple markets, with different competitors in each
+                    vertical
+                    but no direct competitor offering the same integrated ecosystem:
+                </p>
+            </div>
+
+            <!-- Competitive Apps Overview -->
+            <div class="competitive-apps-overview">
+                <div class="container">
+                    <div class="apps-grid">
+                        <div class="app-card wern-card">
+                            <span class="new-badge">🌟 New</span>
+                            <h3 class="app-name mt-4">WERN</h3>
+                            <p class="app-stats">&lt;1K<br>developers</p>
+                        </div>
+                        <div class="app-card">
+                            <h3 class="app-name">WeWard</h3>
+                            <p class="app-stats">10M+<br>developers</p>
+                        </div>
+                        <div class="app-card">
+                            <h3 class="app-name">Sweatcoin</h3>
+                            <p class="app-stats">100M+<br>developers</p>
+                        </div>
+                        <div class="app-card">
+                            <h3 class="app-name">StepBet</h3>
+                            <p class="app-stats">5M+<br>developers</p>
+                        </div>
+                        <div class="app-card">
+                            <h3 class="app-name">StepSetGo</h3>
+                            <p class="app-stats">10M+<br>developers</p>
+                        </div>
+                        <div class="app-card">
+                            <h3 class="app-name">WalkEarn</h3>
+                            <p class="app-stats">10M+<br>developers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="competitive-tabs-wrapper text-center mb-50">
+                <ul class="competitiveTab1 competitive-tabs-nav ul_li_center">
+                    <li class="comp-tab-item thm-btn chatbot-btn active" data-comp-tab="core">
+                        <i class="fas fa-star"></i>
+                        <span>Core Features</span>
+                    </li>
+                    <li class="comp-tab-item thm-btn chatbot-btn" data-comp-tab="social">
+                        <i class="fas fa-users"></i>
+                        <span>Social & Proximity</span>
+                    </li>
+                    <li class="comp-tab-item thm-btn chatbot-btn" data-comp-tab="safety">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Safety & Unique</span>
+                    </li>
+                    <li class="comp-tab-item thm-btn chatbot-btn" data-comp-tab="esg">
+                        <i class="fas fa-leaf"></i>
+                        <span>ESG & Impact</span>
+                    </li>
+                    <li class="comp-tab-item thm-btn chatbot-btn" data-comp-tab="b2b">
+                        <i class="fas fa-building"></i>
+                        <span>B2B & Corporate</span>
+                    </li>
+                    <li class="comp-tab-item thm-btn chatbot-btn" data-comp-tab="analytics">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Analytics & Premium</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="competitive-tab-content">
+                <!-- Core Features Tab -->
+                <div id="comp-tab-core" class="comp-tab-pane active">
+                    <div class="table-responsive">
+                        <table class="competitive-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>WERN<br><span class="verified">(Verified)</span></th>
+                                    <th>WeWard<br><span class="verified">(Verified)</span></th>
+                                    <th>Sweatcoin<br><span class="verified">(Verified)</span></th>
+                                    <th>StepBet<br><span class="verified">(Verified)</span></th>
+                                    <th>StepSetGo<br><span class="verified">(Verified)</span></th>
+                                    <th>WalkEarn<br><span class="verified">(Verified)</span></th>
+                                    <th>Table Accuracy Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Total Downloads -->
+                                <tr class="normal-row">
+                                    <td>Total Downloads</td>
+                                    <td>&lt;1K</td>
+                                    <td>10M+</td>
+                                    <td>100M+</td>
+                                    <td>5M+</td>
+                                    <td>10M+</td>
+                                    <td>1M+</td>
+                                    <td></td>
+                                </tr>
+                                <!-- Launch Year -->
+                                <tr class="normal-row">
+                                    <td>Launch Year</td>
+                                    <td>2026</td>
+                                    <td>2019</td>
+                                    <td>2022</td>
+                                    <td>2015</td>
+                                    <td>2024</td>
+                                    <td>2026</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="core">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        User Onboarding
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="core">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <strong>User Onboarding: </strong> Frictionless sign-up and
+                                            orientation
+                                            process with
+                                            clear value propositions. Users can choose their user type
+                                            (resident,
+                                            tourist,
+                                            woman, etc.) upon login. Supports referral links for immediate
+                                            access to key
+                                            materials. Includes animated visual onboarding screens showcasing
+                                            the
+                                            platform's
+                                            walk-to-earn economy and social impact capabilities.
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="core">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Step-based Rewards
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Yes (betting pot)</td>
+                                    <td>Yes (SSG Coins)</td>
+                                    <td>Yes (cash/coins)</td>
+                                    <td>Accurate; universal core.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="core">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <strong>Step-based Rewards: </strong> The foundational reward
+                                            mechanism
+                                            where users
+                                            earn "Litties" (the basic unit currency) for walking. Conversion
+                                            rate: 1,000
+                                            steps =
+                                            1 Littie. Users earn through real-time step tracking using device
+                                            motion
+                                            sensors
+                                            (accelerometer) and GPS integration. The system includes fraud
+                                            prevention
+                                            mechanisms
+                                            with device attestation and improbable speed/acceleration detection.
+                                            Litties
+                                            can be
+                                            converted to impact coins or redeemed for goods, services, or social
+                                            impact.
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="social">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Daily Referral System
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Yes (invites)</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Accurate for most; WeWard partial Yes.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="social">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <strong>Daily Referral System: </strong> Comprehensive referral
+                                            program
+                                            allowing
+                                            users to invite friends with shareable links. Users earn bonus
+                                            Litties for
+                                            each
+                                            successful signup (typically 100 Litties when referred friend
+                                            completes
+                                            first
+                                            transaction). The system includes:
+
+                                            <ul class="innerList">
+                                                <li>Unique referral codes for each user (e.g., "JOHN2024")</li>
+                                                <li>Tracking of total referrals and active referrals</li>
+                                                <li>Multi-tier referral bonuses</li>
+                                                <li>Mentorship rewards for helping new users onboard</li>
+                                                <li>Social sharing integration for viral growth</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="social">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Daily Social Map
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"></span></td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="core">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <strong>Daily Social Map: </strong> An advanced, real-time map
+                                            interface
+                                            updated
+                                            continuously showing:
+
+                                            <ul class="innerList">
+                                                <li>Nearby walkers with GPS coordinates</li>
+                                                <li>Active trails and walking routes</li>
+                                                <li>Activity overlays (hotspots of walker density)</li>
+                                                <li>Safety zones and verified safe routes</li>
+                                                <li>Toggle views between "Nearby Flags" and "Nearby Trails"
+                                                    modes</li>
+                                                <li>Abu Dhabi-centered with multi-region support</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="esg">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Kindness Score (Karma)
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Partial (CO2 averted stats)</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>
+                                        Accurate; WERN proprietary.
+                                    </td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="safety">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Kindness Score (Karma): </strong> WERN's proprietary
+                                                gamification
+                                                metric. A positive-behavior score that increases with helpful
+                                                community
+                                                actions
+                                                including:
+                                            </p>
+
+                                            <ul class="innerList">
+                                                <li>Safety reporting and civic engagement</li>
+                                                <li>Completing community challenges</li>
+                                                <li>Helping other users</li>
+                                                <li>Participating in group walks</li>
+                                                <li>Contributing to social impact initiatives</li>
+                                                <li>Abu Dhabi-centered with multi-region support</li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                The score creates a reputation system that unlocks additional
+                                                rewards
+                                                and
+                                                recognition.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="esg">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Civic Reporting
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"></span></td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="esg">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Civic Reporting: </strong> Integrated reporting system
+                                                allowing
+                                                users to
+                                                report safety and community issues while walking. Contributes to
+                                                verified civic
+                                                engagement metrics and earns users Kindness Score points. Users
+                                                can
+                                                report:
+                                            </p>
+
+                                            <ul class="innerList">
+                                                <li>Potholes and infrastructure issues</li>
+                                                <li>Safety hazards</li>
+                                                <li>Lighting problems</li>
+                                                <li>Community concerns</li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                Reports are geotagged and submitted to municipal authorities.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="esg">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Carbon Footprint Reporting
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Partial (CO2 averted stats)</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>
+                                        Table understates WeWard; research suggests their 750K tons CO2 claim
+                                        verifiable.
+                                    </td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="esg">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Carbon Footprint Reporting: </strong> Aggregate impact
+                                                reporting
+                                                showing
+                                                estimated CO₂ averted from community walking activity. The
+                                                system
+                                                calculates
+                                                environmental impact based on:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>Steps taken vs. potential car trips avoided</li>
+                                                <li>Total distance walked by community</li>
+                                                <li>Estimated carbon offset in tons</li>
+                                                <li>Blockchain-verified attribution for corporate ESG reporting
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                Displays community-wide statistics like "750K tons CO₂ averted"
+                                                with
+                                                third-party
+                                                verification.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="esg">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Carbon Footprint Tracker
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Partial</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>
+                                        Similar; evidence leans toward WeWard overlap.
+                                    </td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="core">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Carbon Footprint Tracker: </strong> Personal-level
+                                                tracking of
+                                                individual eco-impact from steps with:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>Real-time CO₂ offset calculations per walk</li>
+                                                <li>Environmental badges for milestones</li>
+                                                <li>Visualization of cumulative impact</li>
+                                                <li>Progress rings showing impact goals</li>
+                                                <li>Integration with EcoCoins conversion (see Impact Coins)</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="analytics">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Custom Challenges (Elite)
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Partial</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="analytics">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Custom Challenges (Elite): </strong> Premium feature
+                                                allowing
+                                                users to
+                                                create and host private or public challenges with:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>Customizable step goals and time frames</li>
+                                                <li>Custom reward structures</li>
+                                                <li>Branded challenge themes</li>
+                                                <li>Private group challenges for teams/companies</li>
+                                                <li>Public community challenges for social engagement</li>
+                                                <li>Real-time leaderboards and progress tracking</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="analytics">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Post-Walk Analytics (Elite)
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Yes (personalized stats)</td>
+                                    <td>Yes (health stats)</td>
+                                    <td>Yes (instant feedback)</td>
+                                    <td>Partial (basic tracking)</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Table accurate but conservative; most have basics.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="core">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Post-Walk Analytics (Elite): </strong> Advanced
+                                                analytics
+                                                dashboard
+                                                providing:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li><strong>Trends: </strong> Daily, weekly, monthly step
+                                                    patterns</li>
+                                                <li>
+                                                    <strong>Streaks: </strong> Consecutive days of activity
+                                                    tracking
+                                                </li>
+                                                <li>
+                                                    <strong>Impact Score: </strong> Comprehensive metric
+                                                    combining
+                                                    steps, social
+                                                    engagement, and impact
+                                                </li>
+                                                <li>
+                                                    <strong>Goal Tracking: </strong> Progress toward personal
+                                                    fitness
+                                                    and impact
+                                                    goals
+                                                </li>
+                                                <li>
+                                                    <strong>Performance Metrics: </strong> Pace, elevation,
+                                                    route
+                                                    efficiency
+                                                </li>
+                                                <li>
+                                                    <strong>Health Insights: </strong> Calories burned, active
+                                                    minutes,
+                                                    distance
+                                                    covered
+                                                </li>
+                                                <li>
+                                                    <strong>Historical Data: </strong> Long-term performance
+                                                    trends and
+                                                    achievements
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="social">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Brand Ambassador System
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Accurate; WERN's gamified recruitment novel.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="esg">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Brand Ambassador System: </strong> Gamified recruitment
+                                                program
+                                                empowering top users to champion the platform. Features include:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>Selection of top 1% earners as brand ambassadors</li>
+                                                <li>Revenue sharing model for referrals and engagement</li>
+                                                <li>Exclusive perks and early access to features</li>
+                                                <li>Success story amplification for viral growth</li>
+                                                <li>Ambassador dashboard with analytics</li>
+                                                <li>Special badges and recognition in community</li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                The system creates "walking billboards" where paying 1 user
+                                                $2,000/month
+                                                creates
+                                                more FOMO than 400 users at $5/month.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="esg">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Walk-to-Give Option
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Yes (donations)</td>
+                                    <td>Yes (step donations)</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Table misses rivals' charity ties; WeWard/Sweatcoin qualify.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="safety">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Walk-to-Give Option: </strong> Impact conversion feature
+                                                allowing users
+                                                to transform earned Litties into verified social good:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>EcoCoins → </strong> Tree planting (10 EcoCoins = 1
+                                                    Tree
+                                                    Planted)
+                                                </li>
+                                                <li>
+                                                    <strong>AquaDrops → </strong> Clean water projects (10
+                                                    AquaDrops = 1
+                                                    Bottle
+                                                    Clean Water)
+                                                </li>
+                                                <li>
+                                                    <strong>GrainCoins → </strong> Food security initiatives
+                                                    (support
+                                                    meals for
+                                                    those in need)
+                                                </li>
+                                                <li>
+                                                    <strong>GlowTokens → </strong> Women's safety projects
+                                                </li>
+                                                <li>
+                                                    <strong>BloomCoins → </strong> Community growth milestones
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                All conversions are blockchain-verified with real-time impact
+                                                dashboards
+                                                showing
+                                                tangible outcomes.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="safety">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Emergency Network
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="core">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Emergency Network: </strong> Safety-first feature
+                                                providing:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li><strong>SOS Button: </strong> Instant emergency alerts</li>
+                                                <li>
+                                                    <strong>Safety Beacon: </strong> Real-time location sharing
+                                                    with
+                                                    trusted
+                                                    contacts
+                                                </li>
+                                                <li>
+                                                    <strong>Emergency Contacts: </strong> Pre-configured list of
+                                                    people
+                                                    to
+                                                    notify
+                                                </li>
+                                                <li>
+                                                    <strong>Panic Button Logic: </strong> Immediate notification
+                                                    to
+                                                    nearby
+                                                    walkers and authorities
+                                                </li>
+                                                <li>
+                                                    <strong>Safe Route Alerts: </strong> Warnings when entering
+                                                    unsafe
+                                                    areas
+                                                </li>
+                                                <li>
+                                                    <strong>Community Response: </strong> Nearby users notified
+                                                    to
+                                                    provide
+                                                    assistance
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="core">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Challenges
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Yes (weekly games)</td>
+                                    <td>Partial (implied)</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Accurate; StepSetGo lacks explicit.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="esg">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Challenges: </strong> Ongoing themed challenges and
+                                                carousels
+                                                including:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>Social Challenges: "Earn tokens together"</li>
+                                                <li>Step Tracking Challenges: "Stay motivated daily"</li>
+                                                <li>Safety Challenges: "Walk in groups"</li>
+                                                <li>Eco-Friendly Challenges: "Walk for a cause"</li>
+                                                <li>Invite Friend Challenges: "Grow our community"</li>
+                                                <li>Fitness Together Challenges: "Join the movement!"</li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                Each challenge displays participant count (e.g., "100+ Peoples
+                                                Joined"),
+                                                rewards
+                                                structure, and view details option.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="core">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Footprint Visualization
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Partial (progress charts)</td>
+                                    <td>Yes (stats viz)</td>
+                                    <td>Partial (goal tracking)</td>
+                                    <td>Partial (calorie maps)</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Table fair; visualization varies by depth.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="analytics">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Footprint Visualization: </strong> Visual
+                                                representations of
+                                                activity
+                                                patterns including:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>Heatmaps: </strong> Geographic visualization of
+                                                    walking
+                                                    frequency
+                                                </li>
+                                                <li>
+                                                    <strong>Activity Summary Maps: </strong> Overview of routes
+                                                    traveled
+                                                </li>
+                                                <li>
+                                                    <strong>Environmental Attribution: </strong> Visual linkage
+                                                    between
+                                                    steps
+                                                    and impact
+                                                </li>
+                                                <li>
+                                                    <strong>Progress Charts: </strong> Graphical representation
+                                                    of
+                                                    achievements
+                                                </li>
+                                                <li>
+                                                    <strong>Route History: </strong> Archive of all walking
+                                                    paths with
+                                                    stats
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="analytics">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Data Privacy Focus
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Yes (no sell data)</td>
+                                    <td>Yes (100% privacy)</td>
+                                    <td>Partial (standard)</td>
+                                    <td>Yes (no misuse)</td>
+                                    <td>Partial</td>
+                                    <td>Accurate; all emphasize but WERN/Sweatcoin strongest.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="b2b">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Data Privacy Focus: </strong> Secure-by-design approach
+                                                with:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>GDPR/ADGM DPA compliance</li>
+                                                <li>User consent mechanisms for data collection</li>
+                                                <li>Granular privacy controls</li>
+                                                <li>Data portability and right to erasure</li>
+                                                <li>No data selling policy (stated explicitly)</li>
+                                                <li>End-to-end encryption for sensitive data</li>
+                                                <li>Minimal PII in events (opaque identifiers)</li>
+                                                <li>Compliance with WCAG 2.2 accessibility standards</li>
+                                                <li>Regular security audits and penetration testing</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="b2b">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Employer-Funded Rewards
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Partial (corporate challenges)</td>
+                                    <td>Partial (business programs)</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Table accurate; WeWard close via communities.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="b2b">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Employer-Funded Rewards: </strong> B2B2C model where
+                                                corporate
+                                                wellness
+                                                budgets fund employee reward pools:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>Companies pay annual fees ($399-$799/corporate partner)</li>
+                                                <li>Budget channeled to employee walking rewards</li>
+                                                <li>Verified impact initiatives sponsored by employers</li>
+                                                <li>Branded corporate challenges with company-specific rewards
+                                                </li>
+                                                <li>Employee health tracking with measurable ROI</li>
+                                                <li>Reduces platform's user acquisition costs (CAC)</li>
+                                                <li>Creates sustainable engagement without draining platform
+                                                    liquidity
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="b2b">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Corporate Wellness Integration
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Partial</td>
+                                    <td>Partial</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Accurate; WERN targets B2B.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="esg">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Corporate Wellness Integration: </strong> Comprehensive
+                                                B2B
+                                                platform
+                                                offering:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>Corporate Leagues: </strong> Division-based
+                                                    competitions for
+                                                    departments
+                                                </li>
+                                                <li>
+                                                    <strong>Branded Programs: </strong> Company-specific
+                                                    challenges and
+                                                    branding
+                                                </li>
+                                                <li>
+                                                    <strong>Leaderboards: </strong> Team and organizational
+                                                    rankings
+                                                </li>
+                                                <li>
+                                                    <strong>API Integration: </strong> Connection with existing
+                                                    HR/wellness
+                                                    systems (Workday, SAP SuccessFactors)
+                                                </li>
+                                                <li>
+                                                    <strong>White-Label Options: </strong> Customizable platform
+                                                    deployment
+                                                </li>
+                                                <li>
+                                                    <strong>ESG Dashboards: </strong> Blockchain-verified
+                                                    employee
+                                                    wellness and
+                                                    environmental impact metrics
+                                                </li>
+                                                <li>
+                                                    <strong>Real-time Analytics: </strong> Participation rates,
+                                                    health
+                                                    outcomes,
+                                                    ROI tracking
+                                                </li>
+                                                <li>
+                                                    <strong>CTR Advantage: </strong> 90% click-through rate vs.
+                                                    0.9%
+                                                    traditional
+                                                    ads
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="esg">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Social Impact Dashboards
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Yes (donation stats)</td>
+                                    <td>Partial (charity real-time)</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Table understates WeWard.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="b2b">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Social Impact Dashboards: </strong> Real-time
+                                                visualization of
+                                                collective impact showing:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>Water Provided: </strong> AquaDrops converted to
+                                                    clean water
+                                                    access
+                                                </li>
+                                                <li>
+                                                    <strong>Meals Donated: </strong> GrainCoins supporting food
+                                                    security
+                                                </li>
+                                                <li>
+                                                    <strong>Safety Infrastructure: </strong> GlowTokens funding
+                                                    women's
+                                                    safety
+                                                    projects
+                                                </li>
+                                                <li>
+                                                    <strong>Blockchain Verification: </strong> Immutable proof
+                                                    of impact
+                                                    for ESG
+                                                    reporting
+                                                </li>
+                                                <li>
+                                                    <strong>Community Metrics: </strong> Aggregate statistics
+                                                    for all
+                                                    users
+                                                </li>
+                                                <li>
+                                                    <strong>Corporate Reports: </strong> Downloadable impact
+                                                    reports for
+                                                    B2B
+                                                    clients
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="b2b">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        API & Insights
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Partial (partners)</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Accurate; developer-focused rarity.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="core">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>API & Insights: </strong> Developer and partnership
+                                                integration
+                                                features:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>RESTful APIs: </strong> Full access to platform
+                                                    functionality
+                                                </li>
+                                                <li>
+                                                    <strong>Integration-Ready Architecture: </strong> Modular
+                                                    microservices
+                                                    design
+                                                </li>
+                                                <li>
+                                                    <strong>Analytics Endpoints: </strong> Access to
+                                                    participation,
+                                                    retention,
+                                                    and impact metrics
+                                                </li>
+                                                <li>
+                                                    <strong>White-Label Deployment: </strong> Customizable
+                                                    platform for
+                                                    partners
+                                                </li>
+                                                <li>
+                                                    <strong>Partner Dashboard: </strong> Real-time data
+                                                    visualization
+                                                </li>
+                                                <li>
+                                                    <strong>Webhook Support: </strong> Event-driven
+                                                    notifications
+                                                </li>
+                                                <li>
+                                                    <strong>Documentation: </strong> Comprehensive API reference
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                Enables B2B2C distribution through healthcare providers,
+                                                insurance
+                                                companies,
+                                                and enterprise clients.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="core">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Leaderboards
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Partial (challenges)</td>
+                                    <td>Partial (pot splits)</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Accurate.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="core">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Leaderboards:</strong> Multi-tiered ranking system
+                                                showing:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>Global Leaderboards:</strong> Top performers
+                                                    worldwide
+                                                </li>
+                                                <li>
+                                                    <strong>Friend Leaderboards:</strong> Competition within
+                                                    social
+                                                    circles
+                                                </li>
+                                                <li>
+                                                    <strong>Team Leaderboards:</strong> Department/company
+                                                    rankings
+                                                </li>
+                                                <li>
+                                                    <strong>Challenge-Specific:</strong> Leaderboards per active
+                                                    challenge
+                                                </li>
+                                                <li>
+                                                    <strong>Ranking Metrics:</strong> Steps, streaks, impact
+                                                    score,
+                                                    challenges
+                                                    completed
+                                                </li>
+                                                <li>
+                                                    <strong>Fixed Windows:</strong> Daily, weekly, monthly,
+                                                    all-time
+                                                </li>
+                                                <li>
+                                                    <strong>Real-time Updates:</strong> Live score changes with
+                                                    grace
+                                                    periods
+                                                </li>
+                                                <li>
+                                                    <strong>Technology:</strong> Uses Redis for high-performance
+                                                    real-time
+                                                    calculations
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                Encourages continuous engagement, healthy competition, and
+                                                transparent
+                                                performance tracking across all user levels.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="core">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Badges
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Partial (WeCards)</td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Accurate.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="social">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Badges:</strong> Achievement system with
+                                                blockchain-backed
+                                                recognition:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>Milestone Badges:</strong> Step count achievements
+                                                    (10K,
+                                                    50K, 100K+)
+                                                </li>
+                                                <li>
+                                                    <strong>Cause Badges:</strong> Impact-specific recognition
+                                                    (trees
+                                                    planted,
+                                                    water provided)
+                                                </li>
+                                                <li>
+                                                    <strong>Streak Badges:</strong> Consecutive activity
+                                                    achievements
+                                                </li>
+                                                <li>
+                                                    <strong>Event Badges:</strong> Participation in special
+                                                    challenges
+                                                </li>
+                                                <li>
+                                                    <strong>Ambassador Badges:</strong> Exclusive rewards for
+                                                    brand
+                                                    ambassadors
+                                                </li>
+                                                <li>
+                                                    <strong>Blockchain Minting:</strong> ERC-721 NFTs for
+                                                    permanent,
+                                                    verifiable
+                                                    ownership
+                                                </li>
+                                                <li>
+                                                    <strong>Visual Design:</strong> Rich, animated badge
+                                                    graphics to
+                                                    enhance
+                                                    user engagement
+                                                </li>
+                                                <li>
+                                                    <strong>Social Sharing:</strong> Display badges on profiles
+                                                    and
+                                                    share
+                                                    externally
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                Minting uses idempotency to prevent duplicates.
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="social">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Nearby Walkers
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Accurate; safety/location tie-in unique.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="b2b">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Nearby Walkers: </strong> (See Proximity-based Social
+                                                for
+                                                comprehensive
+                                                details)
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="b2b">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Corporate Leagues
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="safety">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Corporate Leagues:</strong> Structured competition
+                                                framework for
+                                                organizations:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>Division System:</strong> Bronze, Silver, Gold,
+                                                    Platinum
+                                                    tiers
+                                                </li>
+                                                <li>
+                                                    <strong>Department Competitions:</strong> Inter-department
+                                                    rivalries
+                                                </li>
+                                                <li>
+                                                    <strong>Partner Organization Tournaments:</strong>
+                                                    Multi-company
+                                                    events
+                                                </li>
+                                                <li>
+                                                    <strong>Custom Rules:</strong> Configurable scoring and
+                                                    reward
+                                                    structures
+                                                </li>
+                                                <li>
+                                                    <strong>Progress Tracking:</strong> Real-time standings and
+                                                    analytics
+                                                </li>
+                                                <li>
+                                                    <strong>Rewards:</strong> Company-funded prize pools
+                                                </li>
+                                                <li>
+                                                    <strong>Integration:</strong> HR system connectivity for
+                                                    automatic
+                                                    enrollment
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="safety">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Women's Safety Toolkit (Glow)
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Accurate; emerging need unmet elsewhere.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="safety">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Women's Safety Toolkit (Glow):</strong> WERN's
+                                                breakthrough
+                                                safety
+                                                innovation addressing the fact that 68% of women avoid outdoor
+                                                exercise
+                                                due to
+                                                safety fears:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>GlowTokens:</strong> Specialized currency rewarding
+                                                    safe
+                                                    route usage
+                                                    and safety community participation
+                                                </li>
+                                                <li>
+                                                    <strong>Verified Safe Routes:</strong> Community-validated
+                                                    walking
+                                                    paths
+                                                    with lighting and traffic verification
+                                                </li>
+                                                <li>
+                                                    <strong>Safety Scoring System:</strong> Routes rated for
+                                                    safety
+                                                    based on
+                                                    user feedback
+                                                </li>
+                                                <li>
+                                                    <strong>Emergency Escort Features:</strong> Option to
+                                                    request
+                                                    companion
+                                                    walkers in unsafe areas
+                                                </li>
+                                                <li>
+                                                    <strong>Safe Route Multipliers:</strong> Bonus GlowTokens
+                                                    for using
+                                                    verified
+                                                    safe paths
+                                                </li>
+                                                <li>
+                                                    <strong>Safety Community:</strong> Women-focused walking
+                                                    groups and
+                                                    challenges
+                                                </li>
+                                                <li>
+                                                    <strong>Funding Allocation:</strong> GlowTokens converted to
+                                                    fund
+                                                    safety
+                                                    infrastructure like lighting, cameras, and patrols
+                                                </li>
+                                                <li>
+                                                    <strong>Blockchain Verification:</strong> Transparent
+                                                    tracking of
+                                                    safety
+                                                    investments
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                This feature is completely unique to WERN—no competitor offers
+                                                this
+                                                level of
+                                                integrated safety innovation.
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="safety">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        KidLab Mode
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Accurate; family gap.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="esg">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>KidLab Mode:</strong> Family-friendly mode with
+                                                child-appropriate
+                                                features:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>PlayCoins:</strong> Specialized currency earned
+                                                    through
+                                                    basic
+                                                    walking with bonuses for family or group walks
+                                                </li>
+                                                <li>
+                                                    <strong>LabuBu Collections:</strong> Gamified collectible
+                                                    system
+                                                    featuring
+                                                    LabuBu character-based rewards
+                                                </li>
+                                                <li>
+                                                    <strong>Parental Controls:</strong> Guardian-managed child
+                                                    accounts
+                                                    for safe
+                                                    participation
+                                                </li>
+                                                <li>
+                                                    <strong>Geo-Fencing:</strong> Safety zones with real-time
+                                                    breach
+                                                    alerts
+                                                </li>
+                                                <li>
+                                                    <strong>Custom Missions:</strong> Parent-created walking
+                                                    challenges
+                                                    for
+                                                    children
+                                                </li>
+                                                <li>
+                                                    <strong>Family Challenges:</strong> Shared goals that
+                                                    promote
+                                                    collaboration
+                                                    and collective rewards
+                                                </li>
+                                                <li>
+                                                    <strong>Age-Appropriate Content:</strong> Moderated and
+                                                    secure
+                                                    interaction
+                                                    environment
+                                                </li>
+                                                <li>
+                                                    <strong>Educational Integration:</strong> Schools and
+                                                    educational
+                                                    institutions can use it to promote student health
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                Addresses the family gap in the walk-to-earn market.
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="esg">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        Impact Coin Version
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td>Partial (Wards)</td>
+                                    <td>Partial (Sweatcoins)</td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Partial (SSG Coins)</td>
+                                    <td>Partial (coins)</td>
+                                    <td>Accurate for distinction.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="analytics">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>Impact Coin Version:</strong> Comprehensive multi-tiered
+                                                currency
+                                                ecosystem:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>Litties:</strong> Basic unit (1,000 steps = 1
+                                                    Littie),
+                                                    universal
+                                                    currency
+                                                </li>
+                                                <li>
+                                                    <strong>EcoCoins:</strong> Earned through environmental
+                                                    challenges,
+                                                    converted into tree planting
+                                                </li>
+                                                <li>
+                                                    <strong>AquaDrops:</strong> Water-themed challenges
+                                                    supporting clean
+                                                    water
+                                                    projects
+                                                </li>
+                                                <li>
+                                                    <strong>GrainCoins:</strong> Rewards contributing to food
+                                                    security
+                                                    initiatives
+                                                </li>
+                                                <li>
+                                                    <strong>GlowTokens:</strong> Rewards for using safe routes,
+                                                    funding
+                                                    women's
+                                                    safety programs
+                                                </li>
+                                                <li>
+                                                    <strong>BloomCoins:</strong> Earned from personal growth
+                                                    milestones
+                                                    and
+                                                    community engagement
+                                                </li>
+                                                <li>
+                                                    <strong>PlayCoins:</strong> Children's mode walking rewards
+                                                </li>
+                                                <li>
+                                                    <strong>SmileTokens:</strong> Rewards for positive community
+                                                    interactions
+                                                </li>
+                                                <li>
+                                                    <strong>HeroSteps:</strong> Recognition for exceptional
+                                                    achievements
+                                                </li>
+                                                <li>
+                                                    <strong>StoryCoins:</strong> Rewards for engaging with
+                                                    educational
+                                                    content
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                Clear conversion ratios with blockchain tracking ensure
+                                                transparency.
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="analytics">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        AI Coach
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td>Accurate; WERN's edge in personalization.</td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="analytics">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>AI Coach:</strong> Personalized AI-powered guidance
+                                                system:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>Adaptive Recommendations:</strong> Routes, timing,
+                                                    and
+                                                    challenge
+                                                    suggestions based on user behavior
+                                                </li>
+                                                <li>
+                                                    <strong>Smart Prompts:</strong> Nudges to improve habits and
+                                                    optimize step
+                                                    rewards
+                                                </li>
+                                                <li>
+                                                    <strong>Predictive Insights:</strong> Forecasts user
+                                                    performance and
+                                                    engagement trends
+                                                </li>
+                                                <li>
+                                                    <strong>Habit Formation:</strong> Motivation built on
+                                                    behavioral
+                                                    science
+                                                    principles
+                                                </li>
+                                                <li>
+                                                    <strong>Performance Optimization:</strong> Tips for
+                                                    maximizing
+                                                    rewards and
+                                                    overall impact
+                                                </li>
+                                                <li>
+                                                    <strong>Health Coaching:</strong> Personalized fitness and
+                                                    wellness
+                                                    guidance
+                                                </li>
+                                                <li>
+                                                    <strong>Progress Analysis:</strong> AI-driven interpretation
+                                                    of user
+                                                    performance data
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0">
+                                                WERN's edge in personalization—competitors lack this level of
+                                                advanced
+                                                AI
+                                                integration.
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr class="accordion-row" data-expanded="false" data-comp-category="analytics">
+                                    <td class="accordion-trigger">
+                                        <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                        My Passport <span class="coming-soon-pill">Coming soon</span>
+                                    </td>
+                                    <td><span class="check-icon"><i class="fas fa-check"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td><span class="cross-icon"><i class="fas fa-times"></i></span></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="accordion-content" data-comp-category="analytics">
+                                    <td colspan="8">
+                                        <div class="expanded-content">
+                                            <p>
+                                                <strong>My Passport:</strong> Consolidated achievement and
+                                                impact
+                                                record:
+                                            </p>
+                                            <ul class="innerList">
+                                                <li>
+                                                    <strong>Digital Identity:</strong> Comprehensive user
+                                                    profile
+                                                </li>
+                                                <li>
+                                                    <strong>Achievement Archive:</strong> Complete collection of
+                                                    badges,
+                                                    milestones, and accomplishments
+                                                </li>
+                                                <li>
+                                                    <strong>Verified Impact Record:</strong>
+                                                    Blockchain-certified record
+                                                    of
+                                                    social and environmental contributions
+                                                </li>
+                                                <li>
+                                                    <strong>Global Activity Map:</strong> Visual display of
+                                                    walking
+                                                    locations
+                                                    worldwide
+                                                </li>
+                                                <li>
+                                                    <strong>Statistics Dashboard:</strong> Lifetime metrics
+                                                    including
+                                                    total
+                                                    steps, distance, and impact
+                                                </li>
+                                                <li>
+                                                    <strong>Social Proof:</strong> Shareable credentials for
+                                                    social
+                                                    media
+                                                </li>
+                                                <li>
+                                                    <strong>Export Functionality:</strong> Option to download
+                                                    full
+                                                    activity and
+                                                    impact reports
+                                                </li>
+                                                <li>
+                                                    <strong>NFT Gallery:</strong> Showcase of blockchain-minted
+                                                    badges
+                                                    and
+                                                    stamps
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- End Core Features Tab -->
+
+                <!-- Other tabs will show the same table but with filtered rows -->
+                <!-- The JavaScript will handle showing/hiding rows based on selected tab -->
+            </div>
+            <!-- End Tab Content -->
+
+            <!-- Feature Completion Comparison -->
+            <div class="feature-completion-wrapper">
+                <div class="feature-completion-grid">
+                    <div class="completion-card wern-complete">
+                        <div class="percentage-badge">100%</div>
+                        <div class="app-label">WERN</div>
+                        <div class="feature-count">4/4 features</div>
+                    </div>
+                    <div class="completion-card">
+                        <div class="percentage-badge">75%</div>
+                        <div class="app-label">WeWard</div>
+                        <div class="feature-count">3/4 features</div>
+                    </div>
+                    <div class="completion-card">
+                        <div class="percentage-badge">50%</div>
+                        <div class="app-label">Sweatcoin</div>
+                        <div class="feature-count">2/4 features</div>
+                    </div>
+                    <div class="completion-card">
+                        <div class="percentage-badge">25%</div>
+                        <div class="app-label">StepBet</div>
+                        <div class="feature-count">1/4 features</div>
+                    </div>
+                    <div class="completion-card">
+                        <div class="percentage-badge">25%</div>
+                        <div class="app-label">StepSetGo</div>
+                        <div class="feature-count">1/4 features</div>
+                    </div>
+                    <div class="completion-card">
+                        <div class="percentage-badge">0%</div>
+                        <div class="app-label">WalkEarn</div>
+                        <div class="feature-count">0/4 features</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- market opportunity end -->
+
+    <!-- coming soon start -->
+    <section id="coming-soon" class="about pos-rel pb-80 pt-80">
+        <div class="container">
+            <div class="sec-title sec-title-center about-sec-title about-sec-title-two mb-45">
+                <span class="sub-title mb-10">Upcoming</span>
+                <h2 class="title">
+                    What's Next on the Horizon
+                </h2>
+                <p class="content mt-0">
+                    Sneak peek at the groundbreaking features we're crafting for your walking revolution
+                </p>
+            </div>
+            <div class="card-wrap">
+                <!-- 3D Carousel -->
+                <div class="carousel" aria-roledescription="carousel">
+                    <button class="nav prev" aria-label="Vorherige Karte"><i
+                            class="fa-solid fa-angle-left"></i></button>
+
+                    <div class="deck" id="deck" role="region" aria-label="Produktkarussell">
+                        <!-- Card 1: Life Insurance -->
+                        <article class="product-card" role="group" aria-label="Product card 1">
+                            <div class="product-media">
+                                <img src="<?= base_url('public/web/assets/img/next/5.png') ?>"
+                                    alt="Life Insurance" width="220" height="220" />
+                                <div class="media-reflection"></div>
+                            </div>
+                            <div class="product-head">
+                                <h2 class="product-name">Liberte Life Insurance:</h2>
+                                <p class="product-sub">
+                                    A modern, accessible protection model that rewards everyday engagement.
+                                    Users
+                                    earn meaningful life coverage simply by being active on the app
+                                </p>
+                            </div>
+                            <div class="product-ctrl">
+                                <h6>Key Highlights:</h6>
+                                <ul>
+                                    <li>Free instant coverage through in-app activities</li>
+                                    <li>Up to AED 100K (standard) and AED 10M (premium)</li>
+                                    <li>Add multiple beneficiaries</li>
+                                    <li>Earn or purchase points to increase coverage</li>
+                                    <li>Easy annual renewal with non-expiring points</li>
+
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Card 2: Job Portal -->
+                        <article class="product-card" role="group" aria-label="Product card 2">
+                            <div class="product-media">
+                                <img src="<?= base_url('public/web/assets/img/next/4.png') ?>"
+                                    alt="Job Portal" width="220" height="220" />
+                                <div class="media-reflection"></div>
+                            </div>
+                            <div class="product-head">
+                                <h2 class="product-name">Liberte Job Portal</h2>
+                                <p class="product-sub">
+                                    A next-gen platform linking job seekers and employers with intelligent
+                                    matching,
+                                    seamless engagement, and actionable insights for faster, smarter hiring.
+                                </p>
+                            </div>
+                            <div class="product-ctrl">
+                                <h6>Key Highlights:</h6>
+                                <ul>
+                                    <li>Smart job matching</li>
+                                    <li>Profile with uploads, videos & achievements</li>
+                                    <li>Rewards for engagement & referrals</li>
+                                    <li>ATS tools for easy hiring</li>
+                                    <li>Live or recorded interviews</li>
+                                    <li>Social links & recommendations</li>
+                                    <li>Global job filters</li>
+                                    <li>Save favorite profiles</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Card 3: Social Media -->
+                        <article class="product-card" role="group" aria-label="Product card 3">
+                            <div class="product-media">
+                                <img src="<?= base_url('public/web/assets/img/next/1.png') ?>"
+                                    alt="Social Media" width="220" height="220" />
+                                <div class="media-reflection"></div>
+                            </div>
+                            <div class="product-head">
+                                <h2 class="product-name">Liberte Social Media</h2>
+                                <p class="product-sub">
+                                    A platform that connects people, fosters engagement, and rewards meaningful
+                                    interactions in a secure, user-friendly environment.
+                                </p>
+                            </div>
+                            <div class="product-ctrl">
+                                <h6>Key Highlights:</h6>
+                                <ul>
+                                    <li>Personalized content feed</li>
+                                    <li>Verified news & updates</li>
+                                    <li>Secure messaging & calls</li>
+                                    <li>Schedule & amplify posts</li>
+                                    <li>Expressive reactions & feedback</li>
+                                    <li>Influencer & brand engagement</li>
+                                    <li>Business mini-apps</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Card 4: Play & Earn -->
+                        <article class="product-card" role="group" aria-label="Product card 4">
+                            <div class="product-media">
+                                <img src="<?= base_url('public/web/assets/img/next/7.png') ?>"
+                                    alt="Play & Earn" width="220" height="220" />
+                                <div class="media-reflection"></div>
+                            </div>
+                            <div class="product-head">
+                                <h2 class="product-name">Liberte Buy & Sell </h2>
+                                <p class="product-sub">
+                                    A smart, secure marketplace for buying, selling, and renting with global
+                                    reach.
+                                </p>
+                            </div>
+                            <div class="product-ctrl">
+                                <h6>Key Highlights:</h6>
+                                <ul>
+                                    <li>Featured offers & points-based ads</li>
+                                    <li>Personalized wishlists & instant notifications</li>
+                                    <li>Direct live chat with sellers</li>
+                                    <li>Verified, spam-free listings</li>
+                                    <li>Digital business cards for networking</li>
+                                    <li>Coupons, rewards & discounts for engagement</li>
+                                    <li>Support for sustainable & socially responsible products</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Card 5: Freelance -->
+                        <article class="product-card" role="group" aria-label="Product card 5">
+                            <div class="product-media">
+                                <img src="<?= base_url('public/web/assets/img/next/6.png') ?>"
+                                    alt="Freelance" width="220" height="220" />
+                                <div class="media-reflection"></div>
+                            </div>
+                            <div class="product-head">
+                                <h2 class="product-name">Liberte Freelance</h2>
+                                <p class="product-sub">
+                                    Connecting businesses with skilled freelancers worldwide for seamless,
+                                    flexible,
+                                    and reliable collaboration.
+                                </p>
+                            </div>
+                            <div class="product-ctrl">
+                                <h6>Key Highlights:</h6>
+                                <ul>
+                                    <li>Diverse talent across industries</li>
+                                    <li>Remote collaboration & 24/7 access</li>
+                                    <li>Ratings & verified profiles</li>
+                                    <li>Flexible project & scheduling options</li>
+                                    <li>Service promotion via points</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Card 6: Buy & Sell -->
+                        <article class="product-card" role="group" aria-label="Product card 6">
+                            <div class="product-media">
+                                <img src="<?= base_url('public/web/assets/img/next/2.png') ?>"
+                                    alt="Buy & Sell" width="220" height="220" />
+                                <div class="media-reflection"></div>
+                            </div>
+                            <div class="product-head">
+                                <h2 class="product-name">Liberte Play & Earn</h2>
+                                <p class="product-sub">
+                                    A fun and rewarding gaming experience that lets users earn real-world
+                                    rewards
+                                    while playing.
+                                </p>
+                            </div>
+                            <div class="product-ctrl">
+                                <h6>Key Highlights:</h6>
+                                <ul>
+                                    <li>Quiz & challenge rewards</li>
+                                    <li>Private & public games</li>
+                                    <li>Instant scratch wins</li>
+                                    <li>Survey & review points</li>
+                                    <li>Personalized recommendations</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <button class="nav next" aria-label="Nächste Karte"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- coming soon end -->
+
+    <!-- stats start -->
+    <section id="stats" class="statistics pt-80 pb-100 bg_img" data-background="<?= base_url('public/web/assets/img/bg/about-bg.jpg') ?>">
+        <div class="container">
+            <div class="sec-title sec-title--two text-center mb-60">
+                <span class="sub-title d-block mb-25 wow fadeInUp" data-wow-duration="600ms">
+                    <img src="<?= base_url('public/web/assets/img/icon/sub-left-icon.png') ?>" alt="icon">
+                    Our Impact
+                    <img src="<?= base_url('public/web/assets/img/icon/sub-right-icon.png') ?>" alt="icon">
+                </span>
+                <h2 class="title wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
+                    Innovation by the Numbers
+                </h2>
+            </div>
+            <div class="row mt-none-30">
+                <div class="col-lg-3 col-md-6 col-6 mt-30">
+                    <div class="xb-funfact text-center wow fadeInUp" data-wow-delay="200ms" data-wow-duration="600ms">
+                        <div class="xb-item--inner">
+                            <div class="xb-item--number">
+                                <span class="odometer" data-count="45">0</span>
+                            </div>
+                            <h3 class="xb-item--title">Total Features</h3>
+                            <p class="xb-item--content">Current all-features catalog</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mt-30">
+                    <div class="xb-funfact text-center wow fadeInUp" data-wow-delay="400ms" data-wow-duration="600ms">
+                        <div class="xb-item--inner">
+                            <div class="xb-item--number">
+                                <span class="odometer" data-count="13">0</span>
+                            </div>
+                            <h3 class="xb-item--title">Live Features</h3>
+                            <p class="xb-item--content">Available in current release</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mt-30">
+                    <div class="xb-funfact text-center wow fadeInUp" data-wow-delay="600ms" data-wow-duration="600ms">
+                        <div class="xb-item--inner">
+                            <div class="xb-item--number">
+                                <span class="odometer" data-count="31">0</span>
+                            </div>
+                            <h3 class="xb-item--title">Upcoming Features</h3>
+                            <p class="xb-item--content">Planned in the pipeline</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mt-30">
+                    <div class="xb-funfact text-center wow fadeInUp" data-wow-delay="800ms" data-wow-duration="600ms">
+                        <div class="xb-item--inner">
+                            <div class="xb-item--number">
+                                <span class="odometer" data-count="8">0</span>
+                            </div>
+                            <h3 class="xb-item--title">Unique Differentiators</h3>
+                            <p class="xb-item--content">Features no competitor offers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- stats end -->
+
+    </main>
+    <!-- main area end -->
+
+    
+<?php echo view('Web/includes/footer'); ?>
+
+
+
+
+
+
+
+
+
+
+    <!-- WERN Page Script -->
+    <script>
+        // Toggle content visibility for Learn More buttons
+        function toggleContent(button) {
+            const content = button.nextElementSibling;
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                button.textContent = 'Show Less';
+            } else {
+                content.style.display = 'none';
+                button.textContent = 'Learn More';
+            }
+        }
+
+        // Feature Tab Switching
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabItems = document.querySelectorAll('.feature-tabs-nav .tab-item');
+            const featureCards = document.querySelectorAll('.feature-card');
+
+            tabItems.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    const filterValue = this.getAttribute('data-filter');
+
+                    // Update active tab
+                    tabItems.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter feature cards
+                    featureCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+
+                        if (filterValue === 'allFeatures') {
+                            // Show all cards except "allcategories"
+                            if (cardCategory === 'allcategories') {
+                                card.classList.add('hidden');
+                            } else {
+                                card.classList.remove('hidden');
+                            }
+                        } else if (cardCategory === filterValue) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // Initialize: show cards for the active tab on page load
+            const activeTab = document.querySelector('.feature-tabs-nav .tab-item.active');
+            if (activeTab) {
+                const initialFilter = activeTab.getAttribute('data-filter');
+                featureCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (initialFilter === 'allFeatures') {
+                        // Show all cards except "allcategories"
+                        if (cardCategory === 'allcategories') {
+                            card.classList.add('hidden');
+                        } else {
+                            card.classList.remove('hidden');
+                        }
+                    } else if (cardCategory === initialFilter) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            }
+        });
+
+        // Competitive Table Tab Switching
+        document.addEventListener('DOMContentLoaded', function () {
+            const compTabItems = document.querySelectorAll('.competitive-tabs-nav .comp-tab-item');
+            const compTableRows = document.querySelectorAll('.competitive-table tbody tr[data-comp-category]');
+            const normalRows = document.querySelectorAll('.competitive-table tbody tr.normal-row');
+
+            compTabItems.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    const filterValue = this.getAttribute('data-comp-tab');
+
+                    // Update active tab
+                    compTabItems.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Always show normal rows (Total Downloads, Launch Year)
+                    normalRows.forEach(row => {
+                        row.style.display = '';
+                    });
+
+                    // Filter categorized table rows
+                    compTableRows.forEach(row => {
+                        const rowCategory = row.getAttribute('data-comp-category');
+
+                        if (filterValue === 'all' || rowCategory === filterValue) {
+                            row.style.display = '';
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Trigger the default tab (core) on load
+            const defaultTab = document.querySelector('.comp-tab-item.active');
+            if (defaultTab) {
+                defaultTab.click();
+            }
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.addEventListener('DOMContentLoaded', function () {
+            // Smooth scroll for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+
+                    // Skip if href is just "#" or "#0"
+                    if (href === '#' || href === '#0') {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    const targetElement = document.querySelector(href);
+
+                    if (targetElement) {
+                        e.preventDefault();
+
+                        // Get header height for offset
+                        const header = document.querySelector('#xb-header-area');
+                        const headerHeight = header ? header.offsetHeight : 0;
+
+                        // Calculate position
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+
+                        // Smooth scroll
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        const mobileMenu = document.querySelector('.xb-header-menu');
+                        if (mobileMenu && mobileMenu.classList.contains('active')) {
+                            mobileMenu.classList.remove('active');
+                            document.querySelector('.xb-header-menu-backdrop').classList.remove('active');
+                        }
+
+                        // Update active state
+                        document.querySelectorAll('.scrollspy-btn').forEach(item => {
+                            item.classList.remove('active');
+                        });
+                        this.closest('.scrollspy-btn')?.classList.add('active');
+                    }
+                });
+            });
+
+            // Highlight active section on scroll
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.scrollspy-btn');
+
+            function highlightNavOnScroll() {
+                const scrollPosition = window.scrollY + 150;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            const anchor = link.querySelector('a');
+                            if (anchor && anchor.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', highlightNavOnScroll);
+            highlightNavOnScroll(); // Run on page load
+        });
+
+        // Counter/Odometer Animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const counters = document.querySelectorAll('.odometer');
+            let counterStarted = false;
+
+            // Function to start counter animation
+            function startCounters() {
+                if (counterStarted) return;
+
+                counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-count'));
+
+                    // Initialize Odometer if available
+                    if (typeof Odometer !== 'undefined') {
+                        const od = new Odometer({
+                            el: counter,
+                            value: 0,
+                            format: '',
+                            theme: 'default'
+                        });
+
+                        setTimeout(() => {
+                            od.update(target);
+                        }, 200);
+                    } else {
+                        // Fallback: Simple counter without odometer
+                        animateCounter(counter, target);
+                    }
+                });
+
+                counterStarted = true;
+            }
+
+            // Fallback counter animation
+            function animateCounter(element, target) {
+                let current = 0;
+                const increment = target / 60; // 60 frames
+                const duration = 2000; // 2 seconds
+                const stepTime = duration / 60;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = Math.floor(target);
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }, stepTime);
+            }
+
+            // Use Intersection Observer to trigger animation when section is visible
+            const statsSection = document.querySelector('.statistics');
+
+            if (statsSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            startCounters();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.3 // Trigger when 30% of section is visible
+                });
+
+                observer.observe(statsSection);
+            }
+        });
+    </script>
+
+    <!-- Competitive Table Accordion Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionRows = document.querySelectorAll('.competitive-table .accordion-row');
+
+            accordionRows.forEach(row => {
+                const trigger = row.querySelector('.accordion-trigger');
+
+                trigger.addEventListener('click', function (e) {
+                    e.stopPropagation();
+
+                    // Get the next row (which should be the accordion-content)
+                    const contentRow = row.nextElementSibling;
+
+                    // Check if this accordion is currently expanded
+                    const isExpanded = row.getAttribute('data-expanded') === 'true';
+
+                    // Toggle the current accordion
+                    if (isExpanded) {
+                        row.setAttribute('data-expanded', 'false');
+                        contentRow.classList.remove('show');
+                    } else {
+                        row.setAttribute('data-expanded', 'true');
+                        contentRow.classList.add('show');
+                    }
+                });
+
+                // Also make the entire row clickable
+                row.addEventListener('click', function () {
+                    trigger.click();
+                });
+            });
+        });
+    </script>
+    <script>
+        // 3D Deck Carousel animation removed; section is static.
+
+        // Feature Modal Data
+        const features = [
+            { id: 1, name: "User Onboarding", category: "core", priority: "Essential", status: "Live", overview: "WERN's User Onboarding system represents a paradigm shift in how fitness and wellness platforms welcome new members. This isn't just a signup form—it's a carefully crafted journey that transforms first-time visitors into engaged community members. The system delivers a seamless, frictionless experience where new users intuitively select their profile type upon initial login, whether they're a resident exploring their neighborhood, a tourist discovering new cities, or a woman prioritizing safety. The onboarding process features beautifully animated orientation screens that don't just explain features—they tell a story. These visual narratives highlight the platform's revolutionary earning mechanics, showcasing how every step translates into tangible value, and emphasize the profound social impact users can create through their walking journey. The system is designed with psychological principles in mind, reducing cognitive load while maximizing engagement, ensuring that users don't just join—they become invested in the WERN movement from their very first interaction. In Asian markets like Singapore, Japan, South Korea, and India, the onboarding experience is further enhanced with culturally relevant messaging, local language support including Hindi, Mandarin, Japanese, and Korean, and region-specific examples that resonate with local walking cultures. The system adapts to Asian urban environments where walking is deeply integrated into daily life—from morning walks in Singapore's parks to evening strolls in Tokyo's neighborhoods. Cultural sensitivity features ensure that the platform respects local customs, privacy expectations, and social norms prevalent across diverse Asian societies. The onboarding journey also highlights local partnerships, regional impact stories, and city-specific challenges that make the platform immediately relevant to Asian users.", functionalities: ["Profile Type Selection: Intuitive interface allowing users to choose their primary identity (Resident, Tourist, Women, etc.) with visual guidance", "Animated Orientation Screens: Engaging visual narratives explaining earning mechanics, social features, and impact opportunities", "Progressive Disclosure: Information revealed gradually to prevent overwhelm while maintaining interest", "Referral Link Integration: Seamless access to key materials through personalized referral links", "Multi-language Support: Localized onboarding experience for global accessibility", "Social Proof Integration: Showcase community achievements and success stories during onboarding"], benefits: ["Reduced Drop-off Rates: Streamlined process minimizes abandonment during signup", "Higher Engagement: Users understand value proposition immediately, leading to better retention", "Community Building: Profile selection helps match users with relevant features and communities", "Viral Growth: Integrated referral system activates network effects from day one", "Personalization: Profile type enables customized experience tailored to user needs", "Trust Building: Transparent communication about earning and impact builds confidence"] },
+            { id: 2, name: "Step-based Rewards", category: "core", priority: "Essential", status: "Live", overview: "Step-based Rewards form the absolute foundation of WERN's revolutionary movement economy—the mechanism that transforms physical activity into financial value and social impact. This isn't just step counting; it's a sophisticated, fraud-resistant reward system that ensures fairness while maintaining the integrity of the platform. Users earn 'Litties,' WERN's primary reward currency, through verified walking activity with a transparent conversion rate: 1,000 steps equals 1 Littie earned. The system leverages cutting-edge technology, utilizing device motion sensors (accelerometers) and GPS integration to track movement in real-time, creating an accurate and reliable measurement of human activity. What sets WERN apart is its advanced fraud prevention system, which employs device attestation, speed and acceleration heuristics, and session risk scoring to identify and prevent fraudulent activity. This ensures that only genuine human movement is rewarded, protecting the platform's economic integrity while maintaining fairness for all users. In Asian markets, where walking is often a primary mode of transportation in dense urban centers like Mumbai, Bangkok, Manila, and Jakarta, the step-based reward system recognizes the cultural significance of walking as both a practical necessity and a health practice. The system accounts for Asian walking patterns, including slower-paced walks common in hot climates, frequent short-distance trips typical in Asian cities, and walking as part of daily routines like shopping at local markets or visiting temples. The fraud detection algorithms are calibrated to understand Asian urban environments where walking speeds may vary significantly due to crowded streets, weather conditions, and cultural walking behaviors. Additionally, the reward system integrates with popular Asian fitness apps and devices, ensuring seamless tracking across platforms commonly used in the region.", functionalities: ["Real-time Step Tracking: Continuous monitoring using device motion sensors and GPS integration", "Fixed Conversion Rate: 1,000 steps = 1 Littie (transparent and consistent)", "Fraud Prevention System: Device attestation, speed/acceleration detection, and session risk scoring", "Dynamic Reward Adjustments: Adaptive bonuses based on activity patterns and consistency", "Session Validation: Real-time verification of walking sessions with quality checks", "Appeals Process: User-friendly system for contesting flagged sessions", "Historical Tracking: Complete record of all steps and earnings for transparency"], benefits: ["Fair Earning: Transparent system ensures all users are rewarded equitably", "Fraud Protection: Advanced security maintains platform integrity and value", "Real-time Feedback: Immediate step tracking provides instant gratification", "Trust Building: Transparent conversion rates and validation processes build confidence", "Economic Value: Steps translate directly into redeemable rewards", "Motivation: Clear earning potential encourages consistent walking habits"] },
+            { id: 3, name: "Proximity-based Social", category: "social", priority: "Unique Differentiator", status: "Live", overview: "Proximity-based Social is WERN's groundbreaking innovation that transforms walking from a solitary activity into a connected, community-driven experience—a feature that no competitor offers at this level of sophistication. This revolutionary system leverages Leaflet-powered interactive mapping technology to create a real-time social layer that connects users in physical proximity, fostering genuine community bonds while enhancing safety through visibility. The system displays nearby walkers within approximately 600 meters with stunning animated markers, real-time location updates, and beautiful trail visualization that shows walking paths and activity patterns. But this isn't just about seeing others—it's about meaningful connection. When walkers' paths cross within the detection radius, users receive a +5 Littie bonus with a 5% encounter chance, creating serendipitous moments of reward that encourage community interaction. In densely populated Asian cities like Tokyo, Seoul, Hong Kong, and Singapore, where millions of people walk daily, proximity-based social features take on special significance. The 600-meter radius is optimized for Asian urban environments where walking paths are often crowded and social connections can enhance both safety and enjoyment. The feature respects Asian cultural norms around social interaction, privacy, and personal space, allowing users to control their visibility and interaction preferences. In Asian markets, where community and collective well-being are highly valued, this feature enables users to discover walking groups, join community walking events, and connect with neighbors who share similar walking schedules. The system also integrates with popular Asian social platforms and messaging apps, making it easy for users to connect with nearby walkers through familiar communication channels.", functionalities: ["Real-time Location Updates: Continuous GPS tracking with privacy-controlled sharing", "600-Meter Detection Radius: Optimal range for meaningful proximity encounters", "Animated Markers: Visual representation of active walkers with status indicators", "Trail Visualization: Beautiful display of walking paths and activity patterns", "Proximity Bonuses: +5 Littie reward with 5% encounter chance when paths cross", "Privacy Controls: Granular settings for location sharing preferences", "Social Interaction Tools: Features to connect with nearby walkers safely"], benefits: ["Community Building: Creates genuine connections between walkers in physical proximity", "Safety Enhancement: Increased visibility provides security and peace of mind", "Social Motivation: Seeing others walking encourages consistent activity", "Bonus Rewards: Proximity encounters provide additional earning opportunities", "Unique Experience: No competitor offers this level of proximity-based social integration", "Empowerment: Especially valuable for women and vulnerable users seeking safety"] },
+            { id: 4, name: "Daily Referral System", category: "core", priority: "Growth Engine", status: "Live", overview: "The Daily Referral System is WERN's powerful growth engine—a comprehensive, multi-tiered referral program that transforms users into brand ambassadors while creating sustainable viral growth. This isn't just a simple referral link; it's a sophisticated system that rewards users for building the WERN community through shareable, personalized referral codes that make inviting friends effortless. When a referred friend completes their first transaction, the referrer earns 100 Litties as an immediate bonus, creating instant gratification and motivation to continue sharing. The system leverages social networks and word-of-mouth marketing, which are particularly powerful in Asian cultures where community recommendations carry significant weight. In markets like India, China, Philippines, and Indonesia, where social networks and family connections are central to daily life, the referral system taps into existing social structures to drive organic growth. The referral codes can be easily shared through popular Asian messaging platforms like WhatsApp, WeChat, LINE, and KakaoTalk, making it simple for users to invite friends and family. The system also recognizes cultural preferences for group activities and collective achievements, offering team referral bonuses and family referral rewards that align with Asian values of community and togetherness. Multi-tier tracking allows users to build referral networks that can span entire communities, creating powerful network effects in densely connected Asian societies.", functionalities: ["Personalized Referral Codes: Unique codes (e.g., 'JOHN2024') for each user", "Immediate Bonuses: 100 Litties per successful referral completion", "Multi-tier Tracking: System tracks direct and indirect referral networks", "Referral Dashboard: Comprehensive analytics showing total and active referrals", "Social Sharing Integration: Pre-formatted messages for easy sharing across platforms", "Top Referrer Recognition: Special badges and leaderboards for top performers", "Mentorship Rewards: Additional bonuses for helping new users onboard successfully"], benefits: ["Viral Growth: Network effects create exponential user acquisition", "User Engagement: Referral rewards motivate active participation", "Community Building: Users become invested in platform success", "Cost-Effective Acquisition: Referrals typically have lower CAC than paid channels", "Higher Retention: Referred users often have better retention rates", "Social Proof: Seeing friends join creates FOMO and trust"] },
+            { id: 5, name: "Daily Social Map", category: "social", priority: "Unique Differentiator", status: "Live", overview: "The Daily Social Map is WERN's advanced, real-time visualization system that transforms how users understand and interact with their walking community—a comprehensive map interface that goes far beyond simple location tracking. This sophisticated feature provides a continuously updated view of community activity, showing nearby walkers with precise GPS coordinates, active trails that reveal popular walking routes, and dynamic activity overlays that highlight hotspots of walker density. The map interface is particularly valuable in Asian megacities where understanding walking patterns, popular routes, and community activity can help users make informed decisions about when and where to walk. In cities like Mumbai, Delhi, Bangkok, and Jakarta, where walking infrastructure varies significantly between neighborhoods, the social map helps users discover safe, popular routes while avoiding less-traveled areas. The system integrates with local mapping services popular in Asia, including Baidu Maps (China), Naver Maps (South Korea), and local variants that provide accurate, culturally relevant location data. The heat map functionality is especially useful in Asian urban environments where walking patterns are influenced by factors like weather (monsoon seasons), cultural events (festivals, markets), and daily rhythms (morning exercises, evening walks). The map also highlights culturally significant walking destinations like temples, parks, markets, and community centers that are important in Asian cities.", functionalities: ["Real-time Updates: Continuous refresh of walker locations and activity", "GPS Coordinate Display: Precise location data for nearby walkers", "Trail Visualization: Beautiful display of active walking routes and paths", "Activity Hotspots: Heat maps showing areas of high walker density", "Safe Route Overlays: Verified safe paths highlighted on the map", "Dual View Modes: Toggle between Flags view and Trails view", "Time-based Patterns: Historical data showing peak activity times", "Multi-region Support: Scalable from Abu Dhabi to global coverage"], benefits: ["Route Discovery: Find popular and safe walking paths in your area", "Community Insights: Understand activity patterns and community dynamics", "Safety Enhancement: Identify verified safe zones and routes", "Social Connection: See where other walkers are active", "Planning Tool: Use activity patterns to plan optimal walking times", "Visual Engagement: Beautiful map interface increases platform stickiness"] },
+            { id: 6, name: "Civic Reporting", category: "core", priority: "Community Impact", status: "Live", overview: "Civic Reporting represents WERN's commitment to transforming individual walking journeys into collective community improvement—an integrated reporting system that empowers users to contribute to public safety and infrastructure while earning rewards. This feature allows users to report safety issues, community concerns, and infrastructure problems they encounter while walking, creating a crowdsourced database of community needs that directly benefits municipal authorities and fellow walkers. In Asian cities, where rapid urbanization and dense populations create unique infrastructure challenges, civic reporting becomes especially valuable. Users in cities like Manila, Ho Chi Minh City, Dhaka, and Kathmandu can report issues like broken sidewalks, inadequate street lighting, drainage problems, and safety hazards that are common in rapidly growing Asian urban centers. The system integrates with local government reporting mechanisms and municipal apps used across Asian cities, ensuring that reports reach the appropriate authorities quickly. The geotagged reporting system is particularly effective in Asian markets where precise location identification can be challenging due to complex addressing systems or informal settlements. The community verification feature helps ensure report accuracy in diverse Asian contexts where different languages, cultural perspectives, and local knowledge are essential for understanding and resolving issues. The Kindness Score rewards system aligns with Asian values of community contribution and social responsibility, incentivizing users to actively participate in improving their neighborhoods.", functionalities: ["Geotagged Reporting: Precise location tagging for accurate issue identification", "Multiple Report Types: Safety hazards, infrastructure issues, lighting problems, community concerns", "Photo Evidence: Upload capabilities for visual documentation", "Municipal Integration: Direct connection to local government reporting systems", "Community Verification: User validation system ensures report accuracy", "Kindness Score Rewards: Points earned for verified civic engagement", "Status Tracking: Users can follow report resolution progress"], benefits: ["Community Impact: Direct contribution to neighborhood improvement", "Safety Enhancement: Faster identification and resolution of hazards", "Civic Engagement: Empowers users to participate in community governance", "Reward Earning: Kindness Score points incentivize reporting", "Efficiency: Streamlined reporting process accelerates municipal response", "Transparency: Public tracking of report status builds trust"] },
+            { id: 7, name: "Kindness Score (Karma)", category: "gamification", priority: "Engagement Driver", status: "Live", overview: "Kindness Score (Karma) is WERN's proprietary gamification metric—a revolutionary reputation system that quantifies and rewards positive community behavior, creating a virtuous cycle of engagement that goes far beyond simple step counting. This isn't just a points system; it's a comprehensive behavioral recognition framework that measures and rewards the actions that make communities stronger, safer, and more connected. The concept of karma and kindness scores resonates deeply with Asian cultural values, particularly in Buddhist, Hindu, and Confucian traditions where good deeds and community contribution are highly valued. In markets across South Asia, Southeast Asia, and East Asia, the Kindness Score system aligns with cultural concepts of merit, social harmony, and collective well-being. The system recognizes actions like helping other walkers, reporting safety issues, participating in community challenges, and contributing to civic improvement—all behaviors that are culturally reinforced in many Asian societies. The public display of top performers creates positive social recognition that is particularly meaningful in collectivist Asian cultures where community standing and reputation matter significantly. The progression system and milestone achievements provide clear pathways for users to contribute meaningfully to their communities while earning recognition and unlocking additional platform features. The Ambassador Pathway leverages the Kindness Score to identify users who embody the platform's values and can serve as community leaders and brand representatives.", functionalities: ["Behavioral Tracking: Comprehensive monitoring of community-positive actions", "Score Calculation: Transparent algorithm that quantifies helpful behaviors", "Reward Unlocking: Higher scores unlock additional features and recognition", "Social Proof: Public display of top performers creates positive competition", "Progression System: Clear milestones and achievements tied to score levels", "Ambassador Pathway: Top scores lead to brand ambassador opportunities", "Action Categories: Safety reporting, civic engagement, helping others, group participation"], benefits: ["Community Culture: Encourages positive behaviors that strengthen community bonds", "Recognition: Users feel valued for their contributions beyond walking", "Engagement: Gamification elements increase platform stickiness", "Social Impact: Rewards actions that create tangible community improvement", "Reputation Building: Creates a system of trust and recognition", "Motivation: Clear progression system encourages continued positive behavior"] },
+            { id: 8, name: "Carbon Footprint Reporting", category: "analytics", priority: "ESG Value", status: "Live", overview: "Carbon Footprint Reporting is WERN's comprehensive environmental impact measurement system—a sophisticated aggregation tool that quantifies the collective environmental benefit of the walking community while providing blockchain-verified data for corporate ESG reporting. This feature calculates estimated CO₂ averted from community walking activity by comparing steps taken against potential car trips avoided, creating a powerful narrative about the environmental impact of choosing to walk. In Asian markets, where air pollution and environmental concerns are particularly pressing in megacities like Beijing, Delhi, Jakarta, and Bangkok, carbon footprint reporting takes on urgent significance. The system helps users understand their individual contribution to reducing emissions in regions where transportation-related pollution is a major public health concern. The blockchain verification ensures data credibility for Asian corporations seeking to demonstrate ESG compliance and sustainability commitments to stakeholders, regulators, and international partners. The aggregate calculations provide powerful narratives for Asian cities striving to reduce emissions and improve air quality, supporting municipal sustainability goals and climate action plans. The third-party verification system is especially important in Asian markets where data credibility and transparency are critical for building trust with users, governments, and corporate partners. The corporate integration features enable Asian companies to track and report their employees' collective environmental impact, supporting corporate sustainability initiatives that are increasingly important in Asian business environments.", functionalities: ["Aggregate Calculations: Community-wide CO₂ savings computation", "Blockchain Verification: Immutable records for ESG reporting credibility", "Scientific Methodology: Validated calculations based on transportation research", "Third-party Verification: External validation ensures data accuracy", "Corporate Integration: ESG dashboard for business clients", "Individual Contribution Tracking: Personal impact visibility for users", "Historical Trends: Long-term impact tracking and visualization"], benefits: ["Environmental Awareness: Quantifies the real impact of walking choices", "ESG Value: Provides verifiable data for corporate sustainability reporting", "Community Pride: Shows collective environmental achievement", "Transparency: Blockchain verification ensures data credibility", "Motivation: Seeing impact encourages continued walking", "Business Value: Enables corporate partnerships through ESG data"] },
+            { id: 9, name: "Carbon Footprint Tracker", category: "analytics", priority: "Personal Engagement", status: "Live", overview: "Carbon Footprint Tracker is WERN's personal-level environmental impact visualization system—a real-time tool that transforms abstract environmental concepts into tangible, visual progress that users can see and feel with every step they take. This feature provides individual tracking of eco-impact from walking activity, calculating CO₂ offset in real-time as users walk, creating immediate feedback that connects physical activity to environmental benefit. In Asian cities where environmental awareness is growing rapidly, particularly among younger generations in countries like India, China, South Korea, and Singapore, the personal carbon tracker provides meaningful motivation and education. The visual progress rings and charts make environmental impact concrete and understandable, helping users in Asian markets where environmental education may vary significantly. The daily, weekly, and monthly summaries help users understand their contribution to reducing emissions in regions where air quality is a daily concern. The EcoCoin integration connects personal environmental impact to the broader impact coin ecosystem, allowing users to convert their environmental contributions into verified social good. The comparison tools enable users to see how their individual efforts compare to community averages, creating social motivation that is particularly effective in collectivist Asian cultures. The goal-setting features allow users to set personal environmental targets that align with broader community and national sustainability goals prevalent across Asian countries.", functionalities: ["Real-time CO₂ Calculations: Instant offset computation during walking sessions", "Progress Visualization: Beautiful rings and charts showing goal progress", "Environmental Badges: Milestone recognition for impact achievements", "Daily/Weekly/Monthly Summaries: Comprehensive impact reporting across timeframes", "EcoCoin Integration: Direct connection to impact coin conversion system", "Comparison Tools: Individual vs. community average comparisons", "Goal Setting: Customizable environmental impact targets"], benefits: ["Personal Impact: See individual environmental contribution in real-time", "Motivation: Visual progress encourages continued walking", "Education: Helps users understand environmental impact of choices", "Gamification: Badges and milestones create engagement", "Awareness: Connects physical activity to environmental benefit", "Achievement: Recognition system validates environmental efforts"] },
+            { id: 10, name: "Custom Challenges (Elite)", category: "business", priority: "Premium Feature", status: "Elite Tier", overview: "Custom Challenges (Elite) is WERN's premium challenge creation system—a sophisticated platform that empowers organizations, brands, and power users to design and host their own walking challenges with complete customization over goals, timeframes, reward structures, and branding. This feature transforms challenge creation from a platform-controlled activity into a user-driven ecosystem where creativity and community needs drive engagement. In Asian markets, custom challenges enable organizations to create culturally relevant walking initiatives that align with local traditions, festivals, and community values. Companies in Asian countries can design challenges around cultural events like Chinese New Year, Diwali, Songkran, or local festivals, creating engagement that resonates with employees and community members. The branding options allow Asian brands to integrate their visual identity and messaging into challenges, supporting marketing objectives while promoting health and community engagement. The public/private modes enable organizations to create internal challenges for employees while also offering public challenges that engage broader communities. The real-time analytics dashboard provides comprehensive insights into participation and engagement, helping Asian organizations optimize challenge design for maximum impact. The moderation tools ensure that challenges maintain quality standards and community values, which is particularly important in diverse Asian markets with varying cultural norms and expectations. The integration APIs enable Asian organizations to connect challenges with existing HR systems, wellness platforms, and corporate infrastructure commonly used in Asian business environments.", functionalities: ["Custom Goal Setting: Flexible step targets and time frame configuration", "Reward Structure Design: Customizable bonus amounts and distribution methods", "Branding Options: Custom themes, logos, and messaging for challenges", "Public/Private Modes: Choose between open community or restricted group challenges", "Real-time Analytics: Comprehensive dashboard showing participation and engagement", "Moderation Tools: Quality control and community standard enforcement", "Integration APIs: Connect challenges with external systems and platforms"], benefits: ["Organizational Engagement: Enables workplace wellness programs and team building", "Brand Partnerships: Creates sponsored challenge opportunities for revenue", "Community Empowerment: Users can create challenges that meet local needs", "Flexibility: Customization ensures challenges fit specific goals and audiences", "Analytics: Comprehensive data helps optimize challenge design", "Scalability: System supports challenges from small groups to global campaigns"] },
+            { id: 11, name: "Post-Walk Analytics (Elite)", category: "analytics", priority: "Premium Feature", status: "Elite Tier", overview: "Post-Walk Analytics (Elite) is WERN's comprehensive post-activity analysis system—an advanced analytics dashboard providing deep insights into walking patterns, performance metrics, health trends, and long-term behavior changes. This premium feature transforms raw walking data into actionable intelligence, helping users understand their activity patterns, identify improvement opportunities, and optimize their walking routines for maximum health and reward benefits. The system analyzes every walking session to provide detailed insights including pace variations, route efficiency, elevation changes, time-of-day patterns, and consistency metrics. Trend analysis identifies long-term patterns, helping users understand how their walking habits evolve over weeks and months. The streak tracking feature monitors consecutive walking days, providing motivation and recognition for consistency. Impact score calculations combine steps, distance, environmental impact, and social contributions into a comprehensive performance metric. Goal tracking enables users to set and monitor progress toward personal walking objectives, with intelligent recommendations for goal adjustment based on performance patterns. Performance metrics include detailed breakdowns of speed, distance, duration, and intensity, providing comprehensive activity analysis. Health insights leverage walking data to provide observations about activity levels, potential health benefits, and recommendations for optimization. Historical data analysis enables users to review past performance, identify trends, and make data-driven decisions about their walking routines. In Asian markets, where health consciousness is growing rapidly and data-driven wellness approaches are increasingly popular, post-walk analytics provides valuable insights that help users optimize their walking routines within the context of busy Asian urban lifestyles.", functionalities: ["Trend Analysis: Long-term pattern identification and behavior change tracking", "Streak Tracking: Consecutive day monitoring with streak milestones and recovery features", "Impact Score: Comprehensive metric combining steps, distance, environmental impact, and social contributions", "Goal Tracking: Personal objective setting with progress monitoring and intelligent recommendations", "Performance Metrics: Detailed analysis of speed, distance, duration, intensity, and efficiency", "Health Insights: Activity-based health observations and optimization recommendations", "Historical Data: Complete activity history with searchable records and comparative analysis"], benefits: ["Data-Driven Decisions: Evidence-based insights enable informed walking routine optimization", "Performance Optimization: Identify improvement opportunities and efficiency gains", "Health Awareness: Understand health benefits and activity patterns", "Goal Achievement: Track progress toward personal objectives with actionable insights", "Progress Tracking: Visualize improvement over time with comprehensive metrics", "Personalization: Tailored recommendations based on individual activity patterns and goals"] },
+            { id: 12, name: "Brand Ambassador System", category: "business", priority: "Growth Engine", status: "Live", overview: "Brand Ambassador System is WERN's comprehensive gamified recruitment and advocacy program that empowers top-performing users to become official platform champions, transforming passionate community members into powerful growth engines. This sophisticated system identifies users who demonstrate exceptional engagement, community contribution, and platform advocacy, inviting them to join an elite ambassador program with exclusive benefits, revenue sharing opportunities, and special recognition. The selection process evaluates multiple factors including step consistency, Kindness Score, referral success, community participation, and platform advocacy across social media and personal networks. Selected ambassadors receive exclusive perks including early access to new features, special badges and recognition, priority support, and invitations to exclusive events and experiences. The revenue sharing component provides ambassadors with financial incentives tied to their referral success and community growth contributions, creating sustainable motivation for continued advocacy. Success story amplification features highlight ambassador achievements, sharing their stories across platform channels to inspire other users and demonstrate the value of active participation. Special badges and recognition systems provide visible status indicators that distinguish ambassadors within the community, creating social proof and aspiration for other users. Community leadership opportunities enable ambassadors to moderate discussions, lead challenges, organize events, and serve as community representatives. Brand representation features allow ambassadors to serve as official WERN representatives at events, in marketing materials, and in partnership activities. In Asian markets, where community influence and social proof are particularly powerful, the brand ambassador system leverages cultural values around leadership, community contribution, and social recognition to drive organic growth and engagement.", functionalities: ["Top Performer Selection: Multi-factor evaluation process identifying exceptional users", "Revenue Sharing: Financial incentives tied to referral success and community growth", "Exclusive Perks: Early access, special badges, priority support, and exclusive event invitations", "Success Story Amplification: Platform-wide sharing of ambassador achievements and stories", "Special Badges: Visible recognition indicators distinguishing ambassadors in the community", "Community Leadership: Opportunities to moderate, lead challenges, and organize events", "Brand Representation: Official WERN representative opportunities at events and in marketing"], benefits: ["Organic Growth: Leverages passionate users to drive authentic platform expansion", "User Engagement: Creates aspirational goals and recognition opportunities", "Community Building: Develops leadership structure and community organization", "Brand Advocacy: Transforms users into authentic brand representatives", "Recognition: Provides meaningful status and achievement opportunities", "Network Effects: Amplifies growth through ambassador networks and influence"] },
+            { id: 13, name: "Walk-to-Give Option", category: "core", priority: "Social Impact", status: "Live", overview: "Walk-to-Give Option is WERN's transformative impact conversion feature that empowers users to transform their earned Litties into verified social good through multiple impact coin options, creating a direct connection between physical activity and meaningful community contribution. This feature enables users to convert their walking rewards into impact coins that fund verified social causes, including environmental initiatives (EcoCoins), water access projects (AquaDrops), food security programs (GrainCoins), and safety infrastructure (GlowTokens). The conversion system provides transparent exchange rates and real-time conversion capabilities, allowing users to immediately transform their walking achievements into social impact. Blockchain verification ensures that every conversion is immutably recorded, providing transparency and credibility for impact tracking. The impact tracking system shows users exactly how their converted coins contribute to specific projects and causes, creating a tangible connection between walking activity and social outcomes. Donation history provides complete records of all conversions and impact contributions, enabling users to track their cumulative social impact over time. In Asian markets, where social responsibility and community contribution are deeply valued cultural principles, the Walk-to-Give option resonates strongly with users who want their physical activity to create meaningful social change. The multi-token system allows users to choose causes that align with their values and local priorities, whether that's environmental protection in pollution-affected cities, water access in regions with water scarcity, food security in areas with food insecurity, or safety infrastructure in communities where safety is a concern. The verified impact system ensures that conversions translate into real, measurable outcomes, building trust and credibility in markets where transparency and accountability are essential.", functionalities: ["EcoCoin Conversion: Transform Litties into environmental impact coins funding sustainability projects", "AquaDrops Conversion: Convert rewards into water access initiatives supporting clean water programs", "GrainCoins Conversion: Transform earnings into food security programs addressing hunger", "GlowTokens Conversion: Convert rewards into safety infrastructure and women's safety initiatives", "Blockchain Verification: Immutable records ensuring transparency and credibility for all conversions", "Impact Tracking: Detailed visibility into how converted coins contribute to specific projects", "Donation History: Complete records of all conversions and cumulative social impact"], benefits: ["Social Impact: Direct connection between walking activity and meaningful community contribution", "Purpose-Driven Activity: Walking becomes a vehicle for social change and community support", "Community Contribution: Enables users to contribute to causes they care about through walking", "Transparency: Blockchain verification ensures credibility and trust in impact tracking", "Verified Impact: Conversions translate into real, measurable social outcomes", "Personal Fulfillment: Creates sense of purpose and meaning beyond individual health benefits"] },
+            { id: 14, name: "Emergency Network", category: "safety", priority: "Essential", status: "Live", overview: "Emergency Network is WERN's comprehensive safety-first feature system designed to provide users with immediate access to emergency assistance, community support, and safety resources whenever they need help. This critical safety infrastructure includes an SOS Button for immediate emergency activation, Safety Beacon for continuous location sharing with trusted contacts, emergency contact management, panic button logic for rapid response, safe route alerts for hazard avoidance, community response system for peer assistance, and location sharing capabilities for real-time tracking. The SOS Button provides one-tap emergency activation that immediately alerts emergency services and trusted contacts with precise location information, ensuring rapid response in critical situations. The Safety Beacon feature enables continuous location sharing with selected contacts during walking sessions, providing peace of mind for users and their loved ones. Emergency contact management allows users to maintain updated lists of trusted contacts who will be notified in emergency situations. Panic button logic provides intelligent emergency response protocols that activate appropriate assistance based on situation severity and user preferences. Safe route alerts notify users about potential hazards, unsafe areas, or emergency situations along planned routes, enabling proactive safety management. The community response system enables nearby walkers to provide assistance in non-emergency situations, creating a network of support and mutual aid. Location sharing capabilities provide real-time tracking options for trusted contacts, enabling family members and friends to monitor walking sessions for safety. In Asian markets, where safety concerns vary significantly across different urban environments and cultural contexts, the Emergency Network adapts to local emergency services, cultural safety norms, and regional safety priorities. The system integrates with local emergency services in each market, ensuring that SOS activations reach appropriate authorities quickly and effectively.", functionalities: ["SOS Button: One-tap emergency activation with immediate location sharing", "Safety Beacon: Continuous location sharing with trusted contacts during walking sessions", "Emergency Contacts: Management system for trusted contacts who receive emergency notifications", "Panic Button Logic: Intelligent emergency response protocols based on situation severity", "Safe Route Alerts: Proactive notifications about hazards and unsafe areas along routes", "Community Response: Network of nearby walkers available for non-emergency assistance", "Location Sharing: Real-time tracking options for trusted contacts and family members"], benefits: ["User Safety: Comprehensive safety infrastructure providing multiple layers of protection", "Peace of Mind: Continuous safety monitoring and rapid emergency response capabilities", "Rapid Response: Immediate emergency activation ensures quick assistance in critical situations", "Community Support: Network of walkers available for assistance and mutual aid", "Emergency Preparedness: Proactive safety management through route alerts and hazard notifications", "Trust Building: Reliable safety features build confidence and platform trust"] },
+            { id: 15, name: "Challenges (Gamified)", category: "gamification", priority: "Engagement Driver", status: "Live", overview: "Challenges (Gamified) is WERN's comprehensive challenge system featuring ongoing themed competitions that transform walking into engaging, competitive, and rewarding experiences. The system includes diverse challenge types including social challenges that encourage community interaction, step tracking challenges that focus on activity goals, safety challenges that promote safe walking practices, eco-friendly challenges that emphasize environmental impact, and invite friend challenges that drive community growth. Each challenge features structured goals, time limits, reward structures, and leaderboards that create competitive motivation and social engagement. Themed challenges align with seasons, holidays, cultural events, and community priorities, ensuring relevance and engagement across diverse user groups. Step tracking challenges focus on achieving specific step goals over defined time periods, with progressive difficulty levels and milestone rewards. Social challenges encourage interaction between participants, team formation, and community building through collaborative goals and shared achievements. Safety challenges promote safe walking practices, route verification, and community safety contribution, rewarding users for behaviors that enhance community safety. Eco-friendly challenges emphasize environmental impact, carbon reduction, and sustainability, connecting walking activity to broader environmental goals. Invite friend challenges incentivize community growth by rewarding users for successful referrals and new user onboarding. Reward distribution systems ensure fair and transparent reward allocation based on performance, participation, and achievement levels. Leaderboards provide competitive rankings that motivate performance and create social recognition opportunities. In Asian markets, challenges can be customized to align with local cultural events, festivals, and community priorities, creating engagement that resonates with regional values and traditions.", functionalities: ["Themed Challenges: Seasonal, holiday, and cultural event-aligned competitions", "Step Tracking Challenges: Goal-based challenges focusing on step achievement", "Social Challenges: Community interaction and team-based competitions", "Safety Challenges: Safe walking practice promotion and community safety contribution", "Eco-Friendly Challenges: Environmental impact and sustainability-focused competitions", "Reward Distribution: Fair and transparent reward allocation based on performance", "Leaderboards: Competitive rankings providing motivation and social recognition"], benefits: ["Engagement: Diverse challenge types maintain user interest and participation", "Motivation: Competitive elements and rewards drive consistent walking activity", "Community Building: Collaborative challenges foster social connections and team formation", "Goal Achievement: Structured challenges help users achieve walking objectives", "Competition: Leaderboards create competitive motivation and social recognition", "Rewards: Challenge participation provides additional earning and recognition opportunities"] },
+            { id: 16, name: "Footprint Visualization", category: "analytics", priority: "Personal Engagement", status: "Live", overview: "Footprint Visualization is WERN's comprehensive visual analytics system that transforms walking activity data into beautiful, intuitive visualizations that help users understand their activity patterns, discover insights, and stay motivated through visual engagement. The system includes heatmaps that show activity density across geographic areas, activity summary maps that visualize walking routes and patterns, environmental attribution that connects activity to environmental impact, progress charts that track improvement over time, route history that maintains records of past walking sessions, visual analytics that provide data-driven insights, and export options that enable data portability and external analysis. Heatmaps use color gradients to show activity density, helping users identify their most active areas, popular walking zones, and activity patterns across different locations and times. Activity summary maps provide comprehensive visualizations of walking routes, showing paths taken, distances covered, and geographic coverage over time periods. Environmental attribution features connect walking activity to environmental impact, visualizing carbon reduction, trees equivalent, and other environmental metrics in geographic context. Progress charts track improvement over time, showing trends in steps, distance, consistency, and other key metrics through intuitive visual representations. Route history maintains complete records of past walking sessions, enabling users to review previous routes, compare sessions, and identify favorite paths. Visual analytics provide data-driven insights through charts, graphs, and visual representations that make complex data understandable and actionable. Export options enable users to download their data in various formats for external analysis, sharing, or integration with other platforms. In Asian markets, where visual communication is highly valued and data visualization is increasingly popular, footprint visualization provides engaging and culturally relevant ways to understand and share walking activity.", functionalities: ["Heatmaps: Color-gradient visualizations showing activity density across geographic areas", "Activity Summary Maps: Comprehensive route visualizations showing paths, distances, and coverage", "Environmental Attribution: Geographic visualization of environmental impact and carbon reduction", "Progress Charts: Trend visualizations tracking improvement in steps, distance, and consistency", "Route History: Complete records of past walking sessions with route comparison", "Visual Analytics: Data-driven insights through charts, graphs, and visual representations", "Export Options: Data download capabilities in multiple formats for external analysis"], benefits: ["Visual Insights: Intuitive visualizations make complex data understandable and engaging", "Pattern Recognition: Visual patterns help identify activity trends and preferences", "Motivation: Beautiful visualizations create engagement and motivation for continued activity", "Goal Setting: Visual progress tracking supports goal setting and achievement", "Progress Tracking: Visual representations make improvement visible and rewarding", "Data Visualization: Professional-quality visualizations enable data sharing and presentation"] },
+            { id: 17, name: "Data Privacy Focus", category: "core", priority: "Essential", status: "Live", overview: "Data Privacy Focus is WERN's comprehensive privacy and data protection system built on a secure-by-design approach that ensures user data is protected, controlled, and used responsibly throughout the platform experience. The system includes GDPR compliance for European users, ADGM DPA compliance for Abu Dhabi Global Market jurisdiction, comprehensive user consent mechanisms that ensure informed data sharing decisions, granular privacy controls that enable users to customize their privacy settings, data portability features that allow users to export and control their data, a strict no data selling policy that ensures user data is never monetized through third-party sales, and end-to-end encryption that protects sensitive data throughout transmission and storage. GDPR compliance ensures that European users' data rights are fully protected, including rights to access, rectification, erasure, and data portability. ADGM DPA compliance provides similar protections for users in Abu Dhabi Global Market jurisdiction, ensuring compliance with regional data protection regulations. User consent mechanisms ensure that users make informed decisions about data sharing, with clear explanations of how data is used and transparent opt-in/opt-out controls. Granular privacy controls enable users to customize their privacy settings for different types of data and sharing scenarios, providing fine-grained control over personal information. Data portability features allow users to export their data in standard formats, enabling data control and platform independence. The no data selling policy ensures that user data is never monetized through third-party sales, maintaining user trust and platform integrity. End-to-end encryption protects sensitive data throughout transmission and storage, ensuring that personal information remains secure. In Asian markets, where data privacy regulations are evolving and user privacy concerns are growing, the comprehensive privacy focus builds trust and ensures compliance with regional requirements including India's Personal Data Protection Bill, China's Personal Information Protection Law, and other Asian data protection frameworks.", functionalities: ["GDPR Compliance: European data protection regulation compliance with full user rights", "ADGM DPA Compliance: Abu Dhabi Global Market data protection compliance", "User Consent Mechanisms: Informed consent processes with transparent data usage explanations", "Granular Privacy Controls: Fine-grained privacy settings for different data types and scenarios", "Data Portability: User data export capabilities in standard formats", "No Data Selling: Strict policy ensuring user data is never monetized through third-party sales", "End-to-End Encryption: Comprehensive encryption protecting data throughout transmission and storage"], benefits: ["User Trust: Comprehensive privacy protection builds confidence and platform trust", "Regulatory Compliance: Full compliance with GDPR, ADGM DPA, and regional data protection requirements", "Data Security: End-to-end encryption and secure-by-design approach protect user information", "Privacy Protection: Granular controls and consent mechanisms ensure user privacy", "Transparency: Clear data usage policies and user rights information build trust", "User Control: Data portability and privacy controls enable user data autonomy"] },
+            { id: 18, name: "Employer-Funded Rewards", category: "business", priority: "B2B Value", status: "Live", overview: "Employer-Funded Rewards is WERN's innovative B2B2C model that enables corporations to fund employee reward pools through corporate wellness budgets, creating a sustainable and scalable approach to workplace wellness that benefits both employers and employees. The system includes corporate budget integration that allows companies to allocate wellness funds to employee reward pools, employee reward pools that distribute corporate-funded rewards to participating employees, branded corporate challenges that incorporate company branding and messaging, comprehensive analytics dashboards that provide insights into employee engagement and program effectiveness, budget management tools that enable companies to control and optimize wellness spending, employee engagement features that motivate participation and activity, and ROI tracking that measures the business impact of wellness investments. Corporate budget integration enables companies to allocate dedicated wellness funds to employee reward pools, creating sustainable funding for employee rewards without requiring individual employee payments. Employee reward pools distribute corporate-funded rewards to participating employees based on their walking activity and achievement, providing financial incentives for healthy behavior. Branded corporate challenges incorporate company branding, messaging, and values into walking challenges, creating engagement that aligns with corporate culture and objectives. Analytics dashboards provide comprehensive insights into employee participation, engagement levels, activity patterns, and program effectiveness, enabling data-driven wellness program optimization. Budget management tools enable companies to set spending limits, control reward distribution, and optimize wellness budget allocation for maximum impact. Employee engagement features include leaderboards, team competitions, and recognition systems that motivate participation and create workplace community around wellness. ROI tracking measures the business impact of wellness investments, including health outcomes, productivity improvements, and employee satisfaction metrics. In Asian markets, where corporate wellness programs are growing rapidly and employee health is increasingly prioritized, employer-funded rewards provide a scalable solution for companies seeking to improve employee wellness while managing costs effectively.", functionalities: ["Corporate Budget Integration: Wellness fund allocation to employee reward pools", "Employee Reward Pools: Corporate-funded reward distribution to participating employees", "Branded Challenges: Company-branded walking challenges incorporating corporate messaging", "Analytics Dashboard: Comprehensive insights into employee engagement and program effectiveness", "Budget Management: Tools for controlling and optimizing corporate wellness spending", "Employee Engagement: Leaderboards, competitions, and recognition systems motivating participation", "ROI Tracking: Business impact measurement including health outcomes and productivity"], benefits: ["Corporate Wellness: Scalable workplace wellness solution supporting employee health", "Employee Engagement: Financial incentives and gamification drive participation and activity", "Cost-Effective Rewards: Corporate funding enables sustainable reward distribution", "Brand Visibility: Branded challenges create marketing opportunities and brand alignment", "Data Insights: Analytics enable data-driven wellness program optimization", "Workplace Health: Comprehensive approach to improving employee health and wellness"] },
+            { id: 19, name: "Corporate Wellness Integration", category: "business", priority: "B2B Value", status: "Live", overview: "Corporate Wellness Integration is WERN's comprehensive B2B platform solution that enables organizations to implement complete workplace wellness programs through corporate leagues, branded programs, leaderboards, API integration with HR systems, white-label deployment options, ESG dashboards, and real-time analytics. The system provides organizations with enterprise-grade wellness infrastructure that integrates seamlessly into existing corporate environments, enabling companies to promote employee health while achieving business objectives. Corporate leagues create structured competition frameworks that organize employees into teams, departments, or divisions for competitive wellness challenges. Branded programs allow companies to customize wellness initiatives with their own branding, messaging, and corporate values, creating engagement that aligns with organizational culture. Leaderboards provide competitive rankings that motivate employee participation and create workplace community around wellness activities. API integration enables seamless connection with existing HR systems, employee databases, and corporate infrastructure, ensuring smooth implementation and data synchronization. White-label options allow companies to deploy WERN's wellness platform under their own branding, creating a fully customized corporate wellness solution. ESG dashboards provide comprehensive environmental, social, and governance metrics that enable companies to track and report their sustainability impact through employee wellness programs. Real-time analytics deliver immediate insights into employee participation, engagement levels, activity patterns, and program effectiveness, enabling data-driven wellness program management. In Asian markets, where corporate wellness is increasingly prioritized and ESG reporting is becoming mandatory in many jurisdictions, corporate wellness integration provides a comprehensive solution that supports both employee health and corporate sustainability objectives.", functionalities: ["Corporate Leagues: Structured competition frameworks organizing employees into teams and divisions", "Branded Programs: Customizable wellness initiatives with company branding and messaging", "Leaderboards: Competitive rankings motivating employee participation and engagement", "API Integration: Seamless connection with HR systems and corporate infrastructure", "White-Label Options: Fully customized corporate wellness deployment under company branding", "ESG Dashboards: Comprehensive sustainability metrics and impact reporting", "Real-time Analytics: Immediate insights into employee engagement and program effectiveness"], benefits: ["Workplace Wellness: Comprehensive platform supporting employee health and wellness", "Employee Retention: Wellness programs improve employee satisfaction and retention", "ESG Reporting: Sustainability metrics support corporate ESG reporting requirements", "Brand Partnerships: Corporate wellness creates partnership and marketing opportunities", "Data Analytics: Comprehensive analytics enable data-driven wellness program optimization", "Scalability: Enterprise-grade infrastructure supports organizations of all sizes"] },
+            { id: 20, name: "Social Impact Dashboards", category: "analytics", priority: "ESG Value", status: "Live", overview: "Social Impact Dashboards is WERN's comprehensive real-time visualization system that displays collective community impact through beautiful, engaging visualizations showing trees planted, water provided, meals donated, safety infrastructure improvements, blockchain verification of impact, and comprehensive community metrics. The system transforms abstract impact data into tangible, visual representations that help users understand the collective social good created through their walking community. Impact visualization features use charts, graphs, and visual representations to show cumulative impact across different cause areas, making social outcomes visible and understandable. Trees planted tracking shows the environmental impact of community walking activity, visualizing carbon reduction through tree-equivalent metrics. Water provided tracking displays the water access impact created through AquaDrops conversions, showing how walking activity contributes to clean water initiatives. Meals donated tracking visualizes food security impact through GrainCoins conversions, demonstrating community contribution to hunger relief. Safety infrastructure tracking shows how GlowTokens conversions improve community safety through infrastructure investments and safety programs. Blockchain verification provides immutable proof of impact, ensuring that all displayed metrics are credible and verifiable. Community metrics provide comprehensive statistics about community size, activity levels, participation rates, and collective achievements. In Asian markets, where social impact and community contribution are highly valued, social impact dashboards provide meaningful visualization of collective community achievements, creating pride and motivation for continued participation. The dashboards can be customized to highlight impact relevant to Asian priorities, whether that's environmental protection in pollution-affected regions, water access in water-scarce areas, food security in regions with food insecurity, or safety infrastructure in communities where safety is a concern.", functionalities: ["Impact Visualization: Charts, graphs, and visual representations of cumulative social impact", "Trees Planted Tracking: Environmental impact visualization through tree-equivalent metrics", "Water Provided Tracking: Water access impact display through AquaDrops conversions", "Meals Donated Tracking: Food security impact visualization through GrainCoins conversions", "Safety Infrastructure: Community safety improvement tracking through GlowTokens conversions", "Blockchain Verification: Immutable proof ensuring credibility and verifiability of impact metrics", "Community Metrics: Comprehensive statistics about community size, activity, and achievements"], benefits: ["Impact Visibility: Visual representations make collective social impact tangible and understandable", "Community Pride: Collective achievement visualization creates community identity and motivation", "ESG Reporting: Impact metrics support corporate ESG reporting and sustainability objectives", "Transparency: Blockchain verification ensures credibility and trust in impact claims", "Motivation: Visual impact representation encourages continued participation and contribution", "Verification: Immutable blockchain records provide proof of impact for stakeholders"] },
+            { id: 21, name: "API & Insights (White-Label)", category: "business", priority: "B2B Value", status: "Live", overview: "API & Insights (White-Label) is WERN's comprehensive developer and partnership integration platform providing RESTful APIs, analytics endpoints, white-label deployment options, partner dashboards, webhook support, and extensive documentation that enables organizations and developers to integrate WERN's wellness platform into their own systems and applications. The system enables seamless integration of walking rewards and wellness features into third-party applications, corporate systems, and partner platforms, creating a flexible ecosystem that extends WERN's capabilities beyond the core platform. RESTful APIs provide standardized interfaces for accessing WERN's core functionality, including user management, step tracking, reward distribution, challenge management, and analytics data. Integration architecture supports multiple integration patterns including direct API access, webhook-based event notifications, and embedded widget deployment. Analytics endpoints provide access to comprehensive data including user activity, engagement metrics, challenge performance, and impact statistics. White-label deployment enables partners to deploy WERN's platform under their own branding, creating fully customized wellness solutions that integrate seamlessly into partner ecosystems. Partner dashboards provide comprehensive management interfaces for partners to monitor integration performance, manage users, configure settings, and access analytics. Webhook support enables real-time event notifications, allowing partners to receive instant updates about user activity, challenge completions, and other platform events. Comprehensive documentation includes API references, integration guides, code examples, and best practices that enable developers to quickly implement WERN integrations. In Asian markets, where API integration and platform partnerships are increasingly important for business growth, API & Insights provides the infrastructure needed for partnerships with Asian technology companies, corporate wellness providers, and regional platforms.", functionalities: ["RESTful APIs: Standardized interfaces for accessing core platform functionality", "Integration Architecture: Multiple integration patterns supporting diverse partner needs", "Analytics Endpoints: Comprehensive data access including activity, engagement, and performance metrics", "White-Label Deployment: Fully customized platform deployment under partner branding", "Partner Dashboard: Comprehensive management interface for integration monitoring and configuration", "Webhook Support: Real-time event notifications for instant platform updates", "Documentation: Comprehensive API references, guides, and code examples"], benefits: ["Partnership Opportunities: Flexible integration enables diverse partnership models", "Scalability: API architecture supports integration at any scale", "Customization: White-label options enable fully customized partner deployments", "Integration: Seamless connection with existing systems and platforms", "Developer-Friendly: Comprehensive documentation and support enable rapid integration", "B2B Growth: Integration capabilities drive business-to-business growth and partnerships"] },
+            { id: 22, name: "Leaderboards", category: "gamification", priority: "Engagement Driver", status: "Live", overview: "Leaderboards is WERN's comprehensive multi-tiered ranking system that provides competitive motivation through global rankings, friend-based comparisons, team competitions, challenge-specific leaderboards, real-time calculations, achievement recognition, and social engagement features. The system creates multiple layers of competition that appeal to different user motivations, from global recognition to friendly competition with personal networks. Global leaderboards provide platform-wide rankings that showcase top performers across all metrics, creating aspirational goals and recognition opportunities. Friend leaderboards enable users to compete with their personal network, creating friendly competition that motivates activity through social connections. Team leaderboards support group competitions, enabling teams, departments, or communities to compete collectively and build team cohesion. Challenge leaderboards provide competition within specific challenges, creating focused competitive environments that drive participation in themed competitions. Real-time calculations ensure that rankings are always current, providing immediate feedback and motivation for performance improvement. Ranking systems use multiple metrics including steps, distance, consistency, Kindness Score, and impact contributions, enabling diverse competition categories that recognize different types of achievement. Achievement recognition features highlight top performers, creating social recognition and motivation for continued excellence. In Asian markets, where competition and achievement recognition are highly valued, leaderboards provide powerful motivation that aligns with cultural values around performance, recognition, and social standing. The multi-tiered system ensures that users can find competition at their level, whether that's global recognition for top performers or friendly competition within personal networks.", functionalities: ["Global Leaderboards: Platform-wide rankings showcasing top performers across all metrics", "Friend Leaderboards: Personal network competition enabling friendly rivalry with connections", "Team Leaderboards: Group competitions supporting team, department, and community competitions", "Challenge Leaderboards: Challenge-specific rankings creating focused competitive environments", "Real-time Calculations: Immediate ranking updates ensuring current and accurate competition", "Ranking System: Multiple metric categories recognizing diverse achievement types", "Achievement Recognition: Social recognition features highlighting top performers"], benefits: ["Competition: Multi-tiered competition creates motivation across different user segments", "Motivation: Competitive rankings drive consistent activity and performance improvement", "Social Engagement: Friend and team leaderboards create social connections and community", "Recognition: Achievement recognition provides social status and motivation", "Goal Achievement: Competitive goals help users achieve walking objectives", "Community Building: Team competitions foster group cohesion and collective achievement"] },
+            { id: 23, name: "Badges (NFT-Based)", category: "gamification", priority: "Engagement Driver", status: "Live", overview: "Badges (NFT-Based) is WERN's revolutionary achievement recognition system that combines gamification with blockchain technology, providing users with collectible, verifiable, and valuable digital achievements through ERC-721 NFT minting. The system includes milestone badges recognizing step achievements, cause badges celebrating impact contributions, streak badges honoring consistency, event badges commemorating special occasions, and ambassador badges identifying community leaders. Each badge is minted as a unique NFT on the blockchain, providing immutable proof of achievement, collectible value, and potential for future utility. Milestone badges recognize significant step achievements, distance milestones, and activity accomplishments, creating tangible rewards for major walking goals. Cause badges celebrate contributions to social impact causes, recognizing users who convert Litties into impact coins and create verified social good. Streak badges honor consistency and dedication, recognizing users who maintain walking streaks over extended periods. Event badges commemorate participation in special challenges, community events, and platform milestones, creating collectible memories of significant experiences. Ambassador badges identify community leaders and brand ambassadors, providing recognition for exceptional community contribution and platform advocacy. ERC-721 NFT minting ensures that each badge is a unique, non-fungible token with blockchain verification, providing proof of ownership and achievement. Blockchain verification creates immutable records of achievement, ensuring that badges cannot be duplicated or falsified. In Asian markets, where digital collectibles and blockchain technology are increasingly popular, NFT-based badges provide modern, valuable recognition that appeals to tech-savvy users while creating potential for future utility and value appreciation.", functionalities: ["Milestone Badges: Recognition for significant step achievements and activity milestones", "Cause Badges: Celebration of impact contributions and social cause support", "Streak Badges: Recognition for consistency and extended walking streaks", "Event Badges: Commemoration of special challenges, events, and platform milestones", "Ambassador Badges: Identification of community leaders and brand ambassadors", "ERC-721 NFT Minting: Unique non-fungible token creation providing blockchain proof", "Blockchain Verification: Immutable achievement records ensuring authenticity and ownership"], benefits: ["Achievement Recognition: Tangible rewards for major accomplishments and milestones", "Collectible Value: NFT badges have potential collectible and future utility value", "Blockchain Proof: Immutable verification ensures authenticity and prevents duplication", "Gamification: Badge collection creates engaging achievement system", "Social Proof: Visible badges demonstrate achievement and status", "Digital Ownership: Blockchain ownership provides true digital asset ownership"] },
+            { id: 24, name: "Nearby Walkers Map", category: "social", priority: "Unique Differentiator", status: "Live", overview: "Nearby Walkers Map is WERN's interactive real-time mapping feature that displays nearby walkers with precise location data, distance calculations, step count visibility, activity status indicators, interactive map controls, privacy settings, and social interaction features. The system creates a live social layer that shows active walkers in real-time, enabling users to see community activity, discover walking companions, and enhance safety through visibility. Real-time location display shows active walkers on an interactive map with precise GPS coordinates, enabling users to see exactly where other walkers are located. Distance calculation features show the distance between users and nearby walkers, helping users identify potential walking companions or safety resources. Step count display shows the current step counts of nearby walkers, creating social motivation and friendly competition. Activity status indicators show whether walkers are actively walking, paused, or completed, providing context about current activity levels. Interactive map controls enable users to zoom, pan, and explore the map to discover walkers in different areas. Privacy controls allow users to customize their visibility, choosing who can see their location and activity information. Social features enable users to interact with nearby walkers through safe communication channels, creating opportunities for connection and community building. In Asian markets, where dense urban populations create rich opportunities for social connection, the Nearby Walkers Map helps users discover walking communities, find walking companions, and build social connections through shared activity. The feature respects Asian cultural norms around privacy and social interaction, providing controls that enable users to manage their visibility according to personal preferences and cultural comfort levels.", functionalities: ["Real-time Location Display: Interactive map showing active walkers with precise GPS coordinates", "Distance Calculation: Distance measurement between users and nearby walkers", "Step Count Display: Current step count visibility for nearby walkers creating social motivation", "Activity Status: Indicators showing whether walkers are active, paused, or completed", "Interactive Map: Zoom, pan, and exploration controls for map navigation", "Privacy Controls: Customizable visibility settings for location and activity information", "Social Features: Safe communication channels for interaction with nearby walkers"], benefits: ["Social Connection: Real-time visibility enables discovery of walking companions and communities", "Safety: Increased visibility provides security and peace of mind", "Community Awareness: Understanding of local walking activity and community engagement", "Route Planning: Knowledge of walker locations helps plan routes and discover popular paths", "Social Motivation: Seeing other walkers encourages consistent activity", "Location Discovery: Map exploration helps discover new walking areas and routes"] },
+            { id: 25, name: "Corporate Leagues", category: "business", priority: "B2B Value", status: "Live", overview: "Corporate Leagues is WERN's structured competition framework designed for organizations, providing division systems, department competitions, partner organization tournaments, custom rules, progress tracking, prize pools, and comprehensive analytics. The system enables companies to create organized wellness competitions that engage employees, build team cohesion, and promote workplace health through structured competitive frameworks. Division systems organize employees into competitive groups based on departments, teams, locations, or other organizational structures, creating manageable competition scales that enable fair competition and engagement. Department competitions enable departments to compete against each other, fostering team building and inter-departmental engagement while promoting collective wellness goals. Partner organization tournaments enable multiple companies to compete together, creating industry-wide or partnership-based competitions that extend beyond individual organizations. Custom rules allow companies to define competition parameters, scoring systems, and reward structures that align with their specific wellness objectives and corporate culture. Progress tracking provides real-time visibility into competition standings, individual performance, team achievements, and progress toward competition goals. Prize pools enable companies to fund competition rewards, creating financial incentives that motivate participation and achievement. Analytics provide comprehensive insights into competition participation, engagement levels, performance trends, and program effectiveness, enabling data-driven competition optimization. In Asian markets, where corporate team building and collective achievement are highly valued, Corporate Leagues provide structured frameworks that align with cultural values around teamwork, competition, and organizational cohesion while promoting employee wellness.", functionalities: ["Division System: Organizational structure organizing employees into competitive groups", "Department Competitions: Inter-departmental competitions fostering team building and engagement", "Partner Organization Tournaments: Multi-company competitions extending beyond individual organizations", "Custom Rules: Configurable competition parameters, scoring, and reward structures", "Progress Tracking: Real-time visibility into standings, performance, and goal progress", "Prize Pools: Company-funded rewards creating financial competition incentives", "Analytics: Comprehensive insights into participation, engagement, and program effectiveness"], benefits: ["Team Building: Structured competitions foster team cohesion and collaboration", "Employee Engagement: Competitive frameworks motivate participation and activity", "Workplace Wellness: Organized wellness programs promote employee health", "Competition: Structured competition creates motivation and recognition opportunities", "Recognition: Achievement recognition provides social status and motivation", "Corporate Culture: Wellness competitions align with organizational values and culture"] },
+            { id: 26, name: "Women's Safety Toolkit (GlowTokens)", category: "safety", priority: "Unique Differentiator", status: "Live", overview: "Women's Safety Toolkit (GlowTokens) is WERN's breakthrough safety innovation specifically designed to address the critical issue that 68% of women avoid outdoor exercise due to safety fears. This comprehensive toolkit includes the GlowTokens system for safety infrastructure funding, verified safe routes with community-validated safety information, safety scoring that rates routes based on multiple safety factors, emergency escort features that connect users with trusted companions, safety community features that build networks of support, safety alerts that provide real-time hazard notifications, and location sharing capabilities that enable trusted contacts to monitor walking sessions. The GlowTokens system enables users to convert Litties into safety infrastructure investments, funding lighting improvements, security cameras, emergency response systems, and other safety enhancements in communities. Verified safe routes provide community-validated information about route safety, including lighting quality, visibility, traffic patterns, and historical safety data. Safety scoring rates routes based on multiple factors including lighting, visibility, traffic, time of day, and community safety reports, providing users with comprehensive safety information for route planning. Emergency escort features connect users with trusted companions who can accompany them on walks, providing safety through companionship and visibility. Safety community features build networks of women walkers who can provide mutual support, share safety information, and create collective safety resources. Safety alerts provide real-time notifications about hazards, incidents, or safety concerns along planned routes, enabling proactive safety management. Location sharing enables trusted contacts to monitor walking sessions in real-time, providing peace of mind for users and their loved ones. In Asian markets, where women's safety is a critical concern in many urban environments, the Women's Safety Toolkit addresses urgent safety needs while empowering women to engage in outdoor activity with confidence and security.", functionalities: ["GlowTokens System: Safety infrastructure funding through impact coin conversions", "Verified Safe Routes: Community-validated safety information for route planning", "Safety Scoring: Comprehensive route safety ratings based on multiple safety factors", "Emergency Escort: Trusted companion connection for walking safety", "Safety Community: Network of women walkers providing mutual support and resources", "Safety Alerts: Real-time hazard and incident notifications for proactive safety", "Location Sharing: Real-time monitoring capabilities for trusted contacts"], benefits: ["Women's Empowerment: Comprehensive safety toolkit enables confident outdoor activity", "Safety Assurance: Multiple safety layers provide comprehensive protection and peace of mind", "Increased Activity: Safety features remove barriers to outdoor exercise participation", "Community Support: Safety networks provide mutual aid and collective resources", "Peace of Mind: Comprehensive safety infrastructure reduces fear and anxiety", "Unique Market Position: Specialized safety focus differentiates platform in competitive market"] },
+            { id: 27, name: "KidLab Mode (PlayCoins & LabuBu)", category: "safety", priority: "Family Value", status: "Live", overview: "KidLab Mode (PlayCoins & LabuBu) is WERN's comprehensive family-friendly mode designed specifically for children, providing a safe, engaging, and educational walking experience through PlayCoins rewards, LabuBu collectible characters, comprehensive parental controls, geo-fencing capabilities, custom missions, family challenges, and a secure environment designed for young users. The system transforms walking into an engaging game for children while providing parents with comprehensive safety and control features. PlayCoins system provides child-appropriate rewards that children can earn through walking activity, creating motivation and engagement through age-appropriate gamification. LabuBu Collections feature collectible characters that children can unlock and collect through walking achievements, creating long-term engagement and collection motivation. Parental controls provide comprehensive management capabilities including activity monitoring, time limits, content filtering, and safety settings that enable parents to customize their children's experience. Geo-fencing capabilities allow parents to set safe boundaries for their children's walking activity, receiving alerts when children enter or leave designated safe zones. Custom missions enable parents to create age-appropriate walking challenges for their children, tailoring activities to individual interests and abilities. Family challenges enable families to participate in walking activities together, creating bonding opportunities and shared achievement experiences. Safe environment features ensure that KidLab Mode provides age-appropriate content, safe social interactions, and secure platform experience designed specifically for children. In Asian markets, where family values are central and children's safety is paramount, KidLab Mode provides a comprehensive solution that enables families to engage in healthy activity together while maintaining strict safety and parental control standards.", functionalities: ["PlayCoins System: Child-appropriate rewards earned through walking activity", "LabuBu Collections: Collectible characters unlocked through walking achievements", "Parental Controls: Comprehensive management including monitoring, limits, and safety settings", "Geo-fencing: Safe boundary setting with alerts for zone entry and exit", "Custom Missions: Age-appropriate walking challenges created by parents", "Family Challenges: Family participation in shared walking activities and achievements", "Safe Environment: Age-appropriate content and secure platform experience for children"], benefits: ["Family Engagement: Family-friendly features enable shared activity and bonding", "Child Safety: Comprehensive safety features and parental controls protect children", "Parental Control: Extensive management capabilities enable parents to customize experience", "Educational Value: Gamification and missions provide learning opportunities", "Family Bonding: Shared challenges create family connection and achievement", "Market Differentiation: Specialized family focus differentiates platform in competitive market"] },
+            { id: 28, name: "Impact Coin Version (Multi-Token)", category: "core", priority: "Social Impact", status: "Live", overview: "Impact Coin Version (Multi-Token) is WERN's comprehensive multi-token ecosystem that enables users to convert their walking rewards into verified social impact through diverse impact coin options. The system includes EcoCoins for environmental initiatives, AquaDrops for water access projects, GrainCoins for food security programs, GlowTokens for safety infrastructure, seamless token conversion capabilities, blockchain verification ensuring impact credibility, and comprehensive impact tracking that shows users exactly how their conversions create social good. EcoCoins enable users to support environmental initiatives including reforestation, carbon offset programs, renewable energy projects, and sustainability initiatives that address climate change and environmental protection. AquaDrops support water access projects that provide clean water to communities in need, including well construction, water filtration systems, and water infrastructure improvements that address water scarcity and water quality issues. GrainCoins fund food security programs that address hunger and malnutrition, including food distribution programs, agricultural support initiatives, and nutrition programs that provide meals to communities in need. GlowTokens support safety infrastructure improvements including street lighting, security systems, emergency response resources, and community safety programs that enhance safety in neighborhoods and communities. Token conversion capabilities enable seamless transformation of Litties into any impact coin type, providing users with choice and flexibility in their social impact contributions. Blockchain verification ensures that all conversions are immutably recorded and verified, providing transparency and credibility for impact claims. Impact tracking shows users detailed information about how their converted coins contribute to specific projects and create measurable social outcomes. In Asian markets, where diverse social challenges require varied solutions, the multi-token system enables users to support causes that align with local priorities, whether that's environmental protection in pollution-affected regions, water access in water-scarce areas, food security in regions with hunger, or safety infrastructure in communities where safety is a concern.", functionalities: ["EcoCoins (Environmental): Environmental initiative support including reforestation and carbon offset", "AquaDrops (Water): Water access project funding for clean water initiatives", "GrainCoins (Food): Food security program support addressing hunger and malnutrition", "GlowTokens (Safety): Safety infrastructure funding for community safety improvements", "Token Conversion: Seamless transformation of Litties into impact coins", "Blockchain Verification: Immutable records ensuring conversion credibility and transparency", "Impact Tracking: Detailed visibility into how conversions create measurable social outcomes"], benefits: ["Diverse Impact Options: Multiple token types enable support for diverse social causes", "User Choice: Flexibility to choose impact causes that align with personal values", "Verified Impact: Blockchain verification ensures credibility and transparency", "Blockchain Security: Immutable records protect against fraud and ensure authenticity", "Transparency: Impact tracking provides visibility into social outcomes", "Social Good: Direct connection between walking activity and meaningful social contribution"] },
+            { id: 29, name: "AI Coach", category: "analytics", priority: "Personalization", status: "Live", overview: "AI Coach is WERN's intelligent personalized guidance system powered by advanced artificial intelligence and machine learning algorithms that provide adaptive recommendations, smart prompts, predictive insights, habit formation support, performance optimization guidance, health coaching, and comprehensive personalization based on individual user patterns, preferences, and goals. The system analyzes user activity data, walking patterns, consistency metrics, goal progress, and behavioral trends to provide personalized guidance that helps users optimize their walking routines and achieve their health and wellness objectives. Adaptive recommendations provide personalized suggestions for walking times, routes, distances, and intensities based on individual patterns and preferences, helping users optimize their activity for maximum health benefits and reward earnings. Smart prompts deliver timely notifications and reminders that encourage activity at optimal times, helping users maintain consistency and build sustainable walking habits. Predictive insights use machine learning to forecast activity patterns, identify potential challenges, and provide proactive guidance that helps users stay on track toward their goals. Habit formation support provides structured guidance for building consistent walking routines, including gradual progression, milestone recognition, and behavior reinforcement strategies that support long-term habit development. Performance optimization guidance analyzes user performance data to identify improvement opportunities, efficiency gains, and optimization strategies that help users maximize their walking benefits and reward earnings. Health coaching features provide personalized health insights based on walking activity, including recommendations for activity levels, recovery periods, and health optimization strategies tailored to individual health profiles and goals. Personalization ensures that all guidance is tailored to individual user patterns, preferences, goals, and circumstances, creating a customized experience that maximizes engagement and effectiveness. In Asian markets, where personalized health guidance and data-driven wellness approaches are increasingly popular, AI Coach provides intelligent support that helps users optimize their walking routines within the context of busy Asian urban lifestyles and diverse health needs.", functionalities: ["Adaptive Recommendations: Personalized suggestions for walking times, routes, and intensities", "Smart Prompts: Timely notifications and reminders encouraging optimal activity timing", "Predictive Insights: Machine learning forecasts identifying patterns and potential challenges", "Habit Formation: Structured guidance supporting consistent walking routine development", "Performance Optimization: Data-driven analysis identifying improvement opportunities and efficiency gains", "Health Coaching: Personalized health insights and recommendations based on activity patterns", "Personalization: Comprehensive customization based on individual patterns, preferences, and goals"], benefits: ["Personalized Experience: Tailored guidance maximizes engagement and effectiveness", "Better Outcomes: Data-driven recommendations optimize health benefits and goal achievement", "User Engagement: Intelligent support increases platform stickiness and participation", "Health Improvement: Personalized coaching supports health optimization and wellness", "Goal Achievement: Adaptive guidance helps users achieve walking and health objectives", "Competitive Advantage: AI-powered personalization differentiates platform in competitive market"] },
+            { id: 30, name: "My Passport", category: "gamification", priority: "Engagement Driver", status: "Live", overview: "My Passport is WERN's comprehensive consolidated achievement and impact record that serves as a user's digital identity, achievement archive, verified impact record, global activity map, statistics dashboard, social proof showcase, and NFT gallery. The system creates a complete digital portfolio that documents a user's entire WERN journey, providing a comprehensive record of achievements, impact contributions, and platform participation. Digital identity features create a unique user profile that represents their WERN journey, including achievements, badges, impact contributions, and platform participation history. Achievement archive maintains complete records of all badges earned, milestones achieved, challenges completed, and recognition received throughout the user's platform experience. Verified impact record documents all social impact contributions including impact coin conversions, environmental contributions, and community service activities, providing a comprehensive record of social good created through walking activity. Global activity map visualizes the user's walking activity across all locations, showing geographic coverage, route history, and activity patterns around the world. Statistics dashboard provides comprehensive metrics including total steps, distance covered, Litties earned, impact created, badges collected, streaks maintained, and other key performance indicators that summarize the user's platform experience. Social proof showcase enables users to share their achievements and impact with others, creating recognition and motivation through social visibility. NFT gallery displays all NFT-based badges and collectibles earned by the user, showcasing blockchain-verified achievements and digital assets. In Asian markets, where achievement recognition and social proof are highly valued, My Passport provides a comprehensive showcase that enables users to document and share their walking journey, achievements, and social impact contributions.", functionalities: ["Digital Identity: Unique user profile representing complete WERN journey", "Achievement Archive: Complete records of badges, milestones, challenges, and recognition", "Verified Impact Record: Comprehensive documentation of social impact contributions", "Global Activity Map: Geographic visualization of walking activity across all locations", "Statistics Dashboard: Comprehensive metrics summarizing platform experience and achievements", "Social Proof: Achievement and impact sharing capabilities for social recognition", "NFT Gallery: Display of blockchain-verified badges and digital collectibles"], benefits: ["User Identity: Comprehensive digital portfolio creates unique user identity", "Achievement Recognition: Complete achievement archive provides recognition and motivation", "Impact Visibility: Verified impact record demonstrates social contribution and purpose", "Social Proof: Achievement showcase creates recognition and social status", "Portability: Digital record enables platform-independent achievement documentation", "Digital Ownership: NFT gallery provides true ownership of blockchain-verified achievements"] },
+            { id: 31, name: "Streaks", category: "gamification", priority: "Engagement Driver", status: "Live", overview: "Streaks is WERN's comprehensive daily walking streak tracking system that rewards consistent activity through streak monitoring, bonus rewards, recovery features, milestone recognition, leaderboard competition, notification support, and reward multipliers that create powerful motivation for daily walking habits. The system tracks consecutive days of walking activity, providing recognition and rewards for consistency that helps users build sustainable walking routines. Daily streak tracking monitors consecutive days of walking activity, maintaining accurate records of streak length and providing real-time streak status updates. Streak bonuses provide additional rewards for maintaining streaks, with increasing bonuses for longer streaks that create motivation for continued consistency. Streak recovery features offer grace periods and recovery options that help users maintain streaks through temporary interruptions, supporting habit formation while recognizing that occasional breaks are normal. Streak milestones recognize significant streak achievements including 7-day, 30-day, 100-day, and annual milestones that provide major recognition and rewards for exceptional consistency. Streak leaderboards create competitive motivation by ranking users based on streak length, enabling friendly competition and social recognition for consistency achievements. Notifications provide timely reminders and encouragement that help users maintain streaks, including daily reminders, milestone celebrations, and recovery prompts. Reward multipliers increase reward earnings for users maintaining active streaks, providing financial incentives for consistency that complement recognition and achievement rewards. In Asian markets, where consistency and discipline are highly valued cultural principles, Streaks provides powerful motivation that aligns with cultural values around perseverance, habit formation, and long-term commitment while creating engaging gamification that drives daily activity.", functionalities: ["Daily Streak Tracking: Consecutive day monitoring with real-time streak status", "Streak Bonuses: Additional rewards for maintaining streaks with increasing bonuses for longer streaks", "Streak Recovery: Grace periods and recovery options supporting habit formation", "Streak Milestones: Recognition for 7-day, 30-day, 100-day, and annual achievements", "Streak Leaderboards: Competitive rankings based on streak length creating social recognition", "Notifications: Timely reminders and encouragement supporting streak maintenance", "Reward Multipliers: Increased reward earnings for users maintaining active streaks"], benefits: ["Consistency: Streak tracking creates powerful motivation for daily activity", "Habit Formation: Structured streak system supports sustainable walking routine development", "Motivation: Recognition and rewards drive continued consistency and engagement", "Recognition: Milestone achievements provide social status and achievement satisfaction", "Engagement: Gamification elements increase platform stickiness and participation", "Long-term Retention: Streak system supports sustained platform engagement over time"] },
+            { id: 32, name: "Wallet", category: "core", priority: "Essential", status: "Live", overview: "Wallet is WERN's secure digital wallet system that enables users to manage their Litties, impact coins, transaction history, and blockchain-integrated assets through comprehensive financial management features. The system provides secure storage, transparent transaction records, blockchain integration, transfer capabilities, and balance tracking that enable users to fully control and manage their WERN rewards and assets. Litties management features enable users to view balances, track earnings, monitor spending, and manage their primary reward currency with comprehensive transaction visibility. Impact coin storage provides secure storage for all impact coin types including EcoCoins, AquaDrops, GrainCoins, and GlowTokens, enabling users to manage their social impact assets alongside financial rewards. Transaction history maintains complete records of all wallet transactions including earnings, conversions, transfers, and redemptions, providing comprehensive financial transparency and record-keeping. Blockchain integration ensures that all transactions are securely recorded on the blockchain, providing immutability, transparency, and security for digital assets. Secure storage uses advanced encryption and security protocols to protect user assets, ensuring that wallets are protected against unauthorized access and fraud. Transfer capabilities enable users to send Litties and impact coins to other users, supporting gifting, sharing, and community transactions that enhance social engagement. Balance tracking provides real-time visibility into all wallet balances including Litties, impact coins, and transaction pending status, enabling users to monitor their assets comprehensively. In Asian markets, where digital wallets and mobile payments are increasingly popular and financial security is paramount, Wallet provides a secure, transparent, and user-friendly system for managing WERN rewards and assets.", functionalities: ["Litties Management: Comprehensive management of primary reward currency including balances and transactions", "Impact Coin Storage: Secure storage for all impact coin types including EcoCoins, AquaDrops, GrainCoins, and GlowTokens", "Transaction History: Complete records of all wallet transactions including earnings, conversions, and transfers", "Blockchain Integration: Secure blockchain recording ensuring immutability and transparency", "Secure Storage: Advanced encryption and security protocols protecting user assets", "Transfer Capabilities: User-to-user transfer support for gifting and sharing", "Balance Tracking: Real-time visibility into all wallet balances and transaction status"], benefits: ["Financial Management: Comprehensive wallet system enables complete reward and asset control", "Security: Advanced security protocols protect user assets and transactions", "Transparency: Complete transaction history provides financial visibility and record-keeping", "Convenience: User-friendly interface enables easy wallet management and transactions", "Blockchain Benefits: Blockchain integration provides security, immutability, and transparency", "User Control: Comprehensive management capabilities enable full user control over assets"] },
+            { id: 33, name: "Referrals", category: "core", priority: "Growth Engine", status: "Live", overview: "Referrals is WERN's comprehensive referral tracking and reward system that enables users to earn rewards by inviting friends, family, and contacts to join the platform through multi-tier bonuses, comprehensive analytics, social sharing integration, mentorship rewards, leaderboard competition, and transparent reward distribution. The system transforms users into growth ambassadors by providing powerful incentives and tools for community building. Referral tracking maintains complete records of all referrals including direct referrals, indirect referrals through multi-tier networks, referral status, conversion rates, and reward earnings, providing comprehensive visibility into referral performance. Multi-tier bonuses reward users for both direct referrals and indirect referrals through their referral network, creating powerful incentives for building extensive referral networks. Referral analytics provide detailed insights into referral performance including conversion rates, active referrals, reward earnings, network growth, and referral trends that enable users to optimize their referral strategies. Social sharing integration enables easy sharing of referral links through popular social platforms and messaging apps, making it simple for users to invite contacts through familiar communication channels. Mentorship rewards provide additional bonuses for users who help new referrals successfully onboard and become active platform participants, recognizing the value of successful user activation. Referral leaderboards create competitive motivation by ranking users based on referral success, enabling friendly competition and social recognition for top referrers. Reward distribution ensures transparent and timely reward allocation for successful referrals, building trust and motivation for continued referral activity. In Asian markets, where social networks and word-of-mouth recommendations are particularly powerful, Referrals leverages cultural values around community, family connections, and social influence to drive organic growth through authentic user advocacy.", functionalities: ["Referral Tracking: Complete records of direct and indirect referrals with status and performance metrics", "Multi-tier Bonuses: Rewards for direct referrals and indirect network referrals", "Referral Analytics: Detailed insights into referral performance, conversion rates, and network growth", "Social Sharing: Easy sharing integration with popular social platforms and messaging apps", "Mentorship Rewards: Additional bonuses for successful new user activation and onboarding support", "Referral Leaderboards: Competitive rankings based on referral success creating social recognition", "Reward Distribution: Transparent and timely reward allocation for successful referrals"], benefits: ["Viral Growth: Multi-tier referral system creates exponential user acquisition through network effects", "User Acquisition: Powerful referral incentives drive cost-effective user growth", "Community Building: Referral system transforms users into community builders and advocates", "Cost Efficiency: Referral acquisition typically has lower costs than paid channels", "Network Effects: Referral networks create sustainable growth through user advocacy", "Engagement: Referral rewards and recognition motivate continued platform participation"] },
+            { id: 34, name: "Nearby Walkers", category: "social", priority: "Social Connection", status: "Live", overview: "Nearby Walkers is WERN's proximity-based social discovery feature that enables users to see other walkers within their vicinity, displaying distance information, step counts, activity status, and providing social interaction opportunities while maintaining comprehensive privacy controls and safety features. The system creates real-time social awareness that enhances both community connection and safety through visibility. Proximity detection uses GPS technology to identify walkers within a configurable radius, enabling users to discover nearby community members who are actively walking. Distance display shows the exact distance between users and nearby walkers, helping users identify potential walking companions or safety resources within reach. Step count visibility displays the current step counts of nearby walkers, creating social motivation and enabling users to see community activity levels. Activity status indicators show whether nearby walkers are actively walking, paused, or have completed their sessions, providing context about current community activity. Social interaction features enable safe communication and connection with nearby walkers, creating opportunities for community building and companionship. Privacy controls allow users to customize their visibility and interaction preferences, ensuring that users maintain control over their social presence and interactions. Safety features include reporting capabilities, blocking options, and safety alerts that help users maintain safe social interactions. In Asian markets, where dense urban populations create rich opportunities for social connection and community building, Nearby Walkers helps users discover walking communities, find walking companions, and build social connections through shared activity while respecting cultural norms around privacy, social interaction, and personal boundaries.", functionalities: ["Proximity Detection: GPS-based identification of walkers within configurable radius", "Distance Display: Exact distance measurement between users and nearby walkers", "Step Count Visibility: Current step count display for nearby walkers creating social motivation", "Activity Status: Indicators showing whether walkers are active, paused, or completed", "Social Interaction: Safe communication and connection features for community building", "Privacy Controls: Customizable visibility and interaction preferences for user control", "Safety Features: Reporting, blocking, and safety alert capabilities for safe social interactions"], benefits: ["Social Connection: Proximity-based discovery enables community building and companionship", "Safety: Increased visibility provides security and peace of mind through community awareness", "Community Awareness: Real-time visibility into local walking activity and community engagement", "Motivation: Seeing other walkers encourages consistent activity and community participation", "Route Discovery: Knowledge of walker locations helps discover popular routes and areas", "Social Engagement: Social interaction features create opportunities for community connection"] },
+            { id: 35, name: "Safe Route Verification", category: "safety", priority: "Essential", status: "Live", overview: "Safe Route Verification is WERN's comprehensive community-driven route safety system that enables users to discover, verify, and share information about safe walking routes through community ratings, safety scoring, lighting information, accessibility features, route recommendations, and safety alerts. The system creates a crowdsourced safety database that helps users make informed decisions about route selection and walking safety. Route verification enables community members to verify and rate walking routes based on safety factors, creating a database of community-validated safe routes that users can trust. Safety scoring provides comprehensive route ratings based on multiple safety factors including lighting quality, visibility, traffic patterns, crime statistics, time-of-day safety, and community safety reports, giving users detailed safety information for route planning. Lighting information provides specific details about route lighting including brightness levels, lighting coverage, and lighting reliability, helping users assess visibility and safety for different times of day. Accessibility features document route accessibility including sidewalk quality, wheelchair accessibility, elevation changes, and other factors that affect route usability for users with different mobility needs. Community ratings enable users to rate and review routes based on their personal experiences, creating collective intelligence about route safety and quality. Route recommendations use safety data and user preferences to suggest optimal routes for different times, destinations, and safety priorities, helping users find the safest paths for their walking needs. Safety alerts provide real-time notifications about safety concerns, incidents, or hazards along verified routes, enabling proactive safety management. In Asian markets, where route safety varies significantly across different urban environments and safety information is often limited, Safe Route Verification provides critical safety intelligence that helps users navigate cities safely and confidently.", functionalities: ["Route Verification: Community-validated safe route database with user ratings and reviews", "Safety Scoring: Comprehensive route ratings based on lighting, visibility, traffic, and crime factors", "Lighting Information: Detailed lighting quality and coverage information for route assessment", "Accessibility Features: Documentation of route accessibility including sidewalk quality and elevation", "Community Ratings: User reviews and ratings creating collective route safety intelligence", "Route Recommendations: Safety-based route suggestions for different times and destinations", "Safety Alerts: Real-time notifications about safety concerns and hazards along routes"], benefits: ["User Safety: Comprehensive safety information enables informed route selection and safe walking", "Route Discovery: Safety database helps users discover safe routes in unfamiliar areas", "Community Trust: Community-validated information builds trust and confidence in route safety", "Accessibility: Accessibility documentation helps users with different mobility needs find suitable routes", "Peace of Mind: Comprehensive safety information reduces anxiety and increases confidence", "Route Planning: Safety data enables proactive route planning and safety management"] },
+            { id: 36, name: "Parental Controls", category: "safety", priority: "Family Value", status: "Live", overview: "Parental Controls is WERN's comprehensive parental management system designed for KidLab Mode, providing geo-fencing capabilities, time limits, activity monitoring, content filtering, location tracking, emergency contact management, and activity reporting that enable parents to maintain complete oversight and control over their children's platform experience. The system ensures that children can enjoy the benefits of WERN's walking rewards while parents maintain appropriate safety and control. Geo-fencing allows parents to set safe boundaries for their children's walking activity, receiving immediate alerts when children enter or leave designated safe zones, ensuring that children stay within approved areas. Time limits enable parents to set daily or session-based time restrictions for platform use, helping manage screen time and ensuring balanced activity. Activity monitoring provides comprehensive visibility into children's walking activity including steps taken, routes followed, time spent, and platform interactions, enabling parents to monitor their children's platform engagement. Content filtering ensures that children only see age-appropriate content and interactions, protecting them from inappropriate material or communications. Location tracking provides real-time visibility into children's locations during walking sessions, enabling parents to monitor their children's safety and whereabouts. Emergency contact management allows parents to maintain updated lists of emergency contacts who will be notified in emergency situations, ensuring rapid response when needed. Activity reports provide comprehensive summaries of children's platform activity including walking sessions, achievements earned, rewards received, and time spent, enabling parents to review and understand their children's platform experience. In Asian markets, where family safety and parental control are paramount concerns, Parental Controls provides comprehensive management capabilities that enable parents to confidently allow their children to participate in WERN's walking rewards while maintaining strict safety and oversight standards.", functionalities: ["Geo-fencing: Safe boundary setting with alerts for zone entry and exit", "Time Limits: Daily and session-based time restrictions for platform use management", "Activity Monitoring: Comprehensive visibility into children's walking activity and platform interactions", "Content Filtering: Age-appropriate content protection ensuring safe platform experience", "Location Tracking: Real-time location visibility during walking sessions for safety monitoring", "Emergency Contacts: Management system for emergency contact notification in critical situations", "Activity Reports: Comprehensive summaries of children's platform activity and engagement"], benefits: ["Child Safety: Comprehensive safety features and monitoring protect children during platform use", "Parental Peace of Mind: Complete oversight and control capabilities reduce parental anxiety", "Family Control: Extensive management features enable parents to customize children's experience", "Safety Assurance: Multiple safety layers ensure children's security and well-being", "Monitoring: Comprehensive activity visibility enables informed parental decision-making", "Trust Building: Transparent monitoring and control features build parental confidence"] },
+            { id: 37, name: "Geofencing", category: "safety", priority: "Family Value", status: "Live", overview: "Geofencing is WERN's location-based boundary system that enables users to set custom geographic boundaries for safety monitoring and parental control, providing alert systems, location monitoring, custom zone configuration, notification management, and comprehensive safety features. The system uses GPS technology to create virtual boundaries that trigger alerts and notifications when users enter or leave designated zones, providing powerful safety and monitoring capabilities. Boundary setting allows users to define custom geographic areas using map interfaces, creating safe zones, restricted areas, or monitoring boundaries tailored to individual needs and safety requirements. Alert system provides immediate notifications when boundaries are crossed, including entry alerts, exit alerts, and boundary violation warnings that enable rapid response to safety concerns. Location monitoring continuously tracks user locations relative to defined boundaries, providing real-time visibility into boundary status and location changes. Custom zones enable users to create multiple boundaries for different purposes including home zones, school zones, safe areas, and restricted areas, providing flexible boundary management for diverse safety needs. Notification system manages alert delivery including push notifications, SMS alerts, email notifications, and in-app alerts, ensuring that boundary events are communicated through preferred channels. Safety features include emergency activation, trusted contact notification, and safety response protocols that activate when boundary violations occur in safety-critical situations. Parental controls integration enables parents to set and manage boundaries for their children, providing comprehensive safety oversight for family use. In Asian markets, where family safety and location monitoring are important concerns, Geofencing provides powerful safety capabilities that help families maintain awareness and control over their loved ones' locations and safety.", functionalities: ["Boundary Setting: Custom geographic area definition using interactive map interfaces", "Alert System: Immediate notifications for boundary entry, exit, and violation events", "Location Monitoring: Continuous GPS tracking relative to defined boundaries with real-time status", "Custom Zones: Multiple boundary creation for different purposes and safety needs", "Notification System: Multi-channel alert delivery including push, SMS, email, and in-app notifications", "Safety Features: Emergency activation and trusted contact notification for safety-critical situations", "Parental Controls: Integration with parental control systems for family safety management"], benefits: ["Safety: Comprehensive boundary monitoring provides security and peace of mind", "Parental Control: Location-based boundaries enable effective parental oversight and management", "Location Awareness: Real-time boundary status provides awareness of user locations", "Alert System: Immediate notifications enable rapid response to boundary events", "Peace of Mind: Boundary monitoring reduces anxiety and increases safety confidence", "Family Security: Comprehensive safety features protect family members and provide oversight"] },
+            { id: 38, name: "Destination Missions", category: "gamification", priority: "Engagement Driver", status: "Live", overview: "Destination Missions is WERN's location-based mission system that rewards users for walking to specific destinations, creating engaging exploration experiences through destination selection, mission creation, reward distribution, location verification, mission tracking, completion rewards, and mission history. The system transforms walking into purposeful exploration by encouraging users to discover new locations, visit points of interest, and complete location-based objectives. Destination selection enables users to choose from curated destinations including landmarks, parks, cultural sites, markets, and community locations, or create custom destinations for personal exploration goals. Mission creation allows users to set destination goals with specific requirements including distance, time limits, and completion criteria, creating personalized exploration challenges. Reward distribution provides bonus Litties and recognition for successful mission completion, incentivizing exploration and destination achievement. Location verification uses GPS technology to confirm when users reach designated destinations, ensuring accurate mission completion tracking. Mission tracking provides real-time progress updates showing distance remaining, estimated arrival time, and mission status, helping users stay motivated toward completion. Completion rewards recognize successful mission completion with bonuses, badges, and achievement recognition that celebrate exploration accomplishments. Mission history maintains complete records of all completed missions including destinations visited, routes taken, completion times, and rewards earned, creating a comprehensive exploration portfolio. In Asian markets, where walking to destinations is often part of daily life and cultural exploration is highly valued, Destination Missions provides engaging motivation for discovering local landmarks, markets, temples, parks, and cultural sites while earning rewards for purposeful walking activity.", functionalities: ["Destination Selection: Curated and custom destination options for exploration goals", "Mission Creation: Personalized destination challenges with distance and time requirements", "Reward Distribution: Bonus Litties and recognition for successful mission completion", "Location Verification: GPS-based confirmation of destination arrival and mission completion", "Mission Tracking: Real-time progress updates showing distance and estimated arrival", "Completion Rewards: Bonuses, badges, and achievement recognition for mission success", "Mission History: Complete records of destinations visited, routes, and completion achievements"], benefits: ["Engagement: Location-based missions create purposeful and engaging walking experiences", "Exploration: Destination goals encourage discovery of new locations and cultural sites", "Rewards: Mission completion provides additional earning opportunities and recognition", "Goal Achievement: Structured destination goals help users achieve exploration objectives", "Location Discovery: Mission system helps users discover interesting destinations and routes", "Motivation: Destination-based challenges create clear objectives and completion satisfaction"] },
+            { id: 39, name: "Event Missions", category: "gamification", priority: "Engagement Driver", status: "Live", overview: "Event Missions is WERN's time-limited event-based mission system that creates special walking challenges tied to occasions, holidays, cultural celebrations, and community events, providing exclusive rewards, event tracking, community participation features, event leaderboards, and special badges that commemorate participation in significant platform and community events. The system creates excitement and urgency around special occasions while building community engagement through shared event participation. Event creation enables platform administrators and partners to design special missions for holidays, festivals, cultural celebrations, community events, and platform milestones, creating culturally relevant and timely engagement opportunities. Time-limited missions create urgency and exclusivity by restricting participation to specific time windows, making event participation feel special and valuable. Exclusive rewards provide unique bonuses, badges, and recognition available only during event periods, creating collectible achievements and special incentives for event participation. Event tracking monitors participation rates, completion statistics, and community engagement metrics, providing insights into event effectiveness and community response. Community participation features enable users to see how many community members are participating in events, creating social motivation and collective achievement experiences. Event leaderboards create competitive rankings specific to each event, enabling users to compete for event-specific recognition and rewards. Special badges commemorate event participation with unique collectible achievements that document special occasions and community milestones. In Asian markets, where cultural festivals, holidays, and community events are central to social life, Event Missions can be customized to align with local celebrations like Chinese New Year, Diwali, Songkran, Ramadan, and regional festivals, creating engagement that resonates with cultural values and community traditions while providing exclusive rewards and recognition for participation.", functionalities: ["Event Creation: Special mission design for holidays, festivals, and community events", "Time-Limited Missions: Exclusive participation windows creating urgency and collectibility", "Exclusive Rewards: Unique bonuses and badges available only during event periods", "Event Tracking: Participation monitoring and engagement metrics for event effectiveness", "Community Participation: Social visibility showing community event engagement and collective achievement", "Event Leaderboards: Competitive rankings specific to each event with event-based recognition", "Special Badges: Unique collectible achievements commemorating event participation"], benefits: ["Engagement: Time-limited events create excitement and urgency around special occasions", "Community Building: Shared event participation fosters community connection and collective achievement", "Exclusive Rewards: Special event rewards create collectible value and participation incentives", "Event Participation: Event missions encourage participation in cultural celebrations and community events", "Social Connection: Community participation features create social motivation and shared experiences", "Motivation: Exclusive rewards and time-limited availability drive event participation and engagement"] },
+            { id: 40, name: "Impact Coins Conversion", category: "core", priority: "Social Impact", status: "Live", overview: "Impact Coins Conversion is WERN's seamless conversion system that enables users to transform their earned Litties into verified social impact through multiple impact coin options, providing transparent conversion rates, blockchain verification, comprehensive impact tracking, conversion history, and real-time conversion capabilities that create a direct connection between walking rewards and meaningful social contribution. The system empowers users to choose how their walking activity creates social good, providing flexibility and personalization in impact contribution. Litties to Impact Coins conversion enables users to exchange their primary reward currency for any impact coin type including EcoCoins for environmental initiatives, AquaDrops for water access projects, GrainCoins for food security programs, and GlowTokens for safety infrastructure, providing diverse options for social impact contribution. Multiple coin options ensure that users can support causes that align with their values and local priorities, whether that's environmental protection, water access, food security, or safety infrastructure. Conversion rates are transparent and clearly displayed, enabling users to understand exactly how their Litties translate into impact coin value and social contribution. Blockchain verification ensures that all conversions are immutably recorded on the blockchain, providing transparency, credibility, and proof of impact contribution. Impact tracking provides detailed visibility into how converted coins contribute to specific projects and create measurable social outcomes, enabling users to see the tangible results of their conversions. Conversion history maintains complete records of all conversions including amounts, coin types, timestamps, and impact outcomes, providing comprehensive documentation of social contribution. Real-time conversion enables immediate transformation of Litties into impact coins, allowing users to convert rewards as soon as they're earned. In Asian markets, where social responsibility and community contribution are deeply valued, Impact Coins Conversion provides meaningful opportunities for users to transform their walking activity into verified social good that addresses local and regional priorities including environmental protection in pollution-affected areas, water access in water-scarce regions, food security in areas with hunger, and safety infrastructure in communities where safety is a concern.", functionalities: ["Litties to Impact Coins: Seamless exchange of primary rewards for impact coin types", "Multiple Coin Options: Choice between EcoCoins, AquaDrops, GrainCoins, and GlowTokens", "Conversion Rates: Transparent exchange rates clearly displayed for user understanding", "Blockchain Verification: Immutable recording of all conversions ensuring transparency and credibility", "Impact Tracking: Detailed visibility into how conversions contribute to specific projects and outcomes", "Conversion History: Complete records of all conversions with amounts, types, and timestamps", "Real-time Conversion: Immediate transformation of Litties into impact coins upon user request"], benefits: ["Social Impact: Direct connection between walking rewards and verified social contribution", "User Choice: Multiple coin options enable users to support causes aligned with their values", "Verified Impact: Blockchain verification ensures credibility and transparency in impact claims", "Transparency: Clear conversion rates and impact tracking provide visibility into social outcomes", "Purpose: Impact conversion creates meaningful purpose beyond individual health benefits", "Community Contribution: Enables users to contribute to social causes through walking activity"] },
+            { id: 41, name: "Subscriptions (Premium)", category: "business", priority: "Revenue Stream", status: "Live", overview: "Subscriptions (Premium) is WERN's premium subscription tier that provides enhanced features, exclusive rewards, advanced analytics, priority support, ad-free experience, enhanced limits, and early access to new features, creating a sustainable revenue model while delivering exceptional value to power users and committed community members. The premium tier recognizes and rewards users who are deeply engaged with the platform while providing additional value that justifies subscription investment. Premium features include advanced analytics, custom challenge creation, enhanced privacy controls, priority badge minting, and exclusive gamification elements that provide premium users with superior platform experience. Exclusive rewards provide premium users with bonus Litties, special badges, exclusive impact coin conversion rates, and access to premium-only challenges and events that create additional value and recognition. Advanced analytics deliver comprehensive insights including detailed trend analysis, predictive recommendations, custom report generation, and export capabilities that enable premium users to deeply understand their activity and optimize their walking routines. Priority support ensures that premium users receive rapid response times, dedicated support channels, and personalized assistance that enhances their platform experience. Ad-free experience removes all advertising from the platform, creating a clean, focused user experience that maximizes engagement and enjoyment. Enhanced limits provide premium users with higher reward caps, increased conversion limits, and expanded feature access that enable greater platform utilization. Early access provides premium users with first access to new features, beta testing opportunities, and platform updates that create exclusivity and value. In Asian markets, where premium subscriptions are increasingly popular and users value enhanced experiences, Subscriptions (Premium) provides a sustainable revenue model while delivering exceptional value that justifies investment for committed users seeking advanced features and exclusive benefits.", functionalities: ["Premium Features: Advanced analytics, custom challenges, enhanced privacy, and exclusive gamification", "Exclusive Rewards: Bonus Litties, special badges, premium conversion rates, and premium-only challenges", "Advanced Analytics: Comprehensive insights, trend analysis, predictive recommendations, and custom reports", "Priority Support: Rapid response times, dedicated channels, and personalized assistance", "Ad-Free Experience: Complete removal of advertising for clean, focused user experience", "Enhanced Limits: Higher reward caps, increased conversions, and expanded feature access", "Early Access: First access to new features, beta testing, and platform updates"], benefits: ["Revenue Generation: Sustainable subscription model creates predictable platform revenue", "User Value: Premium features and exclusive benefits justify subscription investment", "Enhanced Experience: Superior platform experience for committed and engaged users", "Priority Support: Rapid assistance enhances user satisfaction and platform experience", "Exclusive Benefits: Premium-only features and rewards create value and recognition", "Platform Sustainability: Subscription revenue supports platform development and growth"] },
+            { id: 42, name: "Ambassador Program", category: "business", priority: "Growth Engine", status: "Live", overview: "Ambassador Program is WERN's elite program for top-performing users that provides revenue sharing opportunities, exclusive perks, brand representation opportunities, community leadership roles, success story amplification, and special recognition that transforms passionate community members into powerful growth engines and brand advocates. The program identifies users who demonstrate exceptional engagement, community contribution, and platform advocacy, inviting them to join an elite group of platform champions. Elite selection uses comprehensive evaluation criteria including step consistency, Kindness Score, referral success, community participation, platform advocacy, and leadership potential to identify users who embody WERN's values and can effectively represent the platform. Revenue sharing provides financial incentives tied to referral success and community growth contributions, creating sustainable motivation for continued advocacy and platform promotion. Exclusive perks include early access to features, special badges, priority support, exclusive event invitations, and platform recognition that distinguish ambassadors within the community. Brand representation opportunities enable ambassadors to serve as official WERN representatives at events, in marketing materials, and in partnership activities, providing recognition and professional development opportunities. Community leadership roles allow ambassadors to moderate discussions, lead challenges, organize events, and serve as community representatives, creating meaningful leadership opportunities. Success story amplification features highlight ambassador achievements across platform channels, sharing their stories to inspire other users and demonstrate the value of active participation. Special recognition provides visible status indicators, exclusive badges, and platform-wide acknowledgment that celebrate ambassador contributions. In Asian markets, where community influence and social recognition are particularly powerful, the Ambassador Program leverages cultural values around leadership, community contribution, and social status to drive organic growth while providing meaningful recognition and opportunities for top-performing users.", functionalities: ["Elite Selection: Comprehensive evaluation identifying exceptional users based on engagement and advocacy", "Revenue Sharing: Financial incentives tied to referral success and community growth contributions", "Exclusive Perks: Early access, special badges, priority support, and exclusive event invitations", "Brand Representation: Official WERN representative opportunities at events and in marketing", "Community Leadership: Moderation, challenge leadership, event organization, and community representation", "Success Amplification: Platform-wide sharing of ambassador achievements and success stories", "Special Recognition: Visible status indicators, exclusive badges, and platform-wide acknowledgment"], benefits: ["Organic Growth: Leverages passionate users to drive authentic platform expansion", "User Engagement: Creates aspirational goals and recognition opportunities for top performers", "Brand Advocacy: Transforms users into authentic brand representatives and platform champions", "Community Building: Develops leadership structure and community organization", "Recognition: Provides meaningful status and achievement opportunities for exceptional users", "Network Effects: Amplifies growth through ambassador networks and social influence"] },
+            { id: 43, name: "Privacy Controls", category: "core", priority: "Essential", status: "Live", overview: "Privacy Controls is WERN's comprehensive granular privacy management system that enables users to maintain complete control over their personal information, location sharing, data visibility, and social interactions through extensive customization options that respect user privacy preferences and cultural norms. The system provides fine-grained control over every aspect of data sharing and visibility, ensuring that users can customize their privacy settings according to personal comfort levels and cultural expectations. Location privacy controls enable users to customize location sharing settings including who can see their location, when location is shared, and how precise location data is displayed, providing comprehensive control over location information. Data visibility controls allow users to manage what information is visible to other users, including step counts, activity status, profile information, and achievement displays, enabling users to balance social engagement with privacy preferences. Social interaction settings enable users to control who can interact with them, how they receive communications, and what social features are enabled, providing control over social engagement and interaction. Profile privacy settings allow users to customize profile visibility including public, friends-only, or private options, enabling users to control who can view their profile and activity information. Activity privacy controls enable users to manage activity visibility including walking sessions, routes, achievements, and impact contributions, allowing users to share activity selectively or maintain complete privacy. Sharing controls provide granular management over content sharing including social media integration, achievement sharing, and impact story visibility, enabling users to control how their WERN activity is shared externally. Privacy dashboard provides comprehensive overview of all privacy settings in one location, enabling users to easily review and manage their privacy preferences. In Asian markets, where privacy expectations vary significantly across different cultures and regions, Privacy Controls provides flexible options that enable users to customize their privacy settings according to personal preferences and cultural comfort levels, building trust and ensuring platform adoption across diverse Asian societies.", functionalities: ["Location Privacy: Granular control over location sharing including who, when, and precision", "Data Visibility Controls: Management of information visibility including steps, activity, and profile data", "Social Interaction Settings: Control over who can interact and how communications are received", "Profile Privacy: Customizable profile visibility including public, friends-only, and private options", "Activity Privacy: Management of activity visibility including sessions, routes, and achievements", "Sharing Controls: Granular management over content sharing and social media integration", "Privacy Dashboard: Comprehensive overview of all privacy settings in centralized location"], benefits: ["User Control: Extensive customization options enable complete privacy management", "Privacy Protection: Comprehensive controls protect user privacy and personal information", "Security: Privacy settings enhance security by limiting information exposure", "Trust Building: Transparent privacy controls build user confidence and platform trust", "Customization: Flexible options enable users to balance privacy with social engagement", "User Comfort: Privacy controls ensure users can customize experience according to comfort levels"] },
+            { id: 44, name: "Notifications", category: "core", priority: "Engagement Driver", status: "Live", overview: "Notifications is WERN's intelligent notification system that provides customizable alerts for achievements, challenges, proximity encounters, safety alerts, and platform updates through smart timing, preference management, and multi-channel delivery that keeps users engaged and informed without creating notification fatigue. The system uses intelligent algorithms to deliver timely, relevant notifications that enhance user experience and drive engagement. Achievement notifications celebrate user accomplishments including step milestones, badge earnings, streak achievements, and challenge completions, providing recognition and motivation for continued activity. Challenge alerts notify users about new challenges, challenge deadlines, leaderboard updates, and challenge opportunities, ensuring users stay informed about competitive opportunities. Proximity notifications alert users when nearby walkers are detected, when proximity bonuses are earned, and when social connection opportunities arise, enhancing social engagement and community connection. Safety alerts provide critical notifications about safety concerns, route hazards, emergency situations, and safety feature activations, ensuring users receive important safety information promptly. Customizable settings enable users to control notification types, delivery channels, timing preferences, and frequency limits, allowing users to customize their notification experience according to personal preferences. Notification preferences provide granular control over each notification type including enable/disable options, delivery channel selection, and timing preferences, enabling users to fine-tune their notification experience. Smart timing uses intelligent algorithms to deliver notifications at optimal times based on user activity patterns, time zones, and engagement preferences, maximizing notification effectiveness while minimizing disruption. In Asian markets, where notification preferences vary significantly and users may prefer different communication channels and timing, Notifications provides flexible options that enable users to customize their notification experience according to cultural preferences, communication habits, and personal comfort levels while ensuring important information is delivered effectively.", functionalities: ["Achievement Notifications: Recognition alerts for milestones, badges, streaks, and accomplishments", "Challenge Alerts: Notifications about new challenges, deadlines, leaderboards, and opportunities", "Proximity Notifications: Alerts for nearby walkers, proximity bonuses, and social connections", "Safety Alerts: Critical notifications about safety concerns, hazards, and emergency situations", "Customizable Settings: Control over notification types, channels, timing, and frequency", "Notification Preferences: Granular control over each notification type and delivery options", "Smart Timing: Intelligent algorithms delivering notifications at optimal times based on user patterns"], benefits: ["Engagement: Timely notifications drive user engagement and platform participation", "Awareness: Notifications keep users informed about opportunities, achievements, and important information", "Safety: Safety alerts ensure users receive critical safety information promptly", "Motivation: Achievement and challenge notifications provide recognition and motivation", "User Control: Customizable settings enable users to manage notification experience", "Timely Information: Smart timing ensures notifications are delivered when most effective"] },
+            { id: 45, name: "Accessibility & Inclusivity", category: "core", priority: "Essential", status: "Live", overview: "Accessibility & Inclusivity is WERN's comprehensive accessibility system that ensures the platform is usable and enjoyable for all users regardless of abilities, disabilities, languages, or cultural backgrounds through WCAG 2.2 compliance, screen reader support, multi-language options, inclusive design principles, accessibility features, user customization, and universal access capabilities. The system is built on principles of universal design that ensure platform accessibility from the ground up, creating an inclusive experience that welcomes diverse users. WCAG 2.2 compliance ensures that the platform meets international web accessibility standards, providing accessible experiences for users with visual, auditory, motor, and cognitive disabilities. Screen reader support enables users with visual impairments to navigate and use the platform effectively through comprehensive screen reader compatibility and accessible content structure. Multi-language options provide platform localization in multiple languages including major Asian languages like Hindi, Mandarin, Japanese, Korean, Thai, Vietnamese, and others, ensuring that users can access the platform in their preferred language. Inclusive design principles guide platform development to ensure that features are designed with accessibility and usability in mind from the beginning, creating experiences that work for diverse users. Accessibility features include high contrast modes, text size adjustment, voice navigation, gesture alternatives, and other accommodations that enable users with different abilities to use the platform effectively. User customization enables users to adjust interface elements, text sizes, colors, and interaction methods according to personal preferences and accessibility needs. Universal access capabilities ensure that platform features are available to all users regardless of technical limitations, device capabilities, or connectivity constraints. In Asian markets, where diverse languages, cultures, and accessibility needs require comprehensive accommodation, Accessibility & Inclusivity ensures that WERN is accessible to users across the region, including users with disabilities, users who prefer local languages, and users with varying technical capabilities, creating an inclusive platform that welcomes diverse communities.", functionalities: ["WCAG 2.2 Compliance: International web accessibility standards ensuring accessible experiences", "Screen Reader Support: Comprehensive compatibility enabling effective navigation for visually impaired users", "Multi-language Options: Platform localization in multiple languages including major Asian languages", "Inclusive Design: Design principles ensuring accessibility and usability from development beginning", "Accessibility Features: High contrast, text adjustment, voice navigation, and gesture alternatives", "User Customization: Interface adjustment capabilities for personal preferences and accessibility needs", "Universal Access: Features available to all users regardless of technical or connectivity limitations"], benefits: ["Inclusivity: Comprehensive accessibility ensures platform usability for diverse users", "Broader Reach: Accessibility features expand platform access to users with different abilities", "User Comfort: Customization options enable users to optimize experience for personal needs", "Compliance: WCAG compliance ensures regulatory compliance and accessibility standards", "Social Impact: Inclusive platform promotes social equity and accessibility", "Market Expansion: Accessibility features enable platform growth in diverse markets"] }
+        ];
+
+        // Create featureData mapping from features array
+        const featureData = {};
+        features.forEach(feature => {
+            featureData[feature.name] = feature;
+        });
+
+
+        // Function to open feature modal
+        function openFeatureModal(featureTitle) {
+            const modal = new bootstrap.Modal(document.getElementById('featureModal'));
+            const modalTitle = document.getElementById('featureModalLabel');
+            const modalContent = document.getElementById('featureModalContent');
+
+            const data = featureData[featureTitle];
+
+            if (data) {
+                modalTitle.textContent = featureTitle;
+
+                let content = '';
+                const cardStatusMap = {};
+
+                document.querySelectorAll('.feature-card[data-category="allFeatures"] .xb-item--holder').forEach((holder) => {
+                    const titleEl = holder.querySelector('.xb-item--title');
+                    const statusEl = holder.querySelector('.deepTag');
+                    if (!titleEl || !statusEl) return;
+                    cardStatusMap[titleEl.textContent.trim()] = statusEl.textContent.trim();
+                });
+
+                const statusText = cardStatusMap[featureTitle] || data.status;
+
+                // Create metadata badges section
+                content += '<div class="feature-meta-badges">';
+
+                // Category badge
+                const categoryColors = {
+                    'core': 'primary',
+                    'social': 'info',
+                    'gamification': 'success',
+                    'analytics': 'warning',
+                    'business': 'danger',
+                    'safety': 'dark'
+                };
+                const categoryColor = categoryColors[data.category] || 'secondary';
+                content += `<span class="badge bg-${categoryColor}">
+                    <i class="fas fa-layer-group"></i>
+                    <span>${data.category.charAt(0).toUpperCase() + data.category.slice(1)}</span>
+                </span>`;
+
+                // Priority badge
+                content += `<span class="badge bg-warning text-dark">
+                    <i class="fas fa-star"></i>
+                    <span>${data.priority}</span>
+                </span>`;
+
+                // Status badge
+                const statusColor = statusText === 'Live' ? 'success' : (statusText === 'Upcoming' ? 'secondary' : 'info');
+                const statusIcon = statusText === 'Live' ? 'fa-circle-check' : 'fa-clock';
+                content += `<span class="badge bg-${statusColor}">
+                    <i class="fas ${statusIcon}"></i>
+                    <span>${statusText}</span>
+                </span>`;
+
+                content += '</div>';
+
+                // Overview section
+                if (data.overview) {
+                    content += `<div class="modal-overview">
+                        <h5 class="section-heading">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Overview</span>
+                        </h5>
+                        <p class="overview-text">${data.overview}</p>
+                    </div>`;
+                }
+
+                // Functionalities section
+                if (data.functionalities && data.functionalities.length > 0) {
+                    content += `<div class="modal-section">
+                        <h5 class="section-heading">
+                            <i class="fas fa-cogs"></i>
+                            <span>Key Functionalities</span>
+                        </h5>
+                        <ul class="feature-list">`;
+
+                    data.functionalities.forEach((functionality, index) => {
+                        content += `<li class="feature-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>${functionality}</span>
+                        </li>`;
+                    });
+
+                    content += `</ul></div>`;
+                }
+
+                // Benefits section
+                if (data.benefits && data.benefits.length > 0) {
+                    content += `<div class="modal-section">
+                        <h5 class="section-heading">
+                            <i class="fas fa-trophy"></i>
+                            <span>Key Benefits</span>
+                        </h5>
+                        <ul class="feature-list">`;
+
+                    data.benefits.forEach((benefit, index) => {
+                        content += `<li class="feature-item">
+                            <i class="fas fa-star text-warning"></i>
+                            <span>${benefit}</span>
+                        </li>`;
+                    });
+
+                    content += `</ul></div>`;
+                }
+
+                modalContent.innerHTML = content;
+                modal.show();
+            } else {
+                console.error('Feature data not found for:', featureTitle);
+            }
+        }
+
+        // Modal scroll behavior handler
+        document.addEventListener('DOMContentLoaded', function () {
+            const featureModal = document.getElementById('featureModal');
+            const modalBody = featureModal.querySelector('.modal-body');
+
+            // Prevent body scroll when modal is open
+            featureModal.addEventListener('shown.bs.modal', function () {
+                document.body.style.overflow = 'hidden';
+                document.body.style.paddingRight = '0px';
+            });
+
+            // Restore body scroll when modal is closed
+            featureModal.addEventListener('hidden.bs.modal', function () {
+                document.body.style.overflow = '';
+                document.body.style.paddingRight = '';
+            });
+
+            // Smooth scroll behavior for modal content
+            if (modalBody) {
+                // Prevent wheel event from bubbling to body when modal is scrolling
+                modalBody.addEventListener('wheel', function (e) {
+                    const isScrollable = modalBody.scrollHeight > modalBody.clientHeight;
+
+                    if (isScrollable) {
+                        const isAtTop = modalBody.scrollTop === 0;
+                        const isAtBottom = modalBody.scrollTop + modalBody.clientHeight >= modalBody.scrollHeight - 1;
+
+                        // Prevent default only if we're not at the edges or scrolling away from edge
+                        if ((!isAtTop && !isAtBottom) ||
+                            (isAtTop && e.deltaY > 0) ||
+                            (isAtBottom && e.deltaY < 0)) {
+                            e.stopPropagation();
+                        }
+                    }
+                }, { passive: false });
+
+                // Handle touch events for mobile
+                let touchStartY = 0;
+                modalBody.addEventListener('touchstart', function (e) {
+                    touchStartY = e.touches[0].clientY;
+                }, { passive: true });
+
+                modalBody.addEventListener('touchmove', function (e) {
+                    const touchY = e.touches[0].clientY;
+                    const touchDelta = touchStartY - touchY;
+                    const isScrollable = modalBody.scrollHeight > modalBody.clientHeight;
+
+                    if (isScrollable) {
+                        const isAtTop = modalBody.scrollTop === 0;
+                        const isAtBottom = modalBody.scrollTop + modalBody.clientHeight >= modalBody.scrollHeight - 1;
+
+                        if ((!isAtTop && !isAtBottom) ||
+                            (isAtTop && touchDelta > 0) ||
+                            (isAtBottom && touchDelta < 0)) {
+                            e.stopPropagation();
+                        }
+                    }
+                }, { passive: false });
+            }
+        });
+
+    </script>
+
+    <!-- Feature Detail Modal -->
+    <div id="featureModal" class="modal fade" tabindex="-1" aria-labelledby="featureModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header px-4">
+                    <h3 class="modal-title" id="featureModalLabel">Feature Title</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="featureModalContent">
+                        <!-- Dynamic content will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EULA Modal -->
+    <div id="eulaModal" class="modal fade" tabindex="-1" aria-labelledby="eulaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4">
+                    <h3 class="modal-title" id="eulaModalLabel">
+                        WERN – End User License Agreement (EULA)
+                    </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="eula-content">
+                        <p class="eula-version">Version 1.0</p>
+                        <p class="eula-paragraph">This End User License Agreement ("Agreement", "EULA") is a binding contract between you ("User") and <strong>WERN Technologies Ltd</strong>, incorporated in the United Arab Emirates.</p>
+                        <p class="eula-paragraph">By downloading, installing, accessing, or using the WERN mobile application, web platform, or related digital tools ("App" or "Platform"), you acknowledge that you have read and agree to the terms of this Agreement.</p>
+                        <p class="eula-warning"><strong>If you do not agree, you must discontinue use and uninstall the App immediately.</strong></p>
+
+                        <h4 class="eula-section-title">SECTION 1 – DEFINITIONS</h4>
+                        <p class="eula-paragraph">For clarity throughout this Agreement:</p>
+                        <ul class="eula-list">
+                            <li><strong>"Digital Rewards"</strong> refers collectively to Litties, Impact Coins, badges, challenges, OG Status, or any virtual asset earned on the Platform.</li>
+                            <li><strong>"Services"</strong> include the App, website, APIs, corporate dashboards, campaign tools, analytics, and all associated functions.</li>
+                            <li><strong>"Corporate Partners"</strong> means brands, advertisers, retailers, or businesses using WERN tools or publishing campaigns.</li>
+                            <li><strong>"User Activities"</strong> mean steps, engagement actions, location events, interactions with brands, social features, and participation in rewards.</li>
+                            <li><strong>"Fraudulent Activity"</strong> includes manipulation of steps/location, bot usage, false referrals, false data submission, or exploiting platform systems.</li>
+                        </ul>
+                        <p class="eula-paragraph">These definitions apply throughout the Agreement.</p>
+
+                        <h4 class="eula-section-title">SECTION 2 – LICENSE GRANT & RESTRICTIONS</h4>
+                        <p class="eula-paragraph">WERN grants a limited, revocable, non-exclusive, non-transferable, non-sublicensable license solely for personal use.</p>
+                        <p class="eula-paragraph">You agree that you may not:</p>
+                        <ul class="eula-list">
+                            <li>Reverse-engineer, decompile, or copy code, algorithms, or software</li>
+                            <li>Tamper with digital rewards, thresholds, or earning logic</li>
+                            <li>Circumvent geo-restrictions or location-based validation</li>
+                            <li>Access the Platform through VPNs, emulators, bots, scripts, or automation tools</li>
+                            <li>Modify the App or create derivative works</li>
+                            <li>Exploit system bugs or loopholes intentionally</li>
+                        </ul>
+                        <p class="eula-paragraph">Violation results in immediate termination and possible legal action.</p>
+
+                        <h4 class="eula-section-title">SECTION 3 – ELIGIBILITY</h4>
+                        <p class="eula-paragraph">To use WERN:</p>
+                        <ul class="eula-list">
+                            <li>Under 18 requires parental consent and approval.</li>
+                            <li>You must not be legally prohibited from using such apps in your country.</li>
+                            <li>You confirm that your account is created for legitimate use.</li>
+                        </ul>
+                        <p class="eula-paragraph">WERN may request identity verification for fraud prevention or compliance.</p>
+
+                        <h4 class="eula-section-title">SECTION 4 – ACCOUNT CREATION & SECURITY</h4>
+                        <p class="eula-paragraph">You agree to:</p>
+                        <ul class="eula-list">
+                            <li>Maintain accuracy of your profile and registration data</li>
+                            <li>Not register multiple accounts unless explicitly permitted</li>
+                            <li>Stay responsible for all account actions</li>
+                        </ul>
+                        <p class="eula-paragraph">WERN is not responsible for:</p>
+                        <ul class="eula-list">
+                            <li>Losses due to compromised credentials</li>
+                            <li>Unauthorized use due to negligence</li>
+                            <li>Any damages arising from shared or lost login access</li>
+                        </ul>
+                        <p class="eula-paragraph">We reserve the right to temporarily or permanently restrict any suspicious accounts.</p>
+
+                        <h4 class="eula-section-title">SECTION 5 – PERMITTED & PROHIBITED USE</h4>
+                        <p class="eula-paragraph">You agree to use WERN lawfully and ethically. You may not:</p>
+                        <ul class="eula-list">
+                            <li>Manipulate walking, movement, step count, or activity data</li>
+                            <li>Fake location data through GPS spoofing</li>
+                            <li>Use emulators or rooted devices to bypass controls</li>
+                            <li>Upload unlawful, harmful, abusive, violent, or misleading content</li>
+                            <li>Harass, stalk, or threaten other users</li>
+                            <li>Conduct unauthorized advertising or commercial activity</li>
+                            <li>Attempt to attack, overload, or disrupt the Platform</li>
+                            <li>Interfere with reward algorithms or corporate campaigns</li>
+                            <li>Use WERN for activities that violate UAE or international law</li>
+                        </ul>
+                        <p class="eula-paragraph">WERN reserves broad rights to investigate violations, restrict usage, and pursue remedies.</p>
+
+                        <h4 class="eula-section-title">SECTION 6 – DIGITAL REWARDS & VIRTUAL ASSETS</h4>
+                        <p class="eula-paragraph">WERN's digital rewards system is not:</p>
+                        <ul class="eula-list">
+                            <li>A cryptocurrency</li>
+                            <li>An investment product</li>
+                            <li>A security under UAE, DIFC, ADGM, or international regulations</li>
+                            <li>A financial guarantee or redeemable cash equivalent</li>
+                        </ul>
+                        <p class="eula-paragraph">You understand and agree that:</p>
+                        <ul class="eula-list">
+                            <li>Rewards hold no monetary value unless expressly stated by WERN</li>
+                            <li>WERN may modify, reduce, limit, or remove reward systems at any time</li>
+                            <li>Rewards may expire or be forfeited</li>
+                            <li>Corporate or third-party rewards depend on partner availability</li>
+                            <li>Digital assets do not constitute ownership rights in WERN</li>
+                            <li>WERN can revoke rewards from accounts suspected of fraud</li>
+                        </ul>
+                        <p class="eula-paragraph">You acknowledge that rewards are entirely discretionary and based on system validity checks.</p>
+
+                        <h4 class="eula-section-title">SECTION 7 – CORPORATE CAMPAIGNS & BRAND INTERACTIONS</h4>
+                        <p class="eula-paragraph">When you interact with brand offers, campaigns, challenges, or events:</p>
+                        <ul class="eula-list">
+                            <li>WERN is not responsible for the accuracy, availability, legality, or delivery of third-party offers</li>
+                            <li>Corporate partners are solely responsible for their promotional content</li>
+                            <li>WERN may block or remove campaigns that violate our standards & UAE Law</li>
+                            <li>Data shared with brands is aggregated and anonymized unless explicitly consented</li>
+                        </ul>
+                        <p class="eula-paragraph">WERN disclaims liability for:</p>
+                        <ul class="eula-list">
+                            <li>Non-delivery of partner rewards</li>
+                            <li>Disputes between you and brands</li>
+                            <li>Misleading or expired offers from third parties</li>
+                            <li>Quality, safety, or fulfillment of brand products</li>
+                        </ul>
+                        <p class="eula-paragraph">All corporate programs are optional.</p>
+
+                        <h4 class="eula-section-title">SECTION 8 – LOCATION SERVICES & HEALTH SAFETY DISCLAIMER</h4>
+                        <p class="eula-paragraph">WERN uses location services for:</p>
+                        <ul class="eula-list">
+                            <li>Step validation</li>
+                            <li>Nearby Walkers feature</li>
+                            <li>Geo-locked challenges</li>
+                            <li>Map navigation</li>
+                            <li>Safety features (SOS, zone alerts)</li>
+                        </ul>
+                        <p class="eula-paragraph">By using the App, you acknowledge that:</p>
+                        <ul class="eula-list">
+                            <li>Location accuracy may vary depending on device, network, and GPS availability</li>
+                            <li>WERN is not responsible for inaccurate location data or missed safety alerts</li>
+                            <li>WERN does not guarantee timely SOS responses</li>
+                            <li>Physical activities performed while using WERN (walking, outdoor activity, etc.) are done at your own risk</li>
+                        </ul>
+                        <p class="eula-warning"><strong>WERN is not liable for injuries, accidents, or incidents occurring during use of the Platform.</strong></p>
+
+                        <h4 class="eula-section-title">SECTION 9 – PRIVACY & DATA PROCESSING</h4>
+                        <p class="eula-paragraph">Your data is handled according to the WERN Privacy Policy, which forms part of this Agreement.</p>
+                        <p class="eula-paragraph">WERN may process data for:</p>
+                        <ul class="eula-list">
+                            <li>Reward validation</li>
+                            <li>Anti-fraud checks</li>
+                            <li>Engagement analytics</li>
+                            <li>Reporting for brands</li>
+                            <li>Security improvements</li>
+                        </ul>
+                        <p class="eula-paragraph">WERN does not sell personal data and complies with:</p>
+                        <ul class="eula-list">
+                            <li>UAE PDPL (Federal Decree-Law No. 45 of 2021)</li>
+                            <li>International best-practice privacy frameworks</li>
+                        </ul>
+
+                        <h4 class="eula-section-title">SECTION 10 – SOFTWARE UPDATES</h4>
+                        <p class="eula-paragraph">You agree that:</p>
+                        <ul class="eula-list">
+                            <li>WERN may push mandatory updates</li>
+                            <li>Legacy features may be disabled or deprecated</li>
+                            <li>The App may be temporarily unavailable during upgrades</li>
+                        </ul>
+                        <p class="eula-paragraph">WERN is not responsible for losses or disruptions occurring due to updates.</p>
+
+                        <h4 class="eula-section-title">SECTION 11 – INTELLECTUAL PROPERTY</h4>
+                        <p class="eula-paragraph">All WERN content, code, systems, algorithms, graphics, and branding remain exclusive property of WERN Technologies Ltd.</p>
+                        <p class="eula-paragraph">You may not:</p>
+                        <ul class="eula-list">
+                            <li>Use WERN assets for commercial purposes</li>
+                            <li>Copy or replicate visual identity</li>
+                            <li>Train machine learning systems using WERN content</li>
+                            <li>Extract data using scraping or automated tools</li>
+                        </ul>
+                        <p class="eula-paragraph">Violations may result in legal action.</p>
+
+                        <h4 class="eula-section-title">SECTION 12 – TERMINATION OF ACCOUNT</h4>
+                        <p class="eula-paragraph">We may suspend or terminate your account immediately if:</p>
+                        <ul class="eula-list">
+                            <li>You violate this EULA</li>
+                            <li>Fraud or suspicious activity is detected</li>
+                            <li>You attempt to override security controls</li>
+                            <li>You misuse brand campaigns or social features</li>
+                        </ul>
+                        <p class="eula-paragraph">Termination may result in loss of access to:</p>
+                        <ul class="eula-list">
+                            <li>Rewards</li>
+                            <li>Progress</li>
+                            <li>Account data</li>
+                            <li>Status levels</li>
+                        </ul>
+                        <p class="eula-paragraph">You are not entitled to compensation for termination.</p>
+
+                        <h4 class="eula-section-title">SECTION 13 – WARRANTY DISCLAIMER ("AS IS" BASIS)</h4>
+                        <p class="eula-paragraph">WERN is provided "AS IS," "AS AVAILABLE," and without warranties of any kind.</p>
+                        <p class="eula-paragraph">We do not guarantee:</p>
+                        <ul class="eula-list">
+                            <li>Continuous uptime</li>
+                            <li>Error-free performance</li>
+                            <li>Accurate reward calculation</li>
+                            <li>Safety or emergency outcomes</li>
+                            <li>Compatibility with all devices</li>
+                            <li>Value or stability of digital rewards</li>
+                            <li>Third-party offer accuracy</li>
+                        </ul>
+                        <p class="eula-paragraph">All use is voluntary.</p>
+
+                        <h4 class="eula-section-title">SECTION 14 – LIMITATION OF LIABILITY</h4>
+                        <p class="eula-paragraph">To the maximum extent allowed by UAE law:</p>
+                        <p class="eula-paragraph">WERN is not liable for:</p>
+                        <ul class="eula-list">
+                            <li>Loss of data, rewards, or earnings</li>
+                            <li>Physical injuries or health issues</li>
+                            <li>Technical failures, outages, or errors</li>
+                            <li>Inaccurate steps or location data</li>
+                            <li>Third-party actions or offers</li>
+                            <li>Unauthorized account access</li>
+                            <li>Emotional, indirect, incidental, or consequential damages</li>
+                        </ul>
+                        <p class="eula-paragraph">WERN's maximum liability is limited to the total amount you paid WERN in the last 12 months, if any.</p>
+
+                        <h4 class="eula-section-title">SECTION 15 – INDEMNIFICATION</h4>
+                        <p class="eula-paragraph">You agree to indemnify, defend, and hold harmless WERN from any claims arising due to:</p>
+                        <ul class="eula-list">
+                            <li>Your misuse of the Platform</li>
+                            <li>Fraudulent or harmful behavior</li>
+                            <li>Violation of laws or third-party rights</li>
+                            <li>Content you submit</li>
+                            <li>Disputes between you and any brand or user</li>
+                        </ul>
+
+                        <h4 class="eula-section-title">SECTION 16 – GOVERNING LAW & DISPUTE RESOLUTION</h4>
+                        <p class="eula-paragraph">This Agreement is governed by the laws of the United Arab Emirates.</p>
+                        <p class="eula-paragraph">All disputes shall be resolved through:</p>
+                        <ul class="eula-list">
+                            <li>Informal negotiation (mandatory)</li>
+                            <li>Arbitration under UAE arbitration rules</li>
+                            <li>Failing which, exclusive jurisdiction of Abu Dhabi courts</li>
+                        </ul>
+
+                        <h4 class="eula-section-title">SECTION 17 – MISCELLANEOUS</h4>
+                        <ul class="eula-list">
+                            <li><strong>Severability:</strong> Invalid clauses do not void the entire Agreement</li>
+                            <li><strong>Non-Waiver:</strong> Failure to enforce does not equal permission</li>
+                            <li><strong>Entire Agreement:</strong> This EULA + Privacy Policy + Terms form the full agreement</li>
+                            <li><strong>Revisions:</strong> WERN may revise this Agreement at any time with notice</li>
+                        </ul>
+
+                        <h4 class="eula-section-title">SECTION 18 – CONTACT</h4>
+                        <p class="eula-paragraph mb-2">
+                            <strong>Email:</strong> 
+                            <a href="mailto:info@wernapp.com" style="color: #10b981;">info@wernapp.com</a>
+                        </p>
+                        <p class="eula-paragraph"><strong>Address:</strong> EREC 20, Floor 1, Al Danah, Abu Dhabi, UAE</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-eula-close" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn-eula-accept" id="eulaAcceptBtn">Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EULA Form Handler Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const eulaForm = document.getElementById('wernAccessForm');
+            const eulaAcceptBtn = document.getElementById('eulaAcceptBtn');
+            const emailInput = document.getElementById('eulaEmailInput');
+
+            // Email validation function
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            // Show error message
+            function showError(input, message) {
+                removeError(input);
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'email-error-message';
+                errorDiv.textContent = message;
+                input.parentElement.appendChild(errorDiv);
+                input.classList.add('input-error');
+            }
+
+            // Remove error message
+            function removeError(input) {
+                const existingError = input.parentElement.querySelector('.email-error-message');
+                if (existingError) {
+                    existingError.remove();
+                }
+                input.classList.remove('input-error');
+            }
+
+            // Clear error on input
+            if (emailInput) {
+                emailInput.addEventListener('input', function() {
+                    removeError(this);
+                });
+            }
+
+            if (eulaForm) {
+                eulaForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = emailInput.value.trim();
+
+                    if (!email) {
+                        showError(emailInput, 'Please enter your email address');
+                        return;
+                    }
+
+                    if (!isValidEmail(email)) {
+                        showError(emailInput, 'Please enter a valid email address');
+                        return;
+                    }
+
+                    // Show the EULA modal
+                    const eulaModal = new bootstrap.Modal(document.getElementById('eulaModal'));
+                    eulaModal.show();
+                });
+            }
+
+            if (eulaAcceptBtn) {
+                eulaAcceptBtn.addEventListener('click', function() {
+                    window.location.href = 'launching-soon.html';
+                });
+            }
+
+            // EULA Modal scroll behavior handler
+            const eulaModalEl = document.getElementById('eulaModal');
+            const eulaModalBody = eulaModalEl.querySelector('.modal-body');
+
+            // Prevent body scroll when modal is open
+            eulaModalEl.addEventListener('shown.bs.modal', function () {
+                document.body.style.overflow = 'hidden';
+                document.body.style.paddingRight = '0px';
+            });
+
+            // Restore body scroll when modal is closed
+            eulaModalEl.addEventListener('hidden.bs.modal', function () {
+                document.body.style.overflow = '';
+                document.body.style.paddingRight = '';
+            });
+
+            // Smooth scroll behavior for modal content
+            if (eulaModalBody) {
+                // Handle wheel event for mouse scroll
+                eulaModalBody.addEventListener('wheel', function (e) {
+                    const isScrollable = eulaModalBody.scrollHeight > eulaModalBody.clientHeight;
+
+                    if (isScrollable) {
+                        const isAtTop = eulaModalBody.scrollTop === 0;
+                        const isAtBottom = eulaModalBody.scrollTop + eulaModalBody.clientHeight >= eulaModalBody.scrollHeight - 1;
+
+                        // Prevent default only if we're not at the edges or scrolling away from edge
+                        if ((!isAtTop && !isAtBottom) ||
+                            (isAtTop && e.deltaY > 0) ||
+                            (isAtBottom && e.deltaY < 0)) {
+                            e.stopPropagation();
+                        }
+                    }
+                }, { passive: false });
+
+                // Handle touch events for mobile
+                let touchStartY = 0;
+                eulaModalBody.addEventListener('touchstart', function (e) {
+                    touchStartY = e.touches[0].clientY;
+                }, { passive: true });
+
+                eulaModalBody.addEventListener('touchmove', function (e) {
+                    const touchY = e.touches[0].clientY;
+                    const touchDelta = touchStartY - touchY;
+                    const isScrollable = eulaModalBody.scrollHeight > eulaModalBody.clientHeight;
+
+                    if (isScrollable) {
+                        const isAtTop = eulaModalBody.scrollTop === 0;
+                        const isAtBottom = eulaModalBody.scrollTop + eulaModalBody.clientHeight >= eulaModalBody.scrollHeight - 1;
+
+                        if ((!isAtTop && !isAtBottom) ||
+                            (isAtTop && touchDelta > 0) ||
+                            (isAtBottom && touchDelta < 0)) {
+                            e.stopPropagation();
+                        }
+                    }
+                }, { passive: false });
+            }
+        });
+    </script>

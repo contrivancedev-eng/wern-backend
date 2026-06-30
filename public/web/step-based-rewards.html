@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+
+    <!--========= Required meta tags =========-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Step-based Rewards</title>
+    <link rel="icon" type="image/icon" href="assets/img/favicon.png">
+
+    <!-- css include -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/mousecursor.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/custom-fonts.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+        /* Breadcrumb background for light mode */
+        body.light-mode .breadcrumb.bg_img {
+            background-image: url('assets/img/bg/bootcamp-bg-light.png') !important;
+        }
+    </style>
+</head>
+
+<body class="about-page inner-page">
+
+    <!-- backtotop-start -->
+    <div class="xb-backtotop">
+        <a href="#" class="scroll">
+            <i class="far fa-arrow-up"></i>
+        </a>
+    </div>
+    <!-- backtotop-end -->
+
+    <!-- Preloader-Start -->
+    <div id="preloader" class="preloader">
+        <div class="loader-circle">
+            <div class="loader-line-mask">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-logo">
+                <img src="assets/img/logo/logo.png" alt="WERN Walk. Earn. Empower.">
+            </div>
+        </div>
+    </div>
+    <!-- Preloader-end -->
+
+    <div class="body_wrap o-clip">
+
+        <!-- header start -->
+        <header id="xb-header-area" class="header-area header-style--two header-transparent is-sticky">
+            <div class="xb-header stricky">
+                <div class="container">
+                    <div class="header__wrap xb-border ul_li_between pe-lg-4">
+                        <div class="xb-header-logo">
+                            <a href="index.html" class="logo1">
+                                <img src="assets/img/logo/logo.png" alt="" style="height: 45px;">
+                            </a>
+                        </div>
+                        <div class="main-menu__wrap  navbar navbar-expand-lg p-0">
+                            <nav class="main-menu collapse navbar-collapse">
+                                <ul>
+                                    <li class="scrollspy-btn active">
+                                        <a href="#home"><span>Home</span></a>
+                                    </li>
+                                    <li><a class="scrollspy-btn" href="#major-features"><span>Major Features</span></a>
+                                    </li>
+                                    <li><a class="scrollspy-btn" href="#features"><span>All Features</span></a></li>
+                                    <li><a class="scrollspy-btn" href="#process"><span>Process</span></a></li>
+                                    <li><a class="scrollspy-btn" href="#coming-soon"><span>Coming Soon</span></a></li>
+                                    <li><a class="scrollspy-btn" href="#stats"><span>Statistics</span></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- Theme Toggle Button -->
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                            <i class="far fa-sun"></i>
+                            <i class="far fa-moon"></i>
+                        </button>
+
+                        <div class="header-bar-mobile side-menu d-lg-none">
+                            <a class="xb-nav-mobile" href="javascript:void(0);">
+                                <i class="far fa-bars"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="xb-header-wrap">
+                        <div class="xb-header-menu">
+                            <div class="xb-header-menu-scroll">
+                                <div class="xb-menu-close xb-hide-xl xb-close"></div>
+                                <div class="xb-logo-mobile xb-hide-xl">
+                                    <a href="index.html" rel="home">
+                                        <img src="assets/img/logo/logo.png" alt="" style="height: 45px;">
+                                    </a>
+                                    <!-- Theme Toggle for Mobile -->
+                                    <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()" style="margin-left: auto;">
+                                        <i class="far fa-sun"></i>
+                                        <i class="far fa-moon"></i>
+                                    </button>
+                                </div>
+                                <div class="xb-header-mobile-search xb-hide-xl">
+                                    <form role="search" action="#">
+                                        <input type="text" placeholder="Search..." name="s" class="search-field">
+                                        <button class="search-submit" type="submit"><i
+                                                class="far fa-search"></i></button>
+                                    </form>
+                                </div>
+                                <nav class="xb-header-nav">
+                                    <ul class="xb-menu-primary clearfix">
+                                        <li class="scrollspy-btn">
+                                            <a href="#home"><span>Home</span></a>
+                                        </li>
+                                        <li><a class="scrollspy-btn" href="#major-features"><span>Major
+                                                    Features</span></a></li>
+                                        <li><a class="scrollspy-btn" href="#features"><span>All Features</span></a></li>
+                                        <li><a class="scrollspy-btn" href="#process"><span>Process</span></a></li>
+                                        <li><a class="scrollspy-btn" href="#coming-soon"><span>Coming Soon</span></a>
+                                        </li>
+                                        <li><a class="scrollspy-btn" href="#stats"><span>Statistics</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="xb-header-menu-backdrop"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <div class="body-overlay"></div>
+
+        <!-- main area start -->
+        <main>
+            <!-- hero start -->
+            <section class="breadcrumb bg_img" data-background="assets/img/bg/bootcamp-bg.png">
+                <div class="container">
+                    <div class="breadcrumb__content">
+                        <ul class="breadcrumb__list clearfix list-unstyled">
+                            <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                            <li class="breadcrumb-item dotIcon1 position-relative"><a href="index.html">Features</a>
+                            </li>
+                            <li class="breadcrumb-item dotIcon2 position-relative"> Step-based Rewards </li>
+                        </ul>
+                        <h2 class="breadcrumb__title">Step-based Rewards</h2>
+                    </div>
+                </div>
+            </section>
+            <!-- hero end -->
+
+            <!-- blog content start  -->
+            <section class="blog_details_section pt-70">
+                <div class="container">
+                    <!-- <div class="item_details_content mb-80 pb-70 border-bottom">
+                        <h2 class="details-content-title mb-15">User Onboarding</h2>
+                        <p class="mb-35">
+                            Frictionless sign-up and orientation with animated walkthroughs, referral-aware access, and
+                            user-type selection tailored to your journey. Our onboarding process is designed to give
+                            every new user a smooth start, helping them understand key features and navigation within
+                            minutes.
+                            Interactive tooltips and guided tours ensure that users quickly learn how to make the most
+                            of the platform. Personalized dashboards, contextual hints, and goal-based prompts create a
+                            learning flow that adapts to each user's needs. Whether you’re an individual or part of a
+                            team, our onboarding ensures you feel confident and productive from day one. The process is
+                            intuitive, fast, and built to convert first-time visitors into engaged, long-term users.
+                        </p>
+                    </div> -->
+                    <div class="row mt-none-30 featuresDtls g-0 align-items-start">
+                        <div class="col-lg-8 col-xl-7 mt-30">
+                            <div class="blog_details_content">
+
+                                <h3 class="item_details_info_heading mb-25">
+                                    What it does
+                                </h3>
+                                <p>
+                                    WERN converts your movement into Littles: 1,000 steps = 1 Little. We combine sensor fusion, GPS drift guards, and speed anomaly checks to ensure fairness. Earned Littles can be converted to impact tokens or redeemed with partners.
+                                </p>
+
+                                <div class="highlights-list mt-45">
+                                    <h3 class="item_details_info_heading2 mb-15">
+                                        Highlights
+                                    </h3>
+                                    <div class="highlight-item">
+                                        <div class="highlight-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <div class="highlight-content">
+                                            <h4 class="highlight-title">Real-time Tracking</h4>
+                                            <p class="highlight-description">Accelerometer + GPS with drift and spoof protection.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="highlight-item">
+                                        <div class="highlight-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="highlight-content">
+                                            <h4 class="highlight-title">Anti-Fraud</h4>
+                                            <p class="highlight-description">Device attestation and improbable speed detection.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="highlight-item">
+                                        <div class="highlight-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <line x1="7" y1="2" x2="7" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <line x1="17" y1="2" x2="17" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <line x1="2" y1="7" x2="7" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <line x1="2" y1="17" x2="7" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <line x1="17" y1="17" x2="22" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <line x1="17" y1="7" x2="22" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="highlight-content">
+                                            <h4 class="highlight-title">Convert or Redeem</h4>
+                                            <p class="highlight-description">Turn Littles into impact tokens or partner rewards.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xl-5">
+                            <div class="sidebar">
+                                <!-- Countdown Widget -->
+                                <div class="sidebar_widget xb-border at-glance-widget mb-0">
+                                    <div class="at-glance-wrapper text-center">
+                                        <h3 class="sidebar_widget_title at-glance-title mb-30">At a glance</h3>
+                                        <!-- Stats Grid -->
+                                        <div class="stats-grid">
+                                            <div class="stat-card">
+                                                <div class="stat-number">1,000</div>
+                                                <div class="stat-label">Steps → 1 Little</div>
+                                            </div>
+                                            <div class="stat-card">
+                                                <div class="stat-number stat-positive">+5%</div>
+                                                <div class="stat-label">Proximity Bonus Chance</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ul_li_between d-block xb-border try-it-widget mt-30">
+                                    <div class="xb-item--holder text-start">
+                                        <h3 class="xb-item--title mb-2">Try it</h3>
+                                        <p class="mb-25 try-it-description fs-6">
+                                            Walk with your device and watch steps convert to Littles in real time.
+                                        </p>
+                                        <div class="pricing-btn mb-0 mt-15">
+                                            <a class="thm-btn chatbot-btn py-3 px-5" href="index.html">
+                                                <span class="text">Back to Features</span>
+                                                <span class="btn-bg">
+                                                    <svg width="750" height="60" viewBox="0 0 750 60" fill="none"
+                                                        preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="750" height="60"
+                                                            fill="url(#paint0_radial_2224_3380)"></rect>
+                                                        <defs>
+                                                            <radialGradient id="paint0_radial_2224_3380" cx="0" cy="0"
+                                                                r="1"
+                                                                gradientTransform="matrix(-667.5 -25 0.582116 -49.7476 497 39)"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop offset="0" stop-color="#00FF97"></stop>
+                                                                <stop offset="1" stop-color="#00020F" stop-opacity="0">
+                                                                </stop>
+                                                            </radialGradient>
+                                                        </defs>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- How it looks Section -->
+                    <div class="how-it-looks-wrapper mt-45">
+                        <div class="how-it-looks-container">
+                            <div class="how-it-looks-content">
+                                <h3 class="how-it-looks-title">How it looks</h3>
+                                <p class="how-it-looks-description">
+                                    Clear conversion visuals and streak encouragement, with fraud shield indicators inline.
+                                </p>
+                            </div>
+                            <div class="how-it-looks-preview p-0">
+                                <div class="d-flex countLogic align-items-center gap-3">
+                                    <div class="leftSideStep text-center">
+                                        <h3>1000</h3>
+                                        <small>Steps Takend</small>
+                                    </div>
+                                    <div class="middle">
+                                        <h4>=</h4>
+                                    </div>
+                                    <div class="rightSideStep text-center">
+                                        <h3>1</h3>
+                                        <small>Littie Earned</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- blog content end -->
+
+        </main>
+        <!-- main area end -->
+
+        <!-- footer strt -->
+        <footer class="footer pos-rel z-1 bg_img" data-background="assets/img/bg/footer-bg02.html">
+            <div class="ac-footer-wrap mxw-1650 m-0 m-auto wow fadeInUp" data-wow-duration="600ms">
+                <div class="container">
+                    <div class="pos-rel z-1">
+                        <div class="xb-copyright ul_li_between pt-0">
+                            <div>
+                                <p>Copyright © 2025 <a href="index.html">WERN</a>, All rights reserved.</p>
+                            </div>
+
+                            <ul class="list-unstyled d-flex gap-3" style="font-size: 14px;">
+                                <li><a href="terms-of-service.html" style="color: inherit; text-decoration: none;">Terms of Services</a></li>
+                                <li>|</li>
+                                <li><a href="privacy-and-data-protection-policy.html" style="color: inherit; text-decoration: none;">Privacy & Data Protection Policy</a></li>
+                            </ul>
+
+                            <ul class="xb-social_icon ul_li list-unstyled">
+                                <li><a href="#0">Social media</a></li>
+                                <li>
+                                    <a href="#!">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <i class="fa-brands fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <i class="fa-brands fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <i class="fa-brands fab fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+    </div>
+
+    <!-- jquery include -->
+
+    <!-- Core dependencies -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Core utilities / layout helpers -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/easing.min.js"></script>
+    <script src="assets/js/scrollspy.js"></script>
+
+    <!-- Animation & Effect libraries -->
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/parallaxie.js"></script>
+    <script src="assets/js/parallax-scroll.js"></script>
+    <script src="assets/js/imageRevealHover.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+
+    <!-- Sliders -->
+    <script src="assets/js/swiper.min.js"></script>
+
+    <!-- Special plugins -->
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/lenis.js"></script>
+    <script src="assets/js/magiccursor.js"></script>
+
+    <!-- Main custom script -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        // Set countdown time (24 hours from now)
+        function startCountdown() {
+            // Set the date we're counting down to (24 hours from now)
+            const countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+
+            // Update the countdown every 1 second
+            const countdownInterval = setInterval(function () {
+                // Get current time
+                const now = new Date().getTime();
+
+                // Find the distance between now and the countdown date
+                const distance = countDownDate - now;
+
+                // Time calculations for hours, minutes and seconds
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result with leading zeros
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+                // If the countdown is finished, reset it
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    // Restart countdown
+                    startCountdown();
+                }
+            }, 1000);
+        }
+
+        // Start countdown when page loads
+        window.addEventListener('load', function () {
+            startCountdown();
+        });
+    </script>
+
+</body>
+
+</html>

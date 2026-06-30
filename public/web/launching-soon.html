@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!--========= Required meta tags =========-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="WERN Terms of Service - Read our terms and conditions for using the WERN platform">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Terms of Service | WERN</title>
+    <link rel="icon" type="image/icon" href="assets/img/favicon.png">
+
+    <!-- css include -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/mousecursor.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/custom-fonts.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+        /* ========================================
+           TERMS OF SERVICE PAGE STYLES
+           ======================================== */
+
+        /* Terms Content Section - Dark Mode (Default) */
+        .terms-content {
+            padding: 80px 0;
+            background-color: #00020f;
+        }
+
+        /* Sidebar */
+        .terms-sidebar {
+            position: sticky;
+            top: 100px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .terms-sidebar h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #fff;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #00ff97;
+        }
+
+        .terms-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .terms-nav::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .terms-nav::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+
+        .terms-nav::-webkit-scrollbar-thumb {
+            background: #00ff97;
+            border-radius: 4px;
+        }
+
+        .terms-nav li {
+            margin-bottom: 6px;
+        }
+
+        .terms-nav a {
+            display: block;
+            padding: 10px 15px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .terms-nav a:hover {
+            background: rgba(0, 255, 151, 0.1);
+            color: #00ff97;
+            border-color: rgba(0, 255, 151, 0.3);
+        }
+
+        .terms-nav a.active {
+            background: #00ff97;
+            color: #00020f;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .terms-main {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Introduction Box */
+        .terms-intro {
+            background: linear-gradient(135deg, rgba(0, 255, 151, 0.1) 0%, rgba(0, 255, 151, 0.03) 100%);
+            border-left: 4px solid #00ff97;
+            padding: 25px 30px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 40px;
+        }
+
+        .terms-intro p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .terms-intro p strong {
+            color: #00ff97;
+        }
+
+        /* Sections */
+        .terms-section {
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .terms-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .terms-section h2 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .terms-section h2 .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #00ff97 0%, #008257 100%);
+            color: #00020f;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .terms-section h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #00ff97;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .terms-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 15px;
+        }
+
+        .terms-section p strong {
+            color: #fff;
+        }
+
+        .terms-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .terms-section ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .terms-section ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Pro', 'Font Awesome 5 Pro', 'FontAwesome';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #00ff97;
+            font-size: 14px;
+        }
+
+        /* Highlight Box */
+        .terms-section .highlight-box {
+            background: rgba(0, 255, 151, 0.08);
+            border: 1px solid rgba(0, 255, 151, 0.2);
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin: 20px 0;
+        }
+
+        .terms-section .highlight-box p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* Warning Box */
+        .terms-section .warning-box {
+            background: rgba(252, 211, 50, 0.08);
+            border-left: 4px solid #fcd332;
+            border-radius: 0 12px 12px 0;
+            padding: 20px 25px;
+            margin: 20px 0;
+        }
+
+        .terms-section .warning-box p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .terms-section .warning-box p strong {
+            color: #fcd332;
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background: linear-gradient(135deg, #008257 0%, #183e49 100%);
+            border-radius: 16px;
+            padding: 40px;
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        .contact-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .contact-card p {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .contact-card p i {
+            color: #00ff97;
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .contact-card a {
+            color: #00ff97;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========================================
+           LIGHT MODE STYLES
+           ======================================== */
+
+        body.light-mode .terms-content {
+            background-color: #f8f9fa;
+        }
+
+        body.light-mode .terms-sidebar {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            backdrop-filter: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        body.light-mode .terms-sidebar h4 {
+            color: #1f2937;
+            border-bottom-color: #008257;
+        }
+
+        body.light-mode .terms-nav a:hover {
+            background: linear-gradient(135deg, #008257 0%, #183e49 100%);
+            color: #008257;
+            border-color: rgba(0, 130, 87, 0.3);
+        }
+
+        body.light-mode .terms-nav a.active {
+            background: linear-gradient(135deg, #008257 0%, #183e49 100%);
+            color: #fff !important;
+        }
+
+        body.light-mode .terms-nav::-webkit-scrollbar-thumb {
+            background: #008257;
+        }
+
+        body.light-mode .terms-main {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            backdrop-filter: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        body.light-mode .terms-intro {
+            background: linear-gradient(135deg, rgba(0, 130, 87, 0.1) 0%, rgba(0, 130, 87, 0.03) 100%);
+            border-left-color: #008257;
+        }
+
+        body.light-mode .terms-intro p {
+            color: #374151;
+        }
+
+        body.light-mode .terms-intro p strong {
+            color: #008257;
+        }
+
+        body.light-mode .terms-section {
+            border-bottom-color: #e5e7eb;
+        }
+
+        body.light-mode .terms-section h2 {
+            color: #1f2937;
+        }
+
+        body.light-mode .terms-section h2 .section-number {
+            background: linear-gradient(135deg, #008257 0%, #183e49 100%);
+            color: #fff;
+        }
+
+        body.light-mode .terms-section h4 {
+            color: #008257;
+        }
+
+
+        body.light-mode .terms-section ul li {
+            color: #4b5563;
+        }
+
+        body.light-mode .terms-section ul li::before {
+            color: #008257;
+        }
+
+        body.light-mode .terms-section .highlight-box {
+            background: rgba(0, 130, 87, 0.08);
+            border-color: rgba(0, 130, 87, 0.2);
+        }
+
+        body.light-mode .terms-section .highlight-box p {
+            color: #374151;
+        }
+
+        body.light-mode .terms-section .warning-box {
+            background: rgba(252, 211, 50, 0.15);
+        }
+
+        body.light-mode .terms-section .warning-box p {
+            color: #374151;
+        }
+
+        body.light-mode .terms-section .warning-box p strong {
+            color: #b45309;
+        }
+
+        body.light-mode .contact-card {
+            background: linear-gradient(135deg, #008257 0%, #183e49 100%);
+        }
+
+        /* Breadcrumb background for light mode */
+        body.light-mode .breadcrumb.bg_img {
+            background-image: url('assets/img/bg/bootcamp-bg-light.png') !important;
+        }
+
+        /* ========================================
+           RESPONSIVE STYLES
+           ======================================== */
+
+        @media (max-width: 991px) {
+            .terms-content{
+                padding-top: 0;
+                padding-bottom: 40px;
+            }
+            .terms-sidebar {
+                position: relative;
+                top: 0;
+                margin-bottom: 30px;
+            }
+
+            .terms-nav {
+                max-height: 250px;
+            }
+
+            .terms-main {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .terms-section h2 {
+                font-size: 20px;
+            }
+
+            .terms-section h2 .section-number {
+                min-width: 38px;
+                height: 38px;
+                font-size: 15px;
+            }
+
+            .terms-intro {
+                padding: 20px;
+            }
+
+            .contact-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body class="inner-page">
+
+    <!-- backtotop-start -->
+    <div class="xb-backtotop">
+        <a href="#" class="scroll">
+            <i class="far fa-arrow-up"></i>
+        </a>
+    </div>
+    <!-- backtotop-end -->
+
+    <!-- Preloader-Start -->
+    <div id="preloader" class="preloader">
+        <div class="loader-circle">
+            <div class="loader-line-mask">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-logo">
+                <img src="assets/img/logo/logo.png" alt="WERN Walk. Earn. Empower.">
+            </div>
+        </div>
+    </div>
+    <!-- Preloader-end -->
+
+    <div class="body_wrap o-clip">
+
+        <!-- header start -->
+        <header id="xb-header-area" class="header-area header-style--two header-transparent is-sticky">
+            <div class="xb-header stricky">
+                <div class="container">
+                    <div class="header__wrap xb-border ul_li_between pe-lg-4">
+                        <div class="xb-header-logo">
+                            <a href="index.html" class="logo1">
+                                <img src="assets/img/logo/logo.png" alt="" style="height: 45px;">
+                            </a>
+                        </div>
+                        <div class="main-menu__wrap navbar navbar-expand-lg p-0">
+                            <nav class="main-menu collapse navbar-collapse">
+                                <ul>
+                                    <li>
+                                        <a href="index.html"><span>Home</span></a>
+                                    </li>
+                                    <li><a href="index.html#major-features"><span>Major Features</span></a></li>
+                                    <li><a href="index.html#features"><span>All Features</span></a></li>
+                                    <li><a href="index.html#process"><span>Process</span></a></li>
+                                    <li><a href="index.html#coming-soon"><span>Coming Soon</span></a></li>
+                                    <li><a href="index.html#stats"><span>Statistics</span></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- Theme Toggle Button -->
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                            <i class="far fa-sun"></i>
+                            <i class="far fa-moon"></i>
+                        </button>
+
+                        <div class="header-bar-mobile side-menu d-lg-none">
+                            <a class="xb-nav-mobile" href="javascript:void(0);">
+                                <i class="far fa-bars"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="xb-header-wrap">
+                        <div class="xb-header-menu">
+                            <div class="xb-header-menu-scroll">
+                                <div class="xb-menu-close xb-hide-xl xb-close"></div>
+                                <div class="xb-logo-mobile xb-hide-xl">
+                                    <a href="index.html" rel="home">
+                                        <img src="assets/img/logo/logo.png" alt="" style="height: 45px;">
+                                    </a>
+                                    <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle theme"
+                                        onclick="toggleTheme()" style="margin-left: auto;">
+                                        <i class="far fa-sun"></i>
+                                        <i class="far fa-moon"></i>
+                                    </button>
+                                </div>
+                                <nav class="xb-header-nav">
+                                    <ul class="xb-menu-primary clearfix">
+                                        <li>
+                                            <a href="index.html"><span>Home</span></a>
+                                        </li>
+                                        <li><a href="index.html#major-features"><span>Major Features</span></a></li>
+                                        <li><a href="index.html#features"><span>All Features</span></a></li>
+                                        <li><a href="index.html#process"><span>Process</span></a></li>
+                                        <li><a href="index.html#coming-soon"><span>Coming Soon</span></a></li>
+                                        <li><a href="index.html#stats"><span>Statistics</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="xb-header-menu-backdrop"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <div class="body-overlay"></div>
+
+        <!-- main area start -->
+        <main>
+            <!-- Breadcrumb / Hero Section -->
+            <section class="breadcrumb bg_img" data-background="assets/img/bg/bootcamp-bg.png" style="height: 100vh;">
+                <div class="container">
+                    <div class="breadcrumb__content">
+                        <ul class="breadcrumb__list clearfix list-unstyled">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <!-- <li class="breadcrumb-item dotIcon1 position-relative"><a href="#">Legal</a></li> -->
+                            <li class="breadcrumb-item dotIcon2 position-relative">Launching Soon</li>
+                        </ul>
+                        <h2 class="breadcrumb__title">Launching Soon</h2>
+                    </div>
+                </div>
+            </section>
+            <!-- Breadcrumb End -->
+
+           
+        </main>
+        <!-- main area end -->
+
+        <!-- footer start -->
+        <footer class="footer pos-rel z-1 bg_img" data-background="assets/img/bg/footer-bg02.html">
+            <div class="ac-footer-wrap mxw-1650 m-0 m-auto wow fadeInUp" data-wow-duration="600ms">
+                <div class="container">
+                    <div class="pos-rel z-1">
+                        <div class="xb-copyright ul_li_between pt-0">
+                            <div>
+                                <p>Copyright © 2025 <a href="index.html">WERN</a>, All rights reserved.</p>
+                            </div>
+
+                            <ul class="list-unstyled d-flex gap-3" style="font-size: 14px;">
+                                <li><a href="terms-of-service.html" style="color: inherit; text-decoration: none;">Terms of Services</a></li>
+                                <li>|</li>
+                                <li><a href="privacy-and-data-protection-policy.html" style="color: inherit; text-decoration: none;">Privacy & Data Protection Policy</a></li>
+                            </ul>
+
+                            <ul class="xb-social_icon ul_li list-unstyled">
+                                <li><a href="#0">Social media</a></li>
+                                <li>
+                                    <a href="#!">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <i class="fa-brands fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <i class="fa-brands fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <i class="fa-brands fab fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+    </div>
+
+    <!-- jquery include -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/theme-switcher.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/easing.min.js"></script>
+    <script src="assets/js/scrollspy.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/parallaxie.js"></script>
+    <script src="assets/js/parallax-scroll.js"></script>
+    <script src="assets/js/imageRevealHover.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/lenis.js"></script>
+    <script src="assets/js/magiccursor.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

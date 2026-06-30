@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index,follow">
+<title>Get WERN - Walk. Track. Empower.</title>
+<meta name="description" content="Download WERN on the App Store or Google Play.">
+<link rel="canonical" href="https://wernapp.com/get-app">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    height: 100%;
+    background: #0b0f14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-top-color: #00ff97;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+</style>
+</head>
+<body>
+  <div class="loader" aria-label="Loading"></div>
+
+<script>
+(function() {
+  var ua = (navigator.userAgent || navigator.vendor || window.opera || '').toLowerCase();
+  var IOS_URL = 'https://apps.apple.com/in/app/wern-walk-track-empower/id6761259828';
+  var ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.wern.app&hl=en_IN';
+  var APP_SCHEME = 'com.wern.app';
+  var ANDROID_PACKAGE = 'com.wern.app';
+
+  var isIOS = /iphone|ipad|ipod/.test(ua) ||
+              (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var isAndroid = /android/.test(ua);
+
+  // Desktop / unrecognized — go straight to the Android listing (the
+  // existing behavior). Custom schemes won't open anything on desktop
+  // and would just stall the redirect.
+  if (!isIOS && !isAndroid) {
+    setTimeout(function() { window.location.replace(ANDROID_URL); }, 600);
+    return;
+  }
+
+  // Android: use an intent:// URL. Chrome handles the fallback for us —
+  // if the app is installed it launches; if not, Chrome navigates to
+  // `S.browser_fallback_url`. No timers, no flicker, no double-redirect.
+  if (isAndroid) {
+    var intentUrl =
+      'intent://open#Intent;scheme=' + APP_SCHEME +
+      ';package=' + ANDROID_PACKAGE +
+      ';S.browser_fallback_url=' + encodeURIComponent(ANDROID_URL) +
+      ';end';
+    window.location.replace(intentUrl);
+    return;
+  }
+
+  // iOS: try the custom scheme. Safari shows a one-time "Open in WERN?"
+  // prompt if the app is installed. If the page is still visible after
+  // ~1.5s (no app took focus), we fall through to the App Store. The
+  // visibilitychange handler skips the fallback when the app DID open
+  // (Safari hides this tab while the app comes to the foreground).
+  var fellBack = false;
+  var fallback = function() {
+    if (fellBack) return;
+    fellBack = true;
+    window.location.replace(IOS_URL);
+  };
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) fellBack = true; // app opened — skip fallback
+  });
+  // Kick off the deep-link attempt. iframe is the iOS-safe pattern —
+  // assigning location.href can show a "cannot open page" error if
+  // the scheme isn't registered, but an iframe just silently fails.
+  var iframe = document.createElement('iframe');
+  iframe.style.display = 'none';
+  iframe.src = APP_SCHEME + '://open';
+  document.body.appendChild(iframe);
+  setTimeout(fallback, 1500);
+})();
+</script>
+</body>
+</html>

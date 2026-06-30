@@ -1,0 +1,379 @@
+
+
+/* ===== Background ===== */
+#coming-soon{
+    overflow: hidden;
+}
+#comcoming-soon {
+    position: relative;
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: var(--bg-h);
+    max-width: var(--bg-w);
+    border-radius: 24px;
+
+    background: #111419;
+    box-shadow: var(--shadow-1), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Card Wrapper */
+.card-wrap {
+    position: relative;
+    padding: 28px;
+}
+
+/* ===== Product Card ===== */
+.product-card {
+    width: min(360px, 88vw);
+    border-radius: var(--radius);
+    padding: 18px 18px 20px;
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid var(--stroke-1);
+    box-shadow: var(--shadow-1), inset 0 1px 0 rgba(255, 255, 255, .06);
+    backdrop-filter: blur(18px) saturate(1.15);
+    -webkit-backdrop-filter: blur(18px) saturate(1.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), inset 0 -80px 120px rgba(0, 0, 0, 0.22);
+    border-radius: inherit;
+}
+
+/* Media */
+.product-media {
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.product-media img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+    filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.35));
+    transform: translateZ(0);
+    border-radius: 6px;
+}
+
+/* Head */
+.product-head {
+    padding: 2px 8px 10px
+}
+
+.product-name {
+    margin: 16px 0px 8px 0px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 20px;
+}
+
+.product-sub {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: normal;
+}
+
+/* Controls row */
+.product-ctrl h6 {
+    font-size: 16px;
+    margin: 16px 0px;
+    text-align: left;
+}
+
+.product-ctrl ul li {
+    font-size: 12px;
+    margin-bottom: 8px;
+    line-height: normal;
+    text-align: left;
+}
+
+.product-ctrl ul {
+    padding-left: 20px;
+}
+
+/* ===== Carousel Layer ===== */
+.carousel {
+    position: relative;
+    display: grid;
+    place-items: center;
+    perspective: 1600px;
+    padding: 12px 24px;
+    width: 100%;
+}
+
+.carousel .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--stroke-1);
+    background: #ffffff54;
+    color: var(--ink);
+    box-shadow: var(--shadow-2), inset 0 1px 0 rgba(255, 255, 255, .06);
+    backdrop-filter: blur(10px) saturate(1.1);
+    -webkit-backdrop-filter: blur(10px) saturate(1.1);
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    z-index: 20;
+    color: #111419;
+}
+
+.carousel .prev {
+    left: 20px;
+}
+
+.carousel .next {
+    right: 20px;
+}
+
+.deck {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deck>.product-card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    border-radius: 10px;
+    transform-origin: center bottom;
+    will-change: transform, opacity, filter;
+    transition:
+        transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1),
+        opacity 300ms ease,
+        filter 300ms ease,
+        z-index 0ms;
+}
+
+/* 7 Layer-States - Horizontal Fan Spread */
+.deck .card-pos-0 {
+    transform: translate(-50%, -50%) rotateZ(0deg) scale(1.1);
+    z-index: 7;
+    opacity: 1;
+    filter: none;
+}
+
+.deck .card-pos-1 {
+    transform: translate(calc(-50% - 220px), -50%) rotateZ(-12deg) scale(0.85);
+    z-index: 6;
+    opacity: 0.95;
+    filter: saturate(0.95) brightness(0.92);
+}
+
+.deck .card-pos-2 {
+    transform: translate(calc(-50% + 220px), -50%) rotateZ(12deg) scale(0.85);
+    z-index: 6;
+    opacity: 0.95;
+    filter: saturate(0.95) brightness(0.92);
+}
+
+.deck .card-pos-3 {
+    transform: translate(calc(-50% - 400px), -50%) rotateZ(-20deg) scale(0.72);
+    z-index: 5;
+    opacity: 0.9;
+    filter: saturate(0.92) brightness(0.88);
+}
+
+.deck .card-pos-4 {
+    transform: translate(calc(-50% + 400px), -50%) rotateZ(20deg) scale(0.72);
+    z-index: 5;
+    opacity: 0.9;
+    filter: saturate(0.92) brightness(0.88);
+}
+
+.deck .card-pos-5 {
+    transform: translate(calc(-50% - 560px), -50%) rotateZ(-28deg) scale(0.6);
+    z-index: 4;
+    opacity: 0.85;
+    filter: saturate(0.88) brightness(0.84);
+}
+
+.deck .card-pos-6 {
+    transform: translate(calc(-50% + 560px), -50%) rotateZ(28deg) scale(0.6);
+    z-index: 4;
+    opacity: 0.85;
+    filter: saturate(0.88) brightness(0.84);
+}
+
+/* Deal-in animation */
+.deck .deal-in {
+    animation: dealIn 380ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes dealIn {
+    from {
+        transform: translate(-50%, calc(-50% + 60px)) rotateZ(8deg) scale(0.84);
+        opacity: 0;
+        filter: blur(2px) brightness(0.9);
+    }
+    to {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(1.1);
+        opacity: 1;
+        filter: none;
+    }
+}
+
+/* Responsive */
+@media (max-width:1400px) {
+    .deck .card-pos-0 {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(1.05);
+    }
+    .deck .card-pos-1 {
+        transform: translate(calc(-50% - 200px), -50%) rotateZ(-11deg) scale(0.8);
+    }
+    .deck .card-pos-2 {
+        transform: translate(calc(-50% + 200px), -50%) rotateZ(11deg) scale(0.8);
+    }
+    .deck .card-pos-3 {
+        transform: translate(calc(-50% - 360px), -50%) rotateZ(-18deg) scale(0.68);
+    }
+    .deck .card-pos-4 {
+        transform: translate(calc(-50% + 360px), -50%) rotateZ(18deg) scale(0.68);
+    }
+    .deck .card-pos-5 {
+        transform: translate(calc(-50% - 500px), -50%) rotateZ(-26deg) scale(0.56);
+    }
+    .deck .card-pos-6 {
+        transform: translate(calc(-50% + 500px), -50%) rotateZ(26deg) scale(0.56);
+    }
+}
+
+@media (max-width:1024px) {
+    .deck .card-pos-0 {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(1);
+    }
+    .deck .card-pos-1 {
+        transform: translate(calc(-50% - 170px), -50%) rotateZ(-10deg) scale(0.75);
+    }
+    .deck .card-pos-2 {
+        transform: translate(calc(-50% + 170px), -50%) rotateZ(10deg) scale(0.75);
+    }
+    .deck .card-pos-3 {
+        transform: translate(calc(-50% - 300px), -50%) rotateZ(-16deg) scale(0.62);
+    }
+    .deck .card-pos-4 {
+        transform: translate(calc(-50% + 300px), -50%) rotateZ(16deg) scale(0.62);
+    }
+    .deck .card-pos-5 {
+        transform: translate(calc(-50% - 420px), -50%) rotateZ(-24deg) scale(0.52);
+    }
+    .deck .card-pos-6 {
+        transform: translate(calc(-50% + 420px), -50%) rotateZ(24deg) scale(0.52);
+    }
+}
+
+@media (max-width:768px) {
+    .deck .card-pos-0 {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(0.95);
+    }
+    .deck .card-pos-1 {
+        transform: translate(calc(-50% - 135px), -50%) rotateZ(-8deg) scale(0.7);
+    }
+    .deck .card-pos-2 {
+        transform: translate(calc(-50% + 135px), -50%) rotateZ(8deg) scale(0.7);
+    }
+    .deck .card-pos-3 {
+        transform: translate(calc(-50% - 240px), -50%) rotateZ(-14deg) scale(0.58);
+    }
+    .deck .card-pos-4 {
+        transform: translate(calc(-50% + 240px), -50%) rotateZ(14deg) scale(0.58);
+    }
+    .deck .card-pos-5 {
+        transform: translate(calc(-50% - 335px), -50%) rotateZ(-20deg) scale(0.48);
+    }
+    .deck .card-pos-6 {
+        transform: translate(calc(-50% + 335px), -50%) rotateZ(20deg) scale(0.48);
+    }
+}
+
+@media (max-width:420px) {
+    .product-media img {
+        width: 100%
+    }
+    .deck .card-pos-0 {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(0.88);
+    }
+    .deck .card-pos-1 {
+        transform: translate(calc(-50% - 105px), -50%) rotateZ(-6deg) scale(0.62);
+    }
+    .deck .card-pos-2 {
+        transform: translate(calc(-50% + 105px), -50%) rotateZ(6deg) scale(0.62);
+    }
+    .deck .card-pos-3 {
+        transform: translate(calc(-50% - 180px), -50%) rotateZ(-11deg) scale(0.52);
+    }
+    .deck .card-pos-4 {
+        transform: translate(calc(-50% + 180px), -50%) rotateZ(11deg) scale(0.52);
+    }
+    .deck .card-pos-5 {
+        transform: translate(calc(-50% - 250px), -50%) rotateZ(-16deg) scale(0.42);
+    }
+    .deck .card-pos-6 {
+        transform: translate(calc(-50% + 250px), -50%) rotateZ(16deg) scale(0.42);
+    }
+}
+
+/* Static layout mode (animation removed) */
+#coming-soon .carousel {
+    perspective: none;
+    padding: 0;
+}
+
+#coming-soon .carousel .nav {
+    display: none;
+}
+
+#coming-soon .deck {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+#coming-soon .deck > .product-card {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    z-index: auto;
+    width: 100%;
+    transition: none;
+}
+
+@media (max-width: 1024px) {
+    #coming-soon .deck {
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    #coming-soon .deck {
+        grid-template-columns: 1fr;
+    }
+}

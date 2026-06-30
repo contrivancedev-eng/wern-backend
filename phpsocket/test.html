@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Step Event Test</title>
+    <!-- Use Socket.IO v2.x client (compatible with phpsocket.io) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.5.0/socket.io.js"></script>
+    <style>
+        * { box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { max-width: 600px; margin: 20px auto; padding: 20px; background: #f5f5f5; }
+        h1 { color: #333; text-align: center; }
+        .status-box { padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; font-weight: bold; }
+        .connected { background: #d4edda; color: #155724; }
+        .disconnected { background: #f8d7da; color: #721c24; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
+        input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; }
+        .btn { padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-right: 10px; margin-bottom: 10px; }
+        .btn-primary { background: #007bff; color: white; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-danger { background: #dc3545; color: white; }
+        .btn:hover { opacity: 0.9; }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .log-box { background: #1e1e1e; color: #0f0; padding: 15px; border-radius: 8px; height: 350px; overflow-y: auto; font-family: monospace; font-size: 13px; white-space: pre-wrap; word-wrap: break-word; }
+        .log-success { color: #0f0; }
+        .log-error { color: #f55; }
+        .log-info { color: #5bf; }
+        .log-send { color: #ff0; }
+        h3 { margin-top: 25px; color: #333; }
+        .button-group { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>🚶 Step Event Test</h1>
+    
+    <div id="statusBox" class="status-box disconnected">
+        ⚫ Disconnected
+    </div>
+    
+    <div class="button-group">
+        <button class="btn btn-success" id="connectBtn" onclick="connectSocket()">Connect</button>
+        <button class="btn btn-danger" id="disconnectBtn" onclick="disconnectSocket()" disabled>Disconnect</button>
+    </div>
+
+    <div class="form-group">
+        <label>User ID:</label>
+        <input type="number" id="user_id" value="1" min="1">
+    </div>
+
+    <div class="form-group">
+        <label>Category ID:</label>
+        <input type="number" id="category_id" value="3" min="1">
+    </div>
+    
+    <div class="form-group">
+        <label>Steps (1-50):</label>
+        <input type="number" id="steps" value="10" min="1" max="50">
+    </div>
+    
+    <div class="form-group">
+        <label>Type:</label>
+        <input type="text" id="type" value="walk">
+    </div>
+    
+    <div class="form-group">
+        <label>Latitude:</label>
+        <input type="text" id="lat" value="22.6708">
+    </div>
+    
+    <div class="form-group">
+        <label>Longitude:</label>
+        <input type="text" id="lng" value="88.3497">
+    </div>
+    
+    <button class="btn btn-primary" id="sendBtn" onclick="sendStepEvent()" disabled>
+        📤 Send Step Event
+    </button>
+
+    <h3>📋 Response Log:</h3>
+    <div class="log-box" id="logBox"></div>
+
+    <script>
+        const SERVER_URL = 'http://videosdownloaders.com:3000';
+        let socket = null;
+
+        function log(message, type = 'info') {
+            const logBox = document.getElementById('logBox');
+            const time = new Date().toLocaleTimeString();
+            const colorClass = `log-${type}`;
+            logBox.innerHTML += `<span class="${colorClass}">[${time}] ${message}</span>\n`;
+            logBox.scrollTop = logBox.scrollHeight;
+        }
+
+        function updateStatus(connected) {
+            const statusBox = document.getElementById('statusBox');
+            const connectBtn = document.getElementById('connectBtn');
+            const disconnectBtn = document.getElementById('disconnectBtn');
+            const sendBtn = document.getElementById('sendBtn');
+
+            if (connected) {
+                statusBox.className = 'status-box connected';
+                statusBox.innerHTML = '🟢 Connected (ID: ' + socket.id + ')';
+                connectBtn.disabled = true;
+                disconnectBtn.disabled = false;
+                sendBtn.disabled = false;
+            } else {
+                statusBox.className = 'status-box disconnected';
+                statusBox.innerHTML = '⚫ Disconnected';
+                connectBtn.disabled = false;
+                disconnectBtn.disabled = true;
+                sendBtn.disabled = true;
+            }
+        }
+
+        function connectSocket() {
+            log('Connecting to ' + SERVER_URL + '...', 'info');
+            
+            socket = io(SERVER_URL, { transports: ['websocket', 'polling'] });
+
+            socket.on('connect', () => {
+                updateStatus(true);
+                log('✅ Connected successfully!', 'success');
+            });
+
+            socket.on('disconnect', (reason) => {
+                updateStatus(false);
+                log('❌ Disconnected: ' + reason, 'error');
+            });
+
+            socket.on('connect_error', (error) => log('❌ Connection error: ' + error, 'error'));
+            socket.on('error', (error) => log('❌ Error: ' + error, 'error'));
+
+            socket.on('step_ack', (data) => log('✅ step_ack: ' + JSON.stringify(data, null, 2), 'success'));
+            socket.on('step_error', (data) => log('❌ step_error: ' + JSON.stringify(data, null, 2), 'error'));
+            socket.on('auth_error', (data) => log('❌ auth_error: ' + JSON.stringify(data, null, 2), 'error'));
+            socket.on('server_error', (data) => log('❌ server_error: ' + JSON.stringify(data, null, 2), 'error'));
+        }
+
+        function disconnectSocket() {
+            if (socket) {
+                socket.disconnect();
+                socket = null;
+                log('Disconnected by user', 'info');
+            }
+        }
+
+        function sendStepEvent() {
+            if (!socket || !socket.connected) {
+                alert('Please connect first!');
+                return;
+            }
+
+            const data = {
+                user_id: parseInt(document.getElementById('user_id').value),
+                category_id: parseInt(document.getElementById('category_id').value),
+                steps: parseInt(document.getElementById('steps').value),
+                timestamp: Math.floor(Date.now() / 1000),
+                type: document.getElementById('type').value,
+                lat: document.getElementById('lat').value,
+                lng: document.getElementById('lng').value
+            };
+
+            log('📤 Sending: ' + JSON.stringify(data, null, 2), 'send');
+            socket.emit('step_event', data);
+        }
+
+        window.onload = () => log('Page loaded. Click "Connect" to start.', 'info');
+    </script>
+</body>
+</html>

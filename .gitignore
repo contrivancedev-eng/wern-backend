@@ -1,0 +1,42 @@
+# ----- Secrets / environment (NEVER commit) -----
+.env
+.env.*
+*.env.save
+!.env.example
+
+# Firebase service account = PRIVATE KEY. Never commit.
+writable/firebase-service-account.json
+*firebase-adminsdk*.json
+*service-account*.json
+
+# ----- CodeIgniter writable runtime -----
+writable/cache/
+writable/debugbar/
+writable/logs/
+writable/session/
+writable/uploads/
+writable/fcm_access_token.json
+
+# ----- Dependencies -----
+/vendor/
+node_modules/
+
+# ----- Dated backup / stray source files (e.g. Auth.php(25_06_2026), webRoutes.php-17-4) -----
+*.php(*
+*.php-*
+*.html-*
+*.bak
+*(bak)
+*.htaccess(*
+
+# ----- Info-disclosure / debug files -----
+phpinfo.php
+info.php
+old-default.php
+
+# ----- IDE / OS -----
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db

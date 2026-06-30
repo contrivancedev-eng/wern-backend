@@ -1,0 +1,144 @@
+@media only screen and (max-width:1280.9px) {
+    .wern-hero-video {
+        width: 1088px !important;
+    }
+}
+
+@media only screen and (max-width:1200.9px) {
+    .wern-hero-video {
+        top: 147px !important;
+        left: 73px !important;
+        width: 1030px !important;
+    }
+}
+
+@media only screen and (max-width:1024.9px) {
+    .wern-hero-video {
+        top: 126px !important;
+        left: 50px !important;
+        width: 895px !important;
+    }
+
+    .xb-project-content .xb-item--list {
+        gap: 16px;
+    }
+
+    .footer {
+        padding-top: 0 !important;
+    }
+}
+
+@media only screen and (max-width:992.9px) {
+    .wern-hero-video {
+        top: 126px !important;
+        left: 50px !important;
+        width: 840px !important;
+    }
+
+    .statistics h3 {
+        font-size: 20px;
+    }
+
+    .statistics p {
+        font-size: 14px;
+    }
+
+    .xb-feature-item .xb-item--inner {
+        padding: 24px;
+    }
+}
+
+@media only screen and (max-width:991.9px) {
+    .wern-hero-video {
+        top: 94px !important;
+        left: 18px !important;
+        width: 662px !important;
+    }
+
+    #major-features {
+        padding-bottom: 80px;
+    }
+
+    #major-features .xb-sec-padding {
+        margin: 0px 0px 36px !important;
+        padding-top: 0px;
+    }
+
+    .sec-title .title {
+        font-size: 42px;
+    }
+
+    .feature.pb-155 {
+        padding-bottom: 80px;
+    }
+
+    .process-sction {
+        padding-top: 80px !important;
+    }
+
+    .process-sction .xb-process-step {
+        display: none;
+    }
+
+    .process-sction .xb-process-left-container {
+        padding-bottom: 30px;
+    }
+
+    .process-sction .xb-process-right-container {
+        padding-bottom: 80px !important;
+    }
+
+    #coming-soon {
+        padding-bottom: 80px;
+    }
+}
+
+.xb-img img {
+    width: 100%;
+}
+
+@media only screen and (max-width:767.9px) {
+    .wern-hero-video {
+        top: 73px !important;
+        left: -3px !important;
+        width: 525px !important;
+    }
+
+    .xb-feature-item-3 .xb-img img {
+        width: 100%;
+    }
+
+    .thm-btn {
+        font-size: 14px;
+    }
+
+    .bg_img.pt-80 {
+        padding-top: 0;
+    }
+
+    .breadcrumb .breadcrumb-item {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:475.9px) {
+    .competitive-landscape{
+        padding-top: 0 !important;
+    }
+    .competitive-landscape .sec-title .title {
+        text-align: center;
+    }
+    .wern-hero-video {
+        top: 50px !important;
+        left: 8px !important;
+        width: 374px !important;
+    }
+}
+
+@media only screen and (max-width:375.9px) {
+    .wern-hero-video {
+        top: 50px !important;
+        left: 8px !important;
+        width: 335px !important;
+    }
+}

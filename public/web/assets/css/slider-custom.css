@@ -1,0 +1,588 @@
+/* ===== Dark Card Slider - Custom Styles ===== */
+
+:root {
+    /* Grid & Layout */
+    --step: 32px;
+    --g1: rgba(255, 255, 255, 0.055);
+    --g2: rgba(255, 255, 255, 0.09);
+    --u: 28px;
+
+    /* Container sizing */
+    --bg-w: clamp(800px, 95vw, 1600px);
+    --bg-h: clamp(56vh, 44vw, 72vh);
+    --stack: calc(var(--u) * 3);
+
+    /* Design Tokens */
+    --ink: oklch(98% 0.01 260);
+    --muted: oklch(82% 0.02 260);
+    --bg-1: oklch(26% 0.04 255);
+    --bg-2: oklch(18% 0.03 260);
+    --glass-1: rgba(255, 255, 255, 0.10);
+    --glass-2: rgba(255, 255, 255, 0.06);
+    --stroke-1: rgba(255, 255, 255, 0.18);
+    --stroke-2: rgba(0, 0, 0, 0.20);
+    --accent: #59d1ff;
+    --accent-2: rgba(89, 209, 255, 0.28);
+    --shadow-1: 0 18px 40px rgba(0, 0, 0, 0.45);
+    --shadow-2: 0 6px 20px rgba(0, 0, 0, 0.35);
+    --radius: 18px;
+    --radius-sm: 12px;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #0a0d12;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
+    color: #e8e9ed;
+}
+
+/* ===== Background Container ===== */
+.dark-slider-bg {
+    position: relative;
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: var(--bg-h);
+    max-width: var(--bg-w);
+    margin: var(--stack) auto var(--stack);
+    border-radius: 24px;
+    background: #111419;
+    box-shadow: var(--shadow-1), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.dark-slider-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        repeating-linear-gradient(0deg,
+            transparent 0 calc(var(--step) - 1px),
+            var(--g1) calc(var(--step) - 1px) var(--step)),
+        repeating-linear-gradient(0deg,
+            transparent 0 calc(var(--step) * 4 - 1px),
+            var(--g2) calc(var(--step) * 4 - 1px) calc(var(--step) * 4)),
+        repeating-linear-gradient(90deg,
+            transparent 0 calc(var(--step) - 1px),
+            var(--g1) calc(var(--step) - 1px) var(--step)),
+        repeating-linear-gradient(90deg,
+            transparent 0 calc(var(--step) * 4 - 1px),
+            var(--g2) calc(var(--step) * 4 - 1px) calc(var(--step) * 4));
+    background-blend-mode: normal;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+@supports (color: oklch(50% 0 0)) {
+    .dark-slider-bg {
+        background: oklch(16% 0.02 250);
+    }
+}
+
+/* ===== Card Wrapper ===== */
+.card-slider-wrap {
+    position: relative;
+    padding: 28px;
+}
+
+/* ===== Status Bar ===== */
+.slider-statusbar {
+    position: absolute;
+    inset: 30px -250px auto auto;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    font-size: 12px;
+    color: oklch(92% 0.01 260 / 0.8);
+    padding: 6px 10px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--stroke-1);
+    backdrop-filter: blur(10px) saturate(1.1);
+    -webkit-backdrop-filter: blur(10px) saturate(1.1);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.slider-statusbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.slider-statusbar-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent-2);
+}
+
+.slider-statusbar-battery {
+    width: 24px;
+    height: 12px;
+    border: 1px solid var(--stroke-1);
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-statusbar-battery::after {
+    content: "";
+    position: absolute;
+    right: -4px;
+    top: 3px;
+    width: 3px;
+    height: 6px;
+    border-radius: 1px;
+    background: var(--stroke-1);
+}
+
+.slider-statusbar-battery-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 60%;
+    background: #59d1ff;
+}
+
+/* ===== Product Card ===== */
+.slider-product-card {
+    width: min(360px, 88vw);
+    border-radius: var(--radius);
+    padding: 18px 18px 20px;
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid var(--stroke-1);
+    box-shadow: var(--shadow-1), inset 0 1px 0 rgba(255, 255, 255, .06);
+    backdrop-filter: blur(18px) saturate(1.15);
+    -webkit-backdrop-filter: blur(18px) saturate(1.15);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.slider-product-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), inset 0 -80px 120px rgba(0, 0, 0, 0.22);
+    border-radius: inherit;
+}
+
+.slider-product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .50), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Media */
+.slider-product-media {
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 14px 0 4px;
+}
+
+.slider-product-media img {
+    width: 220px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.35));
+    transform: translateZ(0);
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.slider-product-card:hover .slider-product-media img {
+    transform: translateY(-2px);
+}
+
+.slider-media-reflection {
+    position: absolute;
+    inset: auto 22% 6px 22%;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    filter: blur(12px);
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+/* Head */
+.slider-product-head {
+    text-align: center;
+    padding: 2px 8px 10px;
+}
+
+.slider-product-name {
+    margin: 2px 0 2px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.slider-product-sub {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Controls row */
+.slider-product-ctrl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 6px 6px;
+}
+
+/* Quantity */
+.slider-qtty {
+    display: inline-grid;
+    grid-template-columns: 34px 1fr 34px;
+    gap: 8px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    padding: 6px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.slider-qtty-btn {
+    height: 34px;
+    width: 34px;
+    border-radius: 10px;
+    border: 1px solid var(--stroke-1);
+    background: rgba(255, 255, 255, 0.09);
+    color: var(--ink);
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    transition: transform 0.08s ease, background 0.12s ease, box-shadow 0.12s ease;
+    box-shadow: var(--shadow-2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.slider-qtty-btn:hover {
+    transform: translateY(-1px);
+}
+
+.slider-qtty-btn:active {
+    transform: translateY(0);
+}
+
+.slider-qtty-val {
+    min-width: 2ch;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+}
+
+/* Price */
+.slider-price {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid var(--stroke-1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.slider-price-curr {
+    opacity: 0.8;
+}
+
+/* CTA */
+.slider-cta {
+    margin-top: 12px;
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid var(--stroke-1);
+    background: oklch(82% 0.03 250);
+    color: oklch(16% 0.03 260);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+    transition: transform 0.08s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.slider-cta:hover {
+    transform: translateY(-1px);
+}
+
+.slider-cta:active {
+    transform: translateY(0);
+}
+
+.slider-cta-gloss {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0.15);
+    mix-blend-mode: screen;
+    opacity: 0.4;
+}
+
+/* ===== Carousel Layer ===== */
+.dark-card-carousel {
+    position: relative;
+    display: grid;
+    place-items: center;
+    perspective: 1600px;
+    padding: 12px 24px;
+    width: 100%;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid var(--stroke-1);
+    background: rgba(255, 255, 255, 0.09);
+    color: var(--ink);
+    box-shadow: var(--shadow-2), inset 0 1px 0 rgba(255, 255, 255, .06);
+    backdrop-filter: blur(10px) saturate(1.1);
+    -webkit-backdrop-filter: blur(10px) saturate(1.1);
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    z-index: 20;
+}
+
+.carousel-nav.prev {
+    left: 20px;
+}
+
+.carousel-nav.next {
+    right: 20px;
+}
+
+.carousel-deck {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-deck>.slider-product-card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    transform-origin: center bottom;
+    will-change: transform, opacity, filter, box-shadow;
+    transition:
+        transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1),
+        opacity 300ms ease,
+        filter 300ms ease,
+        box-shadow 200ms ease;
+}
+
+/* Card Positions - Horizontal Fan Spread */
+.card-pos-0 {
+    transform: translate(-50%, -50%) rotateZ(0deg) scale(1.15);
+    z-index: 6;
+    opacity: 1;
+    filter: none;
+}
+
+.card-pos-1 {
+    transform: translate(calc(-50% - 300px), -50%) rotateZ(-15deg) scale(0.85);
+    z-index: 5;
+    opacity: 0.9;
+    filter: saturate(0.95) brightness(0.9);
+}
+
+.card-pos-2 {
+    transform: translate(calc(-50% + 300px), -50%) rotateZ(15deg) scale(0.85);
+    z-index: 5;
+    opacity: 0.9;
+    filter: saturate(0.95) brightness(0.9);
+}
+
+.card-pos-3 {
+    transform: translate(calc(-50% - 560px), -50%) rotateZ(-25deg) scale(0.7);
+    z-index: 4;
+    opacity: 0.85;
+    filter: saturate(0.9) brightness(0.85);
+}
+
+.card-pos-4 {
+    transform: translate(calc(-50% + 560px), -50%) rotateZ(25deg) scale(0.7);
+    z-index: 4;
+    opacity: 0.85;
+    filter: saturate(0.9) brightness(0.85);
+}
+
+.card-pos-5 {
+    transform: translate(-50%, -50%) rotateZ(0deg) scale(0.6);
+    z-index: 3;
+    opacity: 0.7;
+    filter: saturate(0.85) brightness(0.8);
+}
+
+/* Deal-in animation */
+.card-deal-in {
+    animation: dealIn 380ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes dealIn {
+    from {
+        transform: translate(-50%, calc(-50% + 60px)) rotateZ(8deg) scale(0.84);
+        opacity: 0;
+        filter: blur(2px) brightness(0.9);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(1.15);
+        opacity: 1;
+        filter: none;
+    }
+}
+
+/* Hint */
+.dark-card-carousel::after {
+    content: "Swipe • ← / →";
+    position: absolute;
+    bottom: -6px;
+    font-size: 12px;
+    letter-spacing: .08em;
+    color: oklch(92% 0.01 260 / 0.7);
+}
+
+/* ===== Responsive ===== */
+@media (max-width:1400px) {
+    .card-pos-0 {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(1.1);
+    }
+
+    .card-pos-1 {
+        transform: translate(calc(-50% - 250px), -50%) rotateZ(-13deg) scale(0.8);
+    }
+
+    .card-pos-2 {
+        transform: translate(calc(-50% + 250px), -50%) rotateZ(13deg) scale(0.8);
+    }
+
+    .card-pos-3 {
+        transform: translate(calc(-50% - 450px), -50%) rotateZ(-22deg) scale(0.65);
+    }
+
+    .card-pos-4 {
+        transform: translate(calc(-50% + 450px), -50%) rotateZ(22deg) scale(0.65);
+    }
+
+    .card-pos-5 {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(0.55);
+    }
+}
+
+@media (max-width:1024px) {
+    .card-pos-0 {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(1.05);
+    }
+
+    .card-pos-1 {
+        transform: translate(calc(-50% - 200px), -50%) rotateZ(-12deg) scale(0.75);
+    }
+
+    .card-pos-2 {
+        transform: translate(calc(-50% + 200px), -50%) rotateZ(12deg) scale(0.75);
+    }
+
+    .card-pos-3 {
+        transform: translate(calc(-50% - 360px), -50%) rotateZ(-20deg) scale(0.6);
+    }
+
+    .card-pos-4 {
+        transform: translate(calc(-50% + 360px), -50%) rotateZ(20deg) scale(0.6);
+    }
+
+    .card-pos-5 {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(0.5);
+    }
+}
+
+@media (max-width:768px) {
+    .card-pos-0 {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(1);
+    }
+
+    .card-pos-1 {
+        transform: translate(calc(-50% - 160px), -50%) rotateZ(-10deg) scale(0.7);
+    }
+
+    .card-pos-2 {
+        transform: translate(calc(-50% + 160px), -50%) rotateZ(10deg) scale(0.7);
+    }
+
+    .card-pos-3 {
+        transform: translate(calc(-50% - 280px), -50%) rotateZ(-18deg) scale(0.55);
+    }
+
+    .card-pos-4 {
+        transform: translate(calc(-50% + 280px), -50%) rotateZ(18deg) scale(0.55);
+    }
+
+    .card-pos-5 {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(0.45);
+    }
+}
+
+@media (max-width:420px) {
+    .slider-product-media img {
+        width: 180px;
+    }
+
+    .card-pos-0 {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(0.95);
+    }
+
+    .card-pos-1 {
+        transform: translate(calc(-50% - 120px), -50%) rotateZ(-8deg) scale(0.65);
+    }
+
+    .card-pos-2 {
+        transform: translate(calc(-50% + 120px), -50%) rotateZ(8deg) scale(0.65);
+    }
+
+    .card-pos-3 {
+        transform: translate(calc(-50% - 210px), -50%) rotateZ(-15deg) scale(0.5);
+    }
+
+    .card-pos-4 {
+        transform: translate(calc(-50% + 210px), -50%) rotateZ(15deg) scale(0.5);
+    }
+
+    .card-pos-5 {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(0.4);
+    }
+}
