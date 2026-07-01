@@ -190,7 +190,9 @@
 					"status"  => true,
 					"user_id" => $user_id
 				];
-			} catch (Exception $e) {
+			} catch (\Throwable $e) {
+				// Catch ALL errors (incl. Firebase JWT exceptions). Note: this file
+				// imports PHPMailer\Exception, so a bare `Exception` would miss them.
 				return [
 					"status" => false,
 					"error"  => "Invalid token: " . $e->getMessage()

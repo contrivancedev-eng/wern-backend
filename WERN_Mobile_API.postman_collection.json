@@ -1,0 +1,533 @@
+{
+  "info": {
+    "name": "WERN Mobile API",
+    "_postman_id": "wern-mobile-api-collection",
+    "description": "All mobile (app-facing) endpoints for the WERN backend (CodeIgniter 4).\n\nSetup:\n1. Set the collection variable `base_url` (default https://www.wernapp.com/api).\n2. Run Auth > User Login (or Verify Registration) to get a JWT.\n3. Copy the returned `token` into the collection variable `token`.\n   (Most endpoints require `token`.)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "https://www.wernapp.com/api", "type": "string" },
+    { "key": "token", "value": "", "type": "string" }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "User Registration",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"full_name\": \"John Doe\",\n  \"country_code\": \"+1\",\n  \"phone_number\": \"5551234567\",\n  \"email\": \"john@example.com\",\n  \"password\": \"Secret@123\",\n  \"confirm_password\": \"Secret@123\",\n  \"refferal_code\": \"\"\n}" },
+            "url": { "raw": "{{base_url}}/user-registration", "host": ["{{base_url}}"], "path": ["user-registration"] }
+          }
+        },
+        {
+          "name": "Verify Registration OTP",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"email\": \"john@example.com\",\n  \"otp\": \"123456\"\n}" },
+            "url": { "raw": "{{base_url}}/verify-registration-account", "host": ["{{base_url}}"], "path": ["verify-registration-account"] }
+          }
+        },
+        {
+          "name": "Resend Verify OTP",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"email\": \"john@example.com\"\n}" },
+            "url": { "raw": "{{base_url}}/resend-verify-otp", "host": ["{{base_url}}"], "path": ["resend-verify-otp"] }
+          }
+        },
+        {
+          "name": "User Login",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"Secret@123\",\n  \"device_id\": \"fcm-or-device-token\"\n}" },
+            "url": { "raw": "{{base_url}}/user-login-action", "host": ["{{base_url}}"], "path": ["user-login-action"] }
+          }
+        },
+        {
+          "name": "Forgot Password - Send OTP",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"email\": \"john@example.com\"\n}" },
+            "url": { "raw": "{{base_url}}/forgot-password-send-otp", "host": ["{{base_url}}"], "path": ["forgot-password-send-otp"] }
+          }
+        },
+        {
+          "name": "Forgot Password - Verify OTP",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"email\": \"john@example.com\",\n  \"otp\": \"123456\"\n}" },
+            "url": { "raw": "{{base_url}}/forgot-password-verify-otp", "host": ["{{base_url}}"], "path": ["forgot-password-verify-otp"] }
+          }
+        },
+        {
+          "name": "Forgot Password - Change",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"token\": \"{{token}}\",\n  \"password\": \"NewSecret@123\",\n  \"confirm_password\": \"NewSecret@123\"\n}" },
+            "url": { "raw": "{{base_url}}/forgot-password-change", "host": ["{{base_url}}"], "path": ["forgot-password-change"] }
+          }
+        },
+        {
+          "name": "Change Password (logged in)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"token\": \"{{token}}\",\n  \"old_password\": \"Secret@123\",\n  \"new_password\": \"NewSecret@123\",\n  \"confirm_password\": \"NewSecret@123\"\n}" },
+            "url": { "raw": "{{base_url}}/change-password-user", "host": ["{{base_url}}"], "path": ["change-password-user"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "User & Profile",
+      "item": [
+        {
+          "name": "Get User Details",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-user-details?token={{token}}", "host": ["{{base_url}}"], "path": ["get-user-details"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Get Referral Users History",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-refferal-users-history?token={{token}}", "host": ["{{base_url}}"], "path": ["get-refferal-users-history"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Daily Claim",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/user-daily-claim?token={{token}}", "host": ["{{base_url}}"], "path": ["user-daily-claim"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Get Daily Claim Status",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-daily-claim-status?token={{token}}", "host": ["{{base_url}}"], "path": ["get-daily-claim-status"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Get Points Summary",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-points-summary?token={{token}}&category_id=", "host": ["{{base_url}}"], "path": ["get-points-summary"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "category_id", "value": "" }] } }
+        },
+        {
+          "name": "User Activity",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/user-activity?token={{token}}", "host": ["{{base_url}}"], "path": ["user-activity"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Update User Image / Profile",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": { "mode": "formdata", "formdata": [
+              { "key": "token", "value": "{{token}}", "type": "text" },
+              { "key": "full_name", "value": "John Doe", "type": "text" },
+              { "key": "nickname", "value": "Johnny", "type": "text" },
+              { "key": "phone_number", "value": "5551234567", "type": "text" },
+              { "key": "user_image", "type": "file", "src": [] }
+            ] },
+            "url": { "raw": "{{base_url}}/update-user-image", "host": ["{{base_url}}"], "path": ["update-user-image"] }
+          }
+        },
+        {
+          "name": "Get Weather By Location",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-weather-by-location?latitude=25.2&longitude=55.27&unit=C", "host": ["{{base_url}}"], "path": ["get-weather-by-location"], "query": [{ "key": "latitude", "value": "25.2" }, { "key": "longitude", "value": "55.27" }, { "key": "unit", "value": "C" }] } }
+        },
+        {
+          "name": "Delete All Data (account deletion)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"gmail\": \"john@example.com\",\n  \"reason\": \"No longer using the app\"\n}" },
+            "url": { "raw": "{{base_url}}/delete-all-data", "host": ["{{base_url}}"], "path": ["delete-all-data"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Steps & Goals",
+      "item": [
+        {
+          "name": "Save Step Event",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": { "mode": "urlencoded", "urlencoded": [
+              { "key": "token", "value": "{{token}}", "type": "text" },
+              { "key": "category_id", "value": "0", "type": "text" },
+              { "key": "steps", "value": "500", "type": "text" },
+              { "key": "type", "value": "walk", "type": "text" },
+              { "key": "timestamp", "value": "0", "type": "text" },
+              { "key": "lat", "value": "", "type": "text" },
+              { "key": "lng", "value": "", "type": "text" }
+            ] },
+            "url": { "raw": "{{base_url}}/save-step-event", "host": ["{{base_url}}"], "path": ["save-step-event"] }
+          }
+        },
+        {
+          "name": "Step Summary - Today",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-step-summary-today?token={{token}}&category_id=", "host": ["{{base_url}}"], "path": ["get-step-summary-today"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "category_id", "value": "" }] } }
+        },
+        {
+          "name": "Step Summary - Monthly",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-step-summary-monthly?token={{token}}&month=&year=", "host": ["{{base_url}}"], "path": ["get-step-summary-monthly"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "month", "value": "" }, { "key": "year", "value": "" }] } }
+        },
+        {
+          "name": "Litties Transaction",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-littes-transection?token={{token}}", "host": ["{{base_url}}"], "path": ["get-littes-transection"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Step Transaction History",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-step-transection-history?token={{token}}", "host": ["{{base_url}}"], "path": ["get-step-transection-history"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Step Transaction List",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-step-transection-list?token={{token}}&filter=hourly&date=2026-07-01&month=&year=&category_id=", "host": ["{{base_url}}"], "path": ["get-step-transection-list"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "filter", "value": "hourly" }, { "key": "date", "value": "2026-07-01" }, { "key": "month", "value": "" }, { "key": "year", "value": "" }, { "key": "category_id", "value": "" }] } }
+        },
+        {
+          "name": "Save User Goals",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"token\": \"{{token}}\",\n  \"daily_step_goal\": \"10000\",\n  \"activity_level\": \"Beginner\",\n  \"weekly_goal\": \"5\"\n}" },
+            "url": { "raw": "{{base_url}}/save-user-goals", "host": ["{{base_url}}"], "path": ["save-user-goals"] }
+          }
+        },
+        {
+          "name": "Get User Goals",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-user-goals?token={{token}}", "host": ["{{base_url}}"], "path": ["get-user-goals"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        }
+      ]
+    },
+    {
+      "name": "Menu",
+      "item": [
+        {
+          "name": "Get Profile Data",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-profile-data?token={{token}}&month=&year=", "host": ["{{base_url}}"], "path": ["get-profile-data"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "month", "value": "" }, { "key": "year", "value": "" }] } }
+        },
+        {
+          "name": "Get Refer & Earn Data",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-reffer-and-earn-data?token={{token}}", "host": ["{{base_url}}"], "path": ["get-reffer-and-earn-data"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Get Digital Vault Data",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-digital-vault-data?token={{token}}&filter=daily&date=&week_start=&month=&year=&from=&to=&category_id=", "host": ["{{base_url}}"], "path": ["get-digital-vault-data"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "filter", "value": "daily" }, { "key": "date", "value": "" }, { "key": "week_start", "value": "" }, { "key": "month", "value": "" }, { "key": "year", "value": "" }, { "key": "from", "value": "" }, { "key": "to", "value": "" }, { "key": "category_id", "value": "" }] } }
+        }
+      ]
+    },
+    {
+      "name": "Notifications",
+      "item": [
+        {
+          "name": "Get Notification Settings",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-notification-settings?token={{token}}", "host": ["{{base_url}}"], "path": ["get-notification-settings"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Update Notification Settings",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": { "mode": "urlencoded", "urlencoded": [
+              { "key": "token", "value": "{{token}}", "type": "text" },
+              { "key": "daily_goal_reminder", "value": "1", "type": "text" },
+              { "key": "achievement_notification", "value": "1", "type": "text" },
+              { "key": "weekly_progress_report", "value": "1", "type": "text" },
+              { "key": "tier_status_updates", "value": "1", "type": "text" },
+              { "key": "community_challenges", "value": "1", "type": "text" }
+            ] },
+            "url": { "raw": "{{base_url}}/update-notification-settings", "host": ["{{base_url}}"], "path": ["update-notification-settings"] }
+          }
+        },
+        {
+          "name": "Get Notifications (inbox)",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/get-notifications?token={{token}}&limit=50&offset=0", "host": ["{{base_url}}"], "path": ["get-notifications"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "limit", "value": "50" }, { "key": "offset", "value": "0" }] } }
+        },
+        {
+          "name": "Mark Notification Read",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": { "mode": "urlencoded", "urlencoded": [
+              { "key": "token", "value": "{{token}}", "type": "text" },
+              { "key": "id", "value": "1", "type": "text" },
+              { "key": "all", "value": "", "type": "text" }
+            ] },
+            "url": { "raw": "{{base_url}}/mark-notification-read", "host": ["{{base_url}}"], "path": ["mark-notification-read"] }
+          }
+        },
+        {
+          "name": "Save FCM Token",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"token\": \"{{token}}\",\n  \"fcm_token\": \"device-fcm-registration-token\",\n  \"platform\": \"android\"\n}" },
+            "url": { "raw": "{{base_url}}/save-fcm-token", "host": ["{{base_url}}"], "path": ["save-fcm-token"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Community",
+      "item": [
+        {
+          "name": "Create Post",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": { "mode": "formdata", "formdata": [
+              { "key": "token", "value": "{{token}}", "type": "text" },
+              { "key": "content", "value": "My first post!", "type": "text" },
+              { "key": "privacy", "value": "public", "type": "text" },
+              { "key": "feeling_activity", "value": "", "type": "text" },
+              { "key": "check_in", "value": "", "type": "text" },
+              { "key": "walk_for_cause", "value": "", "type": "text" },
+              { "key": "tag_achievement", "value": "", "type": "text" },
+              { "key": "media", "type": "file", "src": [] }
+            ] },
+            "url": { "raw": "{{base_url}}/community-create-post", "host": ["{{base_url}}"], "path": ["community-create-post"] }
+          }
+        },
+        {
+          "name": "Feed",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/community-feed?token={{token}}&limit=20&offset=0", "host": ["{{base_url}}"], "path": ["community-feed"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "limit", "value": "20" }, { "key": "offset", "value": "0" }] } }
+        },
+        {
+          "name": "My Posts",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/community-my-posts?token={{token}}", "host": ["{{base_url}}"], "path": ["community-my-posts"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Post Detail",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/community-post-detail?token={{token}}&post_id=1", "host": ["{{base_url}}"], "path": ["community-post-detail"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "post_id", "value": "1" }] } }
+        },
+        {
+          "name": "Update Post",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": { "mode": "formdata", "formdata": [
+              { "key": "token", "value": "{{token}}", "type": "text" },
+              { "key": "post_id", "value": "1", "type": "text" },
+              { "key": "content", "value": "Edited content", "type": "text" },
+              { "key": "privacy", "value": "public", "type": "text" }
+            ] },
+            "url": { "raw": "{{base_url}}/community-update-post", "host": ["{{base_url}}"], "path": ["community-update-post"] }
+          }
+        },
+        {
+          "name": "Delete Post",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "post_id", "value": "1", "type": "text" }] }, "url": { "raw": "{{base_url}}/community-delete-post", "host": ["{{base_url}}"], "path": ["community-delete-post"] } }
+        },
+        {
+          "name": "Like Post",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "post_id", "value": "1", "type": "text" }] }, "url": { "raw": "{{base_url}}/community-like-post", "host": ["{{base_url}}"], "path": ["community-like-post"] } }
+        },
+        {
+          "name": "Unlike Post",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "post_id", "value": "1", "type": "text" }] }, "url": { "raw": "{{base_url}}/community-unlike-post", "host": ["{{base_url}}"], "path": ["community-unlike-post"] } }
+        },
+        {
+          "name": "Add Comment",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "post_id", "value": "1", "type": "text" }, { "key": "comment", "value": "Nice post!", "type": "text" }, { "key": "parent_id", "value": "", "type": "text" }] }, "url": { "raw": "{{base_url}}/community-add-comment", "host": ["{{base_url}}"], "path": ["community-add-comment"] } }
+        },
+        {
+          "name": "Get Comments",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/community-comments?token={{token}}&post_id=1", "host": ["{{base_url}}"], "path": ["community-comments"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "post_id", "value": "1" }] } }
+        },
+        {
+          "name": "Update Comment",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "comment_id", "value": "1", "type": "text" }, { "key": "comment", "value": "Edited comment", "type": "text" }] }, "url": { "raw": "{{base_url}}/community-update-comment", "host": ["{{base_url}}"], "path": ["community-update-comment"] } }
+        },
+        {
+          "name": "Delete Comment",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "comment_id", "value": "1", "type": "text" }] }, "url": { "raw": "{{base_url}}/community-delete-comment", "host": ["{{base_url}}"], "path": ["community-delete-comment"] } }
+        },
+        {
+          "name": "Save Post",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "post_id", "value": "1", "type": "text" }] }, "url": { "raw": "{{base_url}}/community-save-post", "host": ["{{base_url}}"], "path": ["community-save-post"] } }
+        },
+        {
+          "name": "Unsave Post",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "post_id", "value": "1", "type": "text" }] }, "url": { "raw": "{{base_url}}/community-unsave-post", "host": ["{{base_url}}"], "path": ["community-unsave-post"] } }
+        },
+        {
+          "name": "Saved Posts",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/community-saved-posts?token={{token}}", "host": ["{{base_url}}"], "path": ["community-saved-posts"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Report Post",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "post_id", "value": "1", "type": "text" }, { "key": "reason", "value": "Inappropriate content", "type": "text" }] }, "url": { "raw": "{{base_url}}/community-report-post", "host": ["{{base_url}}"], "path": ["community-report-post"] } }
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "item": [
+        {
+          "name": "Event List",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/event-list?token={{token}}&limit=20&offset=0&type=&search=", "host": ["{{base_url}}"], "path": ["event-list"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "limit", "value": "20" }, { "key": "offset", "value": "0" }, { "key": "type", "value": "" }, { "key": "search", "value": "" }] } }
+        },
+        {
+          "name": "Event Detail",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/event-detail?token={{token}}&event_id=1", "host": ["{{base_url}}"], "path": ["event-detail"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "event_id", "value": "1" }] } }
+        },
+        {
+          "name": "My Events",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/event-my-events?token={{token}}", "host": ["{{base_url}}"], "path": ["event-my-events"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Create Event",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": { "mode": "formdata", "formdata": [
+              { "key": "token", "value": "{{token}}", "type": "text" },
+              { "key": "title", "value": "Morning Walk", "type": "text" },
+              { "key": "category", "value": "Walk", "type": "text" },
+              { "key": "event_datetime", "value": "2026-07-10 07:00:00", "type": "text" },
+              { "key": "location_name", "value": "Central Park", "type": "text" },
+              { "key": "distance_km", "value": "5", "type": "text" },
+              { "key": "description", "value": "Join us!", "type": "text" },
+              { "key": "is_free", "value": "1", "type": "text" },
+              { "key": "price_text", "value": "", "type": "text" },
+              { "key": "latitude", "value": "", "type": "text" },
+              { "key": "longitude", "value": "", "type": "text" },
+              { "key": "image", "type": "file", "src": [] }
+            ] },
+            "url": { "raw": "{{base_url}}/event-create", "host": ["{{base_url}}"], "path": ["event-create"] }
+          }
+        },
+        {
+          "name": "Update Event",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": { "mode": "formdata", "formdata": [
+              { "key": "token", "value": "{{token}}", "type": "text" },
+              { "key": "event_id", "value": "1", "type": "text" },
+              { "key": "title", "value": "Updated title", "type": "text" }
+            ] },
+            "url": { "raw": "{{base_url}}/event-update", "host": ["{{base_url}}"], "path": ["event-update"] }
+          }
+        },
+        {
+          "name": "Delete Event",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "event_id", "value": "1", "type": "text" }] }, "url": { "raw": "{{base_url}}/event-delete", "host": ["{{base_url}}"], "path": ["event-delete"] } }
+        },
+        {
+          "name": "RSVP",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "event_id", "value": "1", "type": "text" }, { "key": "status", "value": "going", "type": "text" }] }, "url": { "raw": "{{base_url}}/event-rsvp", "host": ["{{base_url}}"], "path": ["event-rsvp"] } }
+        },
+        {
+          "name": "Message Thread",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/event-message-thread?token={{token}}&event_id=1&with_user_id=", "host": ["{{base_url}}"], "path": ["event-message-thread"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "event_id", "value": "1" }, { "key": "with_user_id", "value": "" }] } }
+        },
+        {
+          "name": "Send Message",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "event_id", "value": "1", "type": "text" }, { "key": "receiver_id", "value": "", "type": "text" }, { "key": "message", "value": "Hello!", "type": "text" }] }, "url": { "raw": "{{base_url}}/event-send-message", "host": ["{{base_url}}"], "path": ["event-send-message"] } }
+        },
+        {
+          "name": "Conversations",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/event-conversations?token={{token}}", "host": ["{{base_url}}"], "path": ["event-conversations"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        }
+      ]
+    },
+    {
+      "name": "Challenges",
+      "item": [
+        {
+          "name": "Challenge List",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/challenge-list?token={{token}}&limit=20&offset=0&type=&search=", "host": ["{{base_url}}"], "path": ["challenge-list"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "limit", "value": "20" }, { "key": "offset", "value": "0" }, { "key": "type", "value": "" }, { "key": "search", "value": "" }] } }
+        },
+        {
+          "name": "Challenge Detail",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/challenge-detail?token={{token}}&challenge_id=1", "host": ["{{base_url}}"], "path": ["challenge-detail"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "challenge_id", "value": "1" }] } }
+        },
+        {
+          "name": "My Challenges",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/challenge-my-challenges?token={{token}}", "host": ["{{base_url}}"], "path": ["challenge-my-challenges"], "query": [{ "key": "token", "value": "{{token}}" }] } }
+        },
+        {
+          "name": "Leaderboard",
+          "request": { "method": "GET", "header": [], "url": { "raw": "{{base_url}}/challenge-leaderboard?token={{token}}&challenge_id=1", "host": ["{{base_url}}"], "path": ["challenge-leaderboard"], "query": [{ "key": "token", "value": "{{token}}" }, { "key": "challenge_id", "value": "1" }] } }
+        },
+        {
+          "name": "Join",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "challenge_id", "value": "1", "type": "text" }] }, "url": { "raw": "{{base_url}}/challenge-join", "host": ["{{base_url}}"], "path": ["challenge-join"] } }
+        },
+        {
+          "name": "Leave",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "challenge_id", "value": "1", "type": "text" }] }, "url": { "raw": "{{base_url}}/challenge-leave", "host": ["{{base_url}}"], "path": ["challenge-leave"] } }
+        },
+        {
+          "name": "Update Progress",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "challenge_id", "value": "1", "type": "text" }, { "key": "progress_steps", "value": "", "type": "text" }] }, "url": { "raw": "{{base_url}}/challenge-update-progress", "host": ["{{base_url}}"], "path": ["challenge-update-progress"] } }
+        },
+        {
+          "name": "Create Challenge",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": { "mode": "formdata", "formdata": [
+              { "key": "token", "value": "{{token}}", "type": "text" },
+              { "key": "title", "value": "10k Steps", "type": "text" },
+              { "key": "difficulty", "value": "Medium", "type": "text" },
+              { "key": "target_steps", "value": "10000", "type": "text" },
+              { "key": "start_date", "value": "2026-07-05", "type": "text" },
+              { "key": "end_date", "value": "2026-07-12", "type": "text" },
+              { "key": "reward_text", "value": "50 points", "type": "text" },
+              { "key": "description", "value": "Walk 10k daily", "type": "text" },
+              { "key": "image", "type": "file", "src": [] }
+            ] },
+            "url": { "raw": "{{base_url}}/challenge-create", "host": ["{{base_url}}"], "path": ["challenge-create"] }
+          }
+        },
+        {
+          "name": "Update Challenge",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": { "mode": "formdata", "formdata": [
+              { "key": "token", "value": "{{token}}", "type": "text" },
+              { "key": "challenge_id", "value": "1", "type": "text" },
+              { "key": "title", "value": "Updated title", "type": "text" }
+            ] },
+            "url": { "raw": "{{base_url}}/challenge-update", "host": ["{{base_url}}"], "path": ["challenge-update"] }
+          }
+        },
+        {
+          "name": "Delete Challenge",
+          "request": { "method": "POST", "header": [], "body": { "mode": "urlencoded", "urlencoded": [{ "key": "token", "value": "{{token}}", "type": "text" }, { "key": "challenge_id", "value": "1", "type": "text" }] }, "url": { "raw": "{{base_url}}/challenge-delete", "host": ["{{base_url}}"], "path": ["challenge-delete"] } }
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "item": [
+        {
+          "name": "Submit Review",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"token\": \"{{token}}\",\n  \"star\": 5,\n  \"response\": \"Great app!\"\n}" },
+            "url": { "raw": "{{base_url}}/submit-review", "host": ["{{base_url}}"], "path": ["submit-review"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Social Login",
+      "item": [
+        {
+          "name": "Google Callback",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "options": { "raw": { "language": "json" } }, "raw": "{\n  \"credential\": \"google-id-token\"\n}" },
+            "url": { "raw": "{{base_url}}/v1/google/google_callback", "host": ["{{base_url}}"], "path": ["v1", "google", "google_callback"] }
+          }
+        }
+      ]
+    }
+  ]
+}
