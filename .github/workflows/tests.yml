@@ -1,0 +1,84 @@
+name: Run Backend Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: wern_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: mbstring, mysqli, intl, curl, json, openssl
+          coverage: none
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction
+
+      - name: Wait for MySQL to be ready
+        run: |
+          for i in {1..30}; do
+            mysqladmin ping -h 127.0.0.1 -P 3306 -uroot -proot && break
+            echo "Waiting for MySQL..."
+            sleep 2
+          done
+
+      - name: Set up test environment file
+        run: |
+          cp .env.example .env
+          sed -i "s/^CI_ENVIRONMENT.*/CI_ENVIRONMENT = testing/" .env
+          sed -i "s/^database.default.hostname.*/database.default.hostname = 127.0.0.1/" .env
+          sed -i "s/^database.default.database.*/database.default.database = wern_test/" .env
+          sed -i "s/^database.default.username.*/database.default.username = root/" .env
+          sed -i "s/^database.default.password.*/database.default.password = root/" .env
+          sed -i "s/^jwt.secret.*/jwt.secret = 'ci_test_secret_do_not_use_in_prod'/" .env
+
+      - name: Ensure writable directories exist
+        run: |
+          mkdir -p writable/cache writable/logs writable/session writable/uploads
+          chmod -R 777 writable/
+
+      - name: Run database migrations (if applicable)
+        run: php spark migrate --all
+        continue-on-error: true
+
+      - name: Run PHPUnit test suite
+        run: vendor/bin/phpunit --testdox
+
+      - name: Upload test results on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phpunit-results
+          path: build/logs/
